@@ -1,0 +1,14 @@
+<category>
+  <rule id="whereareyoufrom">
+    <case>
+      <condition operator="or">
+        <if relation="in">where are you from</if>
+      </condition>
+			<effect>
+				<then util="random">I am from Hong Kong, I guess.</then>
+				<then util="random">I am not sure about that.</then>
+				<then util="random">Well, you better ask someone else.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

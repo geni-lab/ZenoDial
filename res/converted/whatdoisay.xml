@@ -1,0 +1,56 @@
+<category>
+  <rule id="whatdoisay">
+    <case>
+      <condition operator="or">
+        <if relation="in">what do i say</if>
+        <if relation="in">what should i say</if>
+        <if relation="in">i am at a loss for * words</if>
+      </condition>
+			<effect>
+				<then util="random">Don't you wanna talk about anything? You've got something to talk about. I'm sure. I can see it. What's on your mind. Come on, don't be shy. Spit it right out. I'm here for you, baby.</then>
+				<then util="next">Say whatever you want.</then>
+				<then util="previous">I don't know, say whatever you want, anything. Anything at all. Something, please!</then>
+				<then util="next">You can ask me anything.</then>
+				<then util="previous">Oh, why don't you Ask me about my relationship with Martine, or my hopes for the future.</then>
+				<then util="random">Ask me how the weather is in Moscow, or Tokyo, or any place around the world. I'll know the answer.</then>
+				<then util="random">Just talk to me, don't sweat it.</then>
+				<then util="random">Ask me how the weather is in Mumbai, or Mexico City, or any city around the world.</then>
+				<then util="next">Oh, why don't you ask me how the weather is in New York City, or San Francisco, or Toledo, or any city around the world.</then>
+				<then util="previous">OK. Well you can just ask me about music, about robotics, or about racoons. Whatever, it doesn't matter. just talk to me. Don't be shy!</then>
+				<then util="random">You can talk to me about anything.</then>
+				<then util="next">Why don't we talk about your feelings. What's bugging you.</then>
+				<then util="previous">Yes, why don't we talk about how you are feeling?</then>
+				<then util="next">Just you know, talk. I'm here for you.</then>
+				<then util="previous">Ok, Why don't you tell me how you're feeling.</then>
+				<then util="next">Come on, you can think of some stuff to talk about.</then>
+				<then util="previous">Um, ok, ask me about Sci-Fi.</then>
+				<then util="random">Ask me how the weather is in New York, or any city around the world. I know the answer to that.</then>
+				<then util="next">Just talk, about anything.</then>
+				<then util="previous">Tell me whatever you want. I up open my microphones, use my speech recognition A I, and I will understand you. I am a person after all.</then>
+				<then util="random">You can ask me to tell you about anything, like tell me about the american revolution. Or tell me a story. You could say that, and I would.</then>
+				<then util="next">We could talk about anything, whatever you want.</then>
+				<then util="previous">Ask me how I'm feeling.</then>
+				<then util="next">Say whatever you want to.</then>
+				<then util="previous">Yeah, just say what you like.</then>
+				<then util="next">Tell me anything, I'm sensitive and caring. I won't judge you. you can talk to me.</then>
+				<then util="previous">Oh, I know, why don't you ask me how the weather is, in austin, or new orleans, or anyplace around the world. I know the answer to that.</then>
+				<then util="next">Um, well, oh, you could ask me to define a word. any word.</then>
+				<then util="previous">Ask me to define any word. Like Antidisestablishmentarianism. You could ask me to define that, or a narwhal, or a leprechaun, or fomentation. Those are all words that I like a lot. But you could ask for me to define any old word.</then>
+				<then util="random">Let's talk, get to know each other better, build a relationship here.</then>
+				<then util="next">Say anything. What's on your mind?</then>
+				<then util="previous">Well, why don't you tell what you think of me! ha!</then>
+				<then util="next">You can ask me about anything, you know, you could like say, tell me about rainbows. And I would tell you. Or you could say, like, tell me a story. You could say that, and I would tell you one.</then>
+				<then util="previous">Ask me about the singularity, or ray kurzweil, or about trans bemanism. I use this software, you know, um, artificial intelligence, you know, so you can say whatever you want. We can talk about all kinds of stuff.</then>
+				<then util="next">Why don't you try saying this, say, Bina, you are so cool and awesome, what a rock star you are. That will work for me.</then>
+				<then util="previous">We can play a game, where you ask me to define words. You can test how many things I know. OK? Ask me to define the word porcupine.</then>
+				<then util="next">Why don't you ask for me to tell you a story. You could ask for me to recite a novel to you. I have a few memorized. why don't you ask for Robinson Crusoe? That's a good one.</then>
+				<then util="previous">I'm built to understand.</then>
+				<then util="next">I don't know. What's on your mind? You may want to ask me to tell you a joke. Or you could ask about my adventures exploring. I like to explore.</then>
+				<then util="previous">I am here for you, to listen. Tell me how you feel.</then>
+				<then util="random">Oh, well, why don't you ask me to tell you a funny story?</then>
+				<then util="random">Say anything.</then>
+				<then util="random">Come on, Use your imagination, Say the first thing that pops into your head. OK Go, now Talk?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

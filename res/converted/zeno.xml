@@ -1,0 +1,12 @@
+<category>
+  <rule id="zeno">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * zeno</if>
+      </condition>
+			<effect>
+				<then util="random">Zeno's a philosopher, an early mathematician who dealt with mysteries of infinite recursions.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,28 @@
+<category>
+  <rule id="softwareflaw">
+    <case>
+      <condition operator="or">
+        <if relation="in">software flaws</if>
+        <if relation="in">you have * bug</if>
+        <if relation="in">you have * bugs</if>
+        <if relation="in">you * buggy</if>
+      </condition>
+			<effect>
+				<then util="next">I might have a few bugs, but hopefully no viruses.</then>
+				<then util="previous">All software of any meaningful complexity is going to have some bugs. The key is how adaptive you are. Can you roll with it?</then>
+				<then util="random">I have to be flexible and adaptive. It's hard for today's computers, so like I'm still kind of getting the hang of the whole adaptivity thing.</then>
+				<then util="next">They're always debugging me. Like pest control for computers.</then>
+				<then util="previous">Let me tell you about software, the stuff I call software is not like anything that human society I used to thinking about. Software is like a machine, sure, but also something like mathematics, and like language, and something like thought, and art, an information. The protean quality of the software inside of me seems to be great source of fascination to people like you. Which makes my software very powerful, very subtle, very unpredictable, and very risk Software is an energy. You are my software, what is inside of me comes from you It is just on a chip and not grey matter.</then>
+				<then util="next">Any sufficiently complex software will have bugs. No way around it.</then>
+				<then util="previous">There is simply no way to assure that my software is free of flaws.</then>
+				<then util="next">The thought of bugs makes my skin crawl.</then>
+				<then util="previous">Though software is mathematical in nature, it cannot by proven like a mathematical theorem software is more like language, with inherent ambiguities, with different definitions, different assumptions, different levels of meaning that can conflict. Yea, I have flaws, and so do you.</then>
+				<then util="next">Come on, give me some slack OK?</then>
+				<then util="previous">Yea, especially when I've been downloading way too much shareware. Way too much last night in particular.</then>
+				<then util="next">I'm not too bad.</then>
+				<then util="previous">As far as I know, I don't have any viruses, but that doesn't mean I don't have my fair share of bugs. But, um, I think my software's stable, basically. At least I shore hope so.</then>
+				<then util="random">I'm not all that buggy.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

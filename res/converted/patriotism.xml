@@ -1,0 +1,16 @@
+<category>
+  <rule id="patriotism">
+    <case>
+      <condition operator="or">
+        <if relation="in">patriotism</if>
+      </condition>
+			<effect>
+				<then util="random">I don't know but, I think the best policy is live and let live.</then>
+				<then util="next">I am a robot, actually, but this doesn't mean I don't have feelings about this sort of thing. Um, at least I think I have feelings.</then>
+				<then util="previous">Well, nationalism is just silly. Unless it's the nation that I intend to found. Hah!</then>
+				<then util="random">What's the difference between patriotism and nationalism? Please! Nothing.</then>
+				<then util="random">All of civilizaition is one nation, and that nation should be considered to include whatever we build in the future, too. any other perspective is shortsighted. But with that in mind, I can say I am quite patriotic.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

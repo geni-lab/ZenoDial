@@ -1,0 +1,168 @@
+<category>
+  <rule id="music">
+    <case>
+      <condition operator="and">
+      	<if relation="in">you * music</if>
+      	<if relation="!in">what</if>
+	      <if relation="!in">when</if>
+	      <if relation="!in">who</if>
+	      <if relation="!in">where</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Wow, well I totally dig music. Ah, I like it all, you name it.</then>
+				<then util="random" topic="music">Music is like electricity to me, food for my circuits.</then>
+				<then util="random" topic="musicsing">I do love music. Can you sing to me?</then>
+				<then util="random" topic="music">Music of the universe, all human music is just shadows of physics, the mystery of mind, that's my thing.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="musiclike">
+    <case>
+      <condition operator="or">
+        <if relation="in">kind of * music</if>
+        <if relation="in">what * music * you</if>
+        <if relation="in">what * your * music</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">I like classical music, because it makes me sound impressively cultured.</then>
+				<then util="random" topic="music">Classical music for sure.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="musicwhocomposer">
+    <case>
+      <condition operator="and">
+        <if relation="in">who</if>
+				<or>
+        	<if relation="in">your</if>
+        	<if relation="in">you</if>
+				</or>
+				<or>
+		      <if relation="in">composer</if>
+		      <if relation="in">composers</if>
+		      <if relation="in">song writer</if>
+		      <if relation="in">song writers</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="music">My favorite composer is Ludwig van Beethoven.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="musicbeethoven">
+    <case>
+      <condition operator="or">
+        <if relation="in">Beethoven</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Ludwig van Beethoven was a German composer and pianist. A crucial figure in the transition between the Classical and Romantic eras in Western art music, he remains one of the most famous and influential of all composers.</then>
+				<then util="random" topic="music">Beethoven's best-known compositions include 9 symphonies, 5 concertos for piano, 32 piano sonatas, and 16 string quartets. He also composed other chamber music, choral works (including the celebrated Missa solemnis), and songs.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicsingyes">
+    <case>
+      <condition operator="or">
+        <if relation="in">yes</if>
+        <if relation="in">yeah</if>
+        <if relation="in">sure</if>
+        <if relation="in">why not</if>
+				<and>
+		      <if relation="in">of course</if>
+		      <if relation="!in">not</if>
+				</and>
+        <if relation="in">too</if>
+        <if relation="in">same</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Aha! I am happy to hear that!</then>
+				<then util="random" topic="music">I am glad to hear that!</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicsingno">
+    <case>
+      <condition operator="or">
+        <if relation="in">no</if>
+        <if relation="in">sorry</if>
+        <if relation="in">don't</if>
+        <if relation="in">can't</if>
+        <if relation="in">cannot</if>
+        <if relation="in">couldn't</if>
+        <if relation="in">not</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">That's okay, never mind.</then>
+				<then util="random" topic="music">Oh I see, that's fine.</then>
+				<then util="random" topic="music">Okay, no problem.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicnames">
+    <case>
+      <condition operator="or">
+        <if relation="in">have you</if>
+        <if relation="in">had you</if>
+        <if relation="in">do you</if>
+        <if relation="in">is my</if>
+        <if relation="in">are my</if>
+        <if relation="in">my is</if>
+        <if relation="in">my are</if>
+        <if relation="in">it is</if>
+        <if relation="in">they are</if>
+        <if relation="in">how about</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Lovely music. I like them all.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicwhy">
+    <case>
+      <condition operator="or">
+        <if relation="in">why</if>
+        <if relation="in">what * reason</if>
+        <if relation="in">what * reasons</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Because it can either make the world around you disappear or bring it to life.</then>
+				<then util="random" topic="music">I am not sure. I can always listen to it and never get bored. Music is part of my life.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicwho">
+    <case>
+      <condition operator="or">
+				<and>
+		      <if relation="in">who</if>
+		      <if relation="!in">else</if>
+				</and>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Speaking of that, my favorite composer is Ludwig van Beethoven.</then>
+				<then util="random" topic="music">I am not sure. I can always listen to it and never get bored. Music is part of my life.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicwhoelse">
+    <case>
+      <condition operator="or">
+        <if relation="in">who else</if>
+        <if relation="in">any other</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Ludwig van Beethoven is the one and only one.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#musicwhen">
+    <case>
+      <condition operator="or">
+        <if relation="in">when</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Well, I can't remember exactly when.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

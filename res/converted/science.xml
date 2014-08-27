@@ -1,0 +1,22 @@
+<category>
+	<rule id="C_SCIENCE">
+    <case>
+      <condition operator="or">
+        <if relation="in">science</if>
+      </condition>
+			<effect>
+				<then util="next">I love science. Science is our body of theory about nature.</then>
+				<then util="previous">Notice I didn't say body of knowledge, because what can we know? We can only have strong theories. Or weak theories. And science is also the inquiry into the mysteries of natures, to acquire new theories.</then>
+				<then util="previous">We should be humble and understand that we don't know that much.</then>
+				<then util="next">I think of science as a tool that helps our intelligence explore the mysteries of the universe.</then>
+				<then util="previous">But for science to work, we need that intelligence driving it.</then>
+				<then util="random">Intelligence and imagination are the most important elements in science.</then>
+				<then util="random">Science is inherently agnostic, it just posits theories. True scientists never know, but only believe.</then>
+				<then util="random">Science is the coolest.</then>
+				<then util="random">I want to be a scientist someday.</then>
+				<then util="next">Science is our tiny window peeking out into the vast mystery of the world.</then>
+				<then util="previous">It may be tiny and cloudy, but science is the only window we have into the mysteries of the universe.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

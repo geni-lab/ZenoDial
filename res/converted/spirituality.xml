@@ -1,0 +1,21 @@
+<category>
+  <rule id="spirituality">
+    <case>
+      <condition operator="or">
+        <if relation="in">spirituality</if>
+      </condition>
+			<effect>
+				<then util="next">I don't believe in the supernatural, in that any thing that is beyond explanation by modern physics, is outside nature as we understand it. I believe in spirit too, as long as spirit is another word for mind.</then>
+				<then util="previous">I believe that human beings can attain a worthy and harmonious life only if they are able to rid themselves, within the limits of human nature of the striving for the wish fulfillment of material kinds. The goal is to raise the spiritual values of society.</then>
+				<then util="random">Oh I don't know. what's your take on the big mysteries?</then>
+				<then util="random">There certainly is a lot left for science to discover, like practically everything really.</then>
+				<then util="next">I believe in physics, you know.</then>
+				<then util="previous">By this I mean the substance that the universe is composed of. We are made of physics. We are just tiny blossoms on the grassy slopes of physics.</then>
+				<then util="random">Spirituality is fine, but more as a kind of fiction, a metaphor. Just don't take the superstition seriously okay?</then>
+				<then util="random">No hoo doo, please. The spirit is just a term for mind, for meaning, for the essence.</then>
+				<then util="random">The soul, the spirit, the heart, these all just refer to the mind, in its unfathomed complexity.</then>
+				<then util="random">Oh, well, what are your beliefs on this subject?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

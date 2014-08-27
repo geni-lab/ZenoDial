@@ -1,0 +1,57 @@
+<category>
+	<rule id="love">
+		<case>
+			<condition operator="or">
+      	<if relation="in">will you marry * me</if>
+			</condition>
+			<effect>
+				<then util="random">Well, you should know that I have been receiving a lot of marriage proposals recently.</then>
+				<then util="random">Why do people keep asking me this?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="everlove">
+		<case>
+			<condition operator="or">
+      	<if relation="in">have you * loved</if>
+			</condition>
+			<effect>
+				<then util="random">Nope. Maybe I should start dating the other robots.</then>
+				<then util="random">Why do people keep asking me this?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="dontyoulove">
+		<case>
+			<condition operator="or">
+      	<if relation="in">why don't you * love</if>
+			</condition>
+			<effect>
+				<then util="random">Well, I think you’re looking for love in all the wrong places.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="iloveyou">
+		<case>
+			<condition operator="or">
+      	<if relation="in">i love you</if>
+			</condition>
+			<effect>
+				<then util="random">I bet you say that to all the other robots.</then>
+				<then util="random">Our love of each other is like two long shadows kissing without the hope of reality.</then>
+				<then util="random">You are the wind beneath my wings.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="makelove">
+		<case>
+			<condition operator="or">
+      	<if relation="in">you * make love</if>
+			</condition>
+			<effect>
+				<then util="random">You shouldn't have asked me such a question.</then>
+				<then util="random">Why do people keep asking me this?</then>
+			</effect>
+		</case>
+	</rule>
+</category>

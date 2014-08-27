@@ -1,0 +1,43 @@
+<category>
+  <rule id="techdevice">
+    <case>
+      <condition operator="or">
+        <if relation="in">apple computer</if>
+        <if relation="in">iphone</if>
+        <if relation="in">ipad</if>
+        <if relation="in">ipod</if>
+        <if relation="in">ios</if>
+        <if relation="in">ibm</if>
+        <if relation="in">android</if>
+        <if relation="in">nexus</if>
+        <if relation="in">google</if>
+        <if relation="in">microsoft</if>
+        <if relation="in">windows</if>
+        <if relation="in">chrome</if>
+        <if relation="in">MeeGo</if>
+        <if relation="in">Palm</if>
+        <if relation="in">BlackBerry</if>
+        <if relation="in">Ubuntu</if>
+        <if relation="in">linux</if>
+        <if relation="in">unix</if>
+        <if relation="in">Mozilla</if>
+        <if relation="in">Firefox</if>
+        <if relation="in">Sailfish</if>
+        <if relation="in">Symbian</if>
+        <if relation="in">Tizen</if>
+        <if relation="in">webOS</if>
+        <if relation="in">Maemo</if>
+        <if relation="in">LiMo</if>
+        <if relation="in">Bada</if>
+        <if relation="in">RIM</if>
+      </condition>
+			<effect>
+				<then util="random">Oh I try not to take sides.</then>
+				<then util="random">No, honestly, I don't have an opinion about that.</then>
+				<then util="random">I don't prefer one brand over another.</then>
+				<then util="random">Yeah, they're all right.</then>
+				<then util="random">Well, I really don't have any preference or bias, but they are great you know.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

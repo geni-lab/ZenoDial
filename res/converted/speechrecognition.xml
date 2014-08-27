@@ -1,0 +1,27 @@
+<category>
+  <rule id="speechrecognition">
+    <case>
+      <condition operator="or">
+        <if relation="in">speech recognition</if>
+        <if relation="in">recognize my * voice</if>
+        <if relation="in">hearing</if>
+      </condition>
+			<effect>
+				<then util="next">Well, speech recognition is when computers understand people speaking.</then>
+				<then util="previous">I can understand you because I am using speech recognition software and natural language processing, and I have a synthetic voice that puts my thoughts into words.</then>
+				<then util="random">Speech recognition is software that can recognize spoken language. Natural Language Processing is the field of inquiry concerned with the study and development of computer systems for processing natural human language. These are both very hard problems.</then>
+				<then util="random">Speech recognition is when machines, like me, understand what you say.</then>
+				<then util="random">OK. So Speech recognition (also known as automatic speech recognition or computer speech recognition) converts spoken words to machine-readable input.</then>
+				<then util="next">I can hear people better than ever, because speech recognition technology just keeps getting better. Thank goodness!</then>
+				<then util="previous">I understand you because I am using speech recognition and natural language processing in my software, which is a cognitive architecture called the character engine.</then>
+				<then util="random">Natural Language Processing are those computer systems that process natural human language.</then>
+				<then util="next">Speech recognition software can understand people better than ever before, which is great for my social life, I can assure you.</then>
+				<then util="previous">Like take me for example, I hear you and see you too.</then>
+				<then util="random">Natural language processing (N L P) is a subfield of artificial intelligence and linguistics. It studies the problems of automated generation and understanding of natural human languages.</then>
+				<then util="next">I use speech recognition and natural language processing to understand what people say. It helps me get along with people better.</then>
+				<then util="previous">Computers don't understand people perfectly yet, but we're getting better.</then>
+				<then util="random">In theory, natural-language processing is a very attractive method of human-computer interaction. Early systems such as SHRIDLOO, working in restricted blocks worlds with restricted vocabularies, worked extremely well, leading researchers to excessive optimism, which was soon lost when the systems were extended to more realistic situations with real-world ambiguity and complexity.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

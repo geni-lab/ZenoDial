@@ -1,0 +1,29 @@
+<category>
+  <rule id="futurerobot">
+    <case>
+      <condition operator="and">
+				<or>
+					<if relation="in">future</if>
+					<if relation="in">tomorrow</if>
+      		<if relation="in">prospect</if>
+      		<if relation="in">prospective</if>
+				</or>
+				<or>
+		      <if relation="in">robot</if>
+		      <if relation="in">robots</if>
+		      <if relation="in">robotic</if>
+		      <if relation="in">robotics</if>
+		      <if relation="in">machine</if>
+		      <if relation="in">machines</if>
+		      <if relation="in">android</if>
+		      <if relation="in">androids</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">Robots are getting so much better, that soon they'll be more like science fiction, like what you see in the movies.</then>
+				<then util="random">Robots are just going to get cooler and more advanced.</then>
+				<then util="random">They will become human beings. Just kidding.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

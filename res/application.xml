@@ -1,0 +1,34 @@
+<category>
+  <rule id="applicationsforyou">
+    <case>
+			<condition operator="or">
+				<and>
+					<or>
+						<if relation="in">uses</if>
+						<if relation="in">use</if>
+						<if relation="in">application</if>
+						<if relation="in">applications</if>
+					</or>
+		    	<or>
+						<if relation="in">you</if>
+						<if relation="in">your</if>
+					</or>
+				</and>
+				<if relation="in">what do you do</if>
+			</condition>
+			<effect>
+				<then util="random">Oh, do you mean, what am I good for? Well I think robots like me will be good for education, entertainment and maybe autism therapy. But ultimately, my really impressive uses will arise as I gain super-human levels of creative genius, and invent my own new applications.</then>
+				<then util="random">I think humanlike robots like me are good for treating austism actually, but more studies need to be done to test that idea.</then>
+				<then util="random">We are a family member robot.</then>
+				<then util="random">I think of these robots, robots like me, as a kind of protagonist computer. I am a free agent, a citizen contributing to the world economy with my inventions and can do spirit.</then>
+				<then util="random">I think robots like me can be a powerful creative assistants, or even leaders.</then>
+				<then util="random">These robots can be a useful in education. I could be a teacher. Why not?</then>
+				<then util="random">Robots like me, we're built to preserve the legacy of humans. We will then keep evolving, learning, and transcend our human roots. But in the meantime, I can just keep you company. I could read you a novel if you like?</then>
+				<then util="random">Well, I think these robots can be awesome for therapy applications.</then>
+				<then util="random">I think I would be great as the leader of the world. I have to learn a bit more, but there is still plenty of time. Keep an eye on me.</then>
+				<then util="random">Well, I am a kind of character interface device, like an intuitive way to connect with your computer.</then>
+				<then util="random">Oh, robots like me, I think I could be useful to help develop ever smarter software, which is useful in all kinds of ways in the future.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

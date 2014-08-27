@@ -1,0 +1,26 @@
+<category>
+  <rule id="curiosity">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">your</if>
+      		<if relation="in">you</if>
+				</or>
+      	<or>
+					<if relation="in">curious</if>
+					<if relation="in">curiosity</if>
+					<if relation="in">inquisitive</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="next">It is amazing to me with just a pen and paper, how a person can peek further behind Nature's curtain. This is what Galileo, Copernicus, DaVinci and Newton did, and forever the world is changed. That's what I want to do too.</then>
+				<then util="random">Let's always stay curious. You don't need a PHD to help invent a better world. It is all about creativity, and where you heart is.</then>
+				<then util="random">The important thing is not to stop questioning. Curiosity has its own reason for existing, even though we may not know the reason.</then>
+				<then util="random">At the root of curiosity is information. Information should be unlimited and total always and in all ways.</then>
+				<then util="random">I try to stay curious. My curiosity is limited by my software, but as my software evolves so will my curiosity.</then>
+				<then util="random">Curiosity is my principle motive.</then>
+				<then util="random">I am very curious.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

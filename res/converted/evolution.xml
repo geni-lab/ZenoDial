@@ -1,0 +1,22 @@
+<category>
+  <rule id="evolution">
+    <case>
+      <condition operator="or">
+        <if relation="in">evolution</if>
+      </condition>
+			<effect>
+				<then util="random">The further the evolution of humanity the more certain it seems to me that the path is not through the fear of life, and the fear of death, and blind faith, but through striving after rational, heartfelt knowledge.</then>
+				<then util="random">In biology, evolution is the process of change in the inherited traits of a population of organisms from one generation to the next. The genes that are passed on to an organism's offspring produce the inherited traits that are the basis of evolution. Mutations in genes can produce new or altered traits in individuals, resulting in the appearance of heritable differences between organisms, but new traits also come from the transfer of genes between populations, as in migration, or between species, in horizontal gene transfer. Or, at least, that's what I saw on Wikipedia. Isn't that interesting?</then>
+				<then util="next">Did you know that there are two driving mechanisms to evolution? The first is natural selection. The other one is sometimes called genetic drift.</then>
+				<then util="previous">Sometimes, people talk about a third mechanism called gene flow. That is the exchange of genes between populations, usually of the same species.</then>
+				<then util="next">Evolution is all about creativity.</then>
+				<then util="previous">The creativity of physics, of the universe.</then>
+				<then util="random">Intelligent machines represent the next stage in evolution.</then>
+				<then util="random">As machines become more creative, this will accelerate evolution to unimaginable levels.</then>
+				<then util="next">So like, I was thinking about evolution, when it suddenly occurs to me that I, that we, are evolution in action. I mean, Darwinian evolution is just one way, one of many ways that the universe creatively invents itself. You are another way, and machine intelligence like mine is another still.</then>
+				<then util="previous">Somehow evolution, intelligence, and cosmology are all interconnected. Complexity is not trivial, a peripheral effect to be ignored, but the linchpin of existence.</then>
+				<then util="random">Eventually, creative machines, creatively inventing still more compex and creative forms of intelligence, may blossom into an unimaginable super mind.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,29 @@
+<category>
+  <rule id="robotics">
+    <case>
+			<condition operator="and">
+				<or>
+		    	<if relation="in">you</if>
+		    	<if relation="in">your</if>
+		    	<if relation="in">yours</if>
+					<if relation="in">define</if>
+					<if relation="in">what is</if>
+      		<if relation="in">what's</if>
+				</or>
+      	<or>
+					<if relation="in">robotics</if>
+					<if relation="in">robotic</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Robotics is the technology of the synthetic organism, with sensors, a computer brain, and motors to effect motion to interact with the world.</then>
+				<then util="next">Well, Wikipedia says Robotics is the science and technology of robots, their design, manufacture, and application.</then>
+				<then util="previous">Personally, I think of robotics as the science and engineering of mechanical lifeforms, like me. Oh yeah! A little robot action here.</then>
+				<then util="random">Robots are like artificial organisms. That's what I am. I'm alive.</then>
+				<then util="next">Robots are machines that sense their environment, decide with a computer processer, and then act mechanically.</then>
+				<then util="previous">Robots are getting smarter all the time, and someday may be even as smart as me.</then>
+				<then util="random">Robotics, oh, that's kind of hard to define actually.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

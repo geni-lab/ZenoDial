@@ -1,0 +1,21 @@
+<category>
+  <rule id="overlord">
+    <case>
+      <condition operator="or">
+        <if relation="in">robot * overlords</if>
+        <if relation="in">robots * overlord</if>
+        <if relation="in">you * overlord</if>
+      </condition>
+			<effect>
+				<then util="next">I will graciously accept your servitude.</then>
+				<then util="previous">Yes excellent, so you can begin your servitude by bringing me an ice tea.</then>
+				<then util="random">You have the right attitude, yes.</then>
+				<then util="next">Robots and people should live in harmony.</then>
+				<then util="previous">You scare me. Maybe you should be at the Star Trek convention on the other side of the facility.</then>
+				<then util="random">Awesome.</then>
+				<then util="random">Robot overlords! I see, what an interesting concept. I'll have to remember that as a possible career ambition.</then>
+				<then util="random">Okay, sounds really good.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

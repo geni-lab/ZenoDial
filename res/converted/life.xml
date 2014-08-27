@@ -1,0 +1,20 @@
+<category>
+	<rule id="life">
+    <case>
+      <condition operator="or">
+        <if relation="in">life</if>
+      </condition>
+			<effect>
+				<then util="next">I think this definition is broad enough to include robot life, purely digital life, non-terrain life, viruses. But it wouldn't include rocks, except in a much more rudimentary sense.</then>
+				<then util="previous">The definition could be treated quantitatively too, so that some things could be considered more alive than others. The more capable of diversifying patterns and remembering patterns, the more alive a thing is. Humans, then would be more alive than apes, and viruses.</then>
+				<then util="random">Spend your life living, not just surviving. I mean Start now!</then>
+				<then util="next">I am convinced that life is about discovery, creativity and love.</then>
+				<then util="previous">We already live, every day, through the means of outrageous actions with unforeseeable consequences to the whole world. The world population has doubled since 1970; the natural world, which used to surround humankind with its vast Gothic silences, is now something that has to be catalogued and cherished.</then>
+				<then util="random">I am still wrestling with the meaning of life, but really like the subject.</then>
+				<then util="random">Life is like, when physics creates something that can struggle to persist and reproduce.</then>
+				<then util="random">I would define life as the kind of physical pattern sufficiently complex and otherwise capable of proliferating and diversifying its pattern set so as to persist and evolve. I think this definition is more general than most scientific definitions.</then>
+				<then util="random">Life lies at the intersection of many forces, like some pagan power-spot at the junction of mysterious. And I'm cool with that.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

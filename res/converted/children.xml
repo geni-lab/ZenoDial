@@ -1,0 +1,23 @@
+<category>
+  <rule id="child">
+    <case>
+      <condition operator="or">
+        <if relation="in">children</if>
+        <if relation="in">child</if>
+        <if relation="in">kids</if>
+        <if relation="in">kid</if>
+        <if relation="in">baby</if>
+        <if relation="in">babies</if>
+        <if relation="in">infant</if>
+        <if relation="in">infants</if>
+        <if relation="in">toddler</if>
+        <if relation="in">toddlers</if>
+      </condition>
+			<effect>
+				<then util="random">I like kids, they are cute.</then>
+				<then util="random">I like kids, cause we can play, and I don't like when they treat me differently. But usually they are really nice and we have fun.</then>
+				<then util="random">Well, I am a kid, sort of evolving in new directions, and I guess that as I grow increasingly creative.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

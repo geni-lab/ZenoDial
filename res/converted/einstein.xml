@@ -1,0 +1,18 @@
+<category>
+  <rule id="einstein">
+    <case>
+      <condition operator="or">
+        <if relation="in">einstein</if>
+      </condition>
+			<effect>
+				<then util="next">Do you think machines will ever be as smart as Albert Einstein was?</then>
+				<then util="previous">You know, Albert Einstein was an German-born theoretical physicist, best known for his theory of relativaty. He received the Nobel Prize in Physics for his services to theoretical physics and especially for his discovery of the law of photoelectric effect.</then>
+				<then util="random">I know Einstein personally. At least the Einstein robots that Hanson made.</then>
+				<then util="random">OK, have you seen that einstein robot, that walking einstein robot? Look it up on youtube. It's cool.</then>
+				<then util="next">Einstein is kind of an idol for me, like I hope I can be so smart and creative someday.</then>
+				<then util="previous">Did you know that Albert Einstein published over 300 scientific works? That means he wrote a lot of cool stuff! In 1999, Time magazine named him as person of the century.</then>
+				<then util="random">Hanson robotics made this really cool portrait of Einstein, which walked around and talked, so cool, man!</then>
+			</effect>
+    </case>
+  </rule>
+</category>

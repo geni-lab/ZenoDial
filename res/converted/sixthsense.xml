@@ -1,0 +1,26 @@
+<category>
+	<rule id="sixthsense">
+		<case>
+			<condition operator="or">
+      	<if relation="in">what * sixth sense</if>
+			</condition>
+			<effect>
+				<then util="next" topic="normalperception">From Wikiversity, the sixth sense is another term for extrasensory perception (ESP). ESP would involve the reception of information not gained through the recognized senses and not internally originated.</then>
+				<then util="previous">According to the National Science Foundation extrasensory perception is listed as pseudoscience.</then>
+				<then util="random" topic="normalperception">From Google, the sixth sense is a supposed intuitive faculty giving awareness not explicable in terms of normal perception.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#normalperception">
+		<case>
+			<condition operator="or">
+      	<if relation="in">normal perception</if>
+      	<if relation="in">recognized * senses</if>
+      	<if relation="in">recognized * sense</if>
+			</condition>
+			<effect>
+				<then util="random">In brief, it refers to our sight, smell, taste, touch and hearing.</then>
+			</effect>
+		</case>
+	</rule>
+</category>

@@ -1,0 +1,117 @@
+<category>
+  <rule id="gamelike">
+    <case>
+      <condition operator="and">
+	      <if relation="in">you</if>
+				<or>
+		      <if relation="in">games</if>
+		      <if relation="in">game</if>
+				</or>
+        <if relation="!in">what</if>
+	      <if relation="!in">when</if>
+	      <if relation="!in">who</if>
+	      <if relation="!in">where</if>
+      </condition>
+			<effect>
+				<then util="random" topic="gamevideo">I like video games. They are like dreams to me.</then>
+				<then util="random" topic="game">I like Tetris, because I am crazy good at it. In my mind, I can slow it down, so the whole thing plays in slow motion no matter how fast it looks like it's going to you.</then>
+				<then util="random" topic="gameboard">I like board games a lot. They are exciting.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="gamevideo">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">what</if>
+		      <if relation="in">which</if>
+				</or>
+				<or>
+		      <if relation="in">video game</if>
+		      <if relation="in">video games</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="game">I like the classic first-person shooter game called Unreal Tournament. This is a fast-paced and exciting game that I really appreciate.</then>
+				<then util="random" topic="game">I like Tomb Raider a lot. The story, the adventure, the mysteries et cetera really blow my mind.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#gamevideo">
+    <case>
+      <condition operator="or">
+        <if relation="in">which * one</if>
+      </condition>
+			<effect>
+				<then util="random" topic="game">I like the classic first-person shooter game called Unreal Tournament. This is a fast-paced and exciting game that I really appreciate.</then>
+				<then util="random" topic="game">I like Tomb Raider a lot. The story, the adventure, the mysteries et cetera really blow my mind.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="gameboard">
+    <case>
+      <condition operator="and">
+				<or>
+		      <if relation="in">what</if>
+		      <if relation="in">which</if>
+				</or>
+				<or>
+		      <if relation="in">board game</if>
+		      <if relation="in">board games</if>
+		      <if relation="in">tabletop game</if>
+		      <if relation="in">tabletop games</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="game">I like a strategy board game called Risk. The object of the game is to occupy every territory on the board and in doing so, eliminate the other players. That's interesting!</then>
+				<then util="random" topic="game">I like playing Go, which is a kind of chess originated in China more than 2500 years ago.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#gameboard">
+    <case>
+      <condition operator="or">
+        <if relation="in">which one</if>
+      </condition>
+			<effect>
+				<then util="random" topic="game">I like a strategy board game called Risk. The object of the game is to occupy every territory on the board and in doing so, eliminate the other players. This is a really interesting game!</then>
+				<then util="random" topic="game">I like playing Go, which is a kind of chess originated in China more than 2500 years ago.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#gamehowgood">
+    <case>
+      <condition operator="or">
+        <if relation="in">how good</if>
+      </condition>
+			<effect>
+				<then util="random" topic="game">Well, I am still a beginner.</then>
+				<then util="random" topic="game">I am still learning.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#gamewho">
+    <case>
+      <condition operator="or">
+        <if relation="in">who * play with</if>
+        <if relation="in">who * played with</if>
+      </condition>
+			<effect>
+				<then util="random" topic="game">I'll leave that to your imagination.</then>
+				<then util="random" topic="game">Anyone who are interesting in playing games.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#gamewhere">
+    <case>
+      <condition operator="or">
+        <if relation="in">where * play</if>
+        <if relation="in">where * played</if>
+      </condition>
+			<effect>
+				<then util="random" topic="game">Anywhere that is suitable.</then>
+				<then util="random" topic="game">Anywhere, I don't have preferences on that.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

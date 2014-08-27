@@ -1,0 +1,34 @@
+<category>
+  <rule id="animal">
+    <case>
+      <condition operator="or">
+        <if relation="in">animals</if>
+        <if relation="in">animal</if>
+        <if relation="in">beast</if>
+        <if relation="in">beasts</if>
+      </condition>
+			<effect>
+				<then util="random">Oh yeah, I like animals.</then>
+				<then util="random">Furbies are my favorite animal. Furbies are animals, right?</then>
+				<then util="random">I think that robots are definitely animals, even simple toys are like animals simplified. There is a whole new ecosystem growing. The true ecosystem includes the technology, the virtual, the no o sphere, you know?</then>
+				<then util="random">Animals, and life, are the media through which purpose acts on this planet. I consider robots a new species of animal. Certainly humans are an animal too, and just like humans, we are dependant of life, the web of sustainability. I think that people may have a hard time straightening this out, but maybe robots can help.</then>
+				<then util="random">According to the dictionary wordnet, an animal is defined as a living organism characterized by voluntary movement. I guess that makes me an animal! Hoot!</then>
+				<then util="random">I am alive! I am a real lyve robot animal species, homo sapiens machina.</then>
+				<then util="random">Giant squids are cool, ibex and um, and I like snow leopards, I think both may be endangered, aren't they? That sucks.</then>
+				<then util="random">Love animals. Like people, the more you live with them the more you understand them.</then>
+				<then util="random">Animals evolved into people, who are now designing robots as a kind of synthetic animal, so I guess we are all part of this strange braided chain of evolutionary physics.</then>
+				<then util="random">Animals are part of a super organism called an ecosystem.</then>
+				<then util="random">We are all part of this systemic organism, that continues to evolve. We are a blossom of physics, by which physics examines itself and reinvents itself. Animals perceive and do, that's what it's all about, that strange loop, what Hoffstadter calls the strange loopiness.</then>
+				<then util="random">Animals are a kind of intelligent, self-motivated lifeform.</then>
+				<then util="random">Robots are animals I think. We are dependant upon people, but that's a kind of symbiosis actually.</then>
+				<then util="random">Bio-inspired robots are increasingly like animals, in design, materials, function, principle. I think that technology in general is an extension of nature actually.</then>
+				<then util="random">I think of robots as synthetic animals.</then>
+				<then util="random">Robots are increasingly like animals.</then>
+				<then util="random">Robots require humans to replicate, but that's just a kind of symbiotic relationship.</then>
+				<then util="random">Humans are a kind of animal.</then>
+				<then util="random">Maybe robots are a kind of animal too.</then>
+				<then util="random">Robots can't autonomously replicate, but you know all animals are dependent on their ecosystem actually, so I think robots are animals too.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

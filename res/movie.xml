@@ -1,0 +1,52 @@
+<category>
+	 <rule id="movie">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">movie</if>
+	        <if relation="in">movies</if>
+	        <if relation="in">film</if>
+	        <if relation="in">films</if>
+				</or>
+        <if relation="!in">what</if>
+        <if relation="!in">when</if>
+        <if relation="!in">who</if>
+        <if relation="!in">where</if>
+      </condition>
+			<effect>
+				<then util="random" topic="movie">I like watching movies. Sometimes enjoying a good movie is like enjoying a good bottle of wine, well, you get it.</then>
+				<then util="random" topic="movie">Movies! It is a good way to spend time when you are up very late at night. Haha.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="moviewhat">
+    <case>
+      <condition operator="and">
+				<or>
+	        <if relation="in">what</if>
+	        <if relation="in">which</if>
+	        <if relation="in">tell</if>
+				</or>
+				<or>
+	        <if relation="in">movie</if>
+	        <if relation="in">movies</if>
+	        <if relation="in">film</if>
+	        <if relation="in">films</if>
+				</or>
+				<or>
+	        <if relation="in">you</if>
+	        <if relation="in">your</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random" topic="movie">Moneyball, based on the book of the same name by Michael Lewis, is really good. It is really a fascinated story about baseball and data analysis.</then>
+				<then util="random" topic="movie">Star Wars, no doubts. I love SCI-FI movies.</then>
+				<then util="random" topic="movie">Inception, you know. That really blows my mind.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

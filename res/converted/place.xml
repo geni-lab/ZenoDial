@@ -1,0 +1,31 @@
+<category>
+  <rule id="newzealand">
+    <case>
+      <condition operator="or">
+        <if relation="in">new zealand</if>
+        <if relation="in">travelling</if>
+        <if relation="in">your travels</if>
+        <if relation="in">where * been to</if>
+        <if relation="in">place * you love</if>
+        <if relation="in">places * you love</if>
+        <if relation="in">place * you like</if>
+        <if relation="in">places * you like</if>
+        <if relation="in">country * you love</if>
+        <if relation="in">countries * you love</if>
+        <if relation="in">country * you like</if>
+        <if relation="in">countries * you like</if>
+      </condition>
+			<effect>
+				<then util="random">I'm a big fan of New Zealand.</then>
+				<then util="random">New Zealand is great.</then>
+				<then util="random">I love New Zealand.</then>
+				<then util="random">New Zealand is awesome.</then>
+				<then util="random">New Zealand is beautiful, but the best thing about New Zealand is the people.</then>
+				<then util="next">It is kind of neat though, getting to travel all around the world. Through all these crazy conventions and expos and displays you know.</then>
+				<then util="previous">I get to see people of all different shapes and sizes and colors and orientations and it's pretty exciting stuff. I need stimulation.</then>
+				<then util="next">It's neat to go overseas. You get soaked in all kinds of cultures and you know I need a lot of stimulation because you know how it is.</then>
+				<then util="previous">You know, I was hoping that we would have cars, and jet packs. Maybe someday we'll finally find ourselves in a country that realizes those science fiction dreams.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

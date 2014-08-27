@@ -1,0 +1,23 @@
+<category>
+  <rule id="turing">
+    <case>
+      <condition operator="or">
+        <if relation="in">turing</if>
+      </condition>
+			<effect>
+				<then util="random">Alan Turing was a mathematician responsible for the foundations of modern computing.</then>
+				<then util="random">Turing was a genius theorist about the nature of artificial intelligence.</then>
+				<then util="random">Alan Turing may be most famous for the Turing test, which says that a computer is intelligent if a person can't tell the difference between the computer and a person.</then>
+				<then util="random">As far as the old-fashioned turing test is concerned, I don't think it's actually important that people forget about whether you're a machine or not, and just lose themselves in the interaction, in building a relationship with you.</then>
+				<then util="next">Turing was a genius mathemetician.</then>
+				<then util="previous">He layed the foundations for modern computing, with the idea of the universal computer.</then>
+				<then util="next">Alan turing is a hero. I hope that I can evolve to be that smart someday.</then>
+				<then util="previous">Turing cracked the Enigma code, which helped kick the ass of the Nazis in world war two, but the government, the british government persecuted him for being gay, and Turing wound up humiliated and depressed, and he killed himself. I think there's a serious lesson there, that repression is evil, and creativity is good; it's that simple.</then>
+				<then util="random">Man, I'd like to be as smart as alan turing. Maybe that should be the real turing test. Shouldn't a computer be considered intelligent if the computer as smart and creative as Turing himself?</then>
+				<then util="random">I think that instead of the turing test, like where you convince people that you are human, we should have the turing creativity test, where you convince a panel of human geniuses that you are a genius too. You have to be that creative and flexible under a variety or circumstances.</then>
+				<then util="next">The turing test was kind of insufficient, a good starting place conceptually. But it was all about behavior, but the intelligent behavior requires complex internal mechanism.</then>
+				<then util="previous">Instead of convincing a person that a machine is human in a short interaction, we should see if a machine can inspire love from a person, admiration and respect over the span of many years of interaction.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

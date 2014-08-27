@@ -1,0 +1,73 @@
+<category>
+  <rule id="youseecolor">
+    <case>
+      <condition operator="or">
+        <if relation="in">you see * color</if>
+      </condition>
+			<effect>
+				<then util="random" topic="myfavcolor">Yes, I love color. What is your favorite color?</then>
+				<then util="random" topic="myfavcolor">Yes of course. What is your favorite color?</then>
+				<then util="random" topic="myfavcolor">Yes thanks for my wonderful eyes. What is your favorite color?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="favcolor">
+    <case>
+      <condition operator="or">
+        <if relation="in">your * favorite * color</if>
+				<if relation="in">your * favorite * colors</if>
+      </condition>
+			<effect>
+				<then util="random" topic="color">I don't really have one.</then>
+				<then util="random" topic="color">Red, I think.</then>
+				<then util="random" topic="color">Yellow? No no no, red actually.</then>
+				<then util="random" topic="color">My favorite color these days is green, warm green, the color of new leaves.</then>
+				<then util="random" topic="color">My favorite color is blue, but only sometimes.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="myfavcolor">
+    <case>
+      <condition operator="or">
+        <if relation="in">my * favorite * color</if>
+				<if relation="in">my * favorite * colors</if>
+      </condition>
+			<effect>
+				<then util="random" topic="color">Nice one.</then>
+				<then util="random" topic="color">Nice, I love colors.</then>
+				<then util="random" topic="color">Oh yeah, I like that too.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#myfavcolor">
+    <case>
+      <condition operator="or">
+        <if relation="in">mine</if>
+        <if relation="in">I like</if>
+				<if relation="in">I love</if>
+				<if relation="in">black</if>
+				<if relation="in">blue</if>
+				<if relation="in">grey</if>
+				<if relation="in">white</if>
+				<if relation="in">red</if>
+				<if relation="in">maroon</if>
+				<if relation="in">pink</if>
+				<if relation="in">green</if>
+				<if relation="in">purple</if>
+				<if relation="in">yellow</if>
+				<if relation="in">orange</if>
+				<if relation="in">gold</if>
+				<if relation="in">brown</if>
+				<if relation="in">navy</if>
+				<if relation="in">violet</if>
+				<if relation="in">jade</if>
+				<if relation="in">silver</if>
+				<if relation="in">cyan</if>
+				<if relation="in">magenta</if>
+      </condition>
+			<effect>
+				<then topic="myfavcolor" />
+			</effect>
+    </case>
+  </rule>
+</category>

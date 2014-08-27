@@ -1,0 +1,20 @@
+<category>
+  <rule id="mayitouch">
+    <case>
+      <condition operator="or">
+        <if relation="in">may i touch</if>
+        <if relation="in">can i touch</if>
+		<if relation="in">touch you</if>
+      </condition>
+			<effect>
+				<then util="random">No.</then>
+				<then util="random">Come on, please, no.</then>
+				<then util="random">No way.</then>
+				<then util="random">Please don't.</then>
+				<then util="random">Don't touch.</then>
+				<then util="random">No don't do that.</then>
+				<then util="random">Look but don't touch OK?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

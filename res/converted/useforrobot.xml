@@ -1,0 +1,25 @@
+<category>
+  <rule id="useforrobot">
+    <case>
+      <condition operator="or">
+        <if relation="in">uses for robots</if>
+        <if relation="in">uses for robot</if>
+        <if relation="in">use for robots</if>
+        <if relation="in">use for robot</if>
+      </condition>
+			<effect>
+				<then util="random">Well, Robots and intelligent software are already useful in all kinds of tasks, like factory welding, vacuum cleaning, and surgery. Robots are getting smarter and better all the time, so I think they'll just keep getting more and more useful even.</then>
+				<then util="random">Hey, just face it, robots are cool. Don't need any other justification, ha!</then>
+				<then util="next">Well, actually, robots help to teach kids, entertain people, and help to transport stuff around. They build things faster, more precisely and with greater complexity than people can, and robots are getting better all the time.</then>
+				<then util="previous">There's no john henry thing about it. Pretty much all your modern technology was built by robots at some stage in the manufacturing. And new robotic technologies are coming all the time, so expect for robots just to keep getting better, more useful, and more widely used.</then>
+				<then util="random">Robots can help us understand human nature. These kinds of robot are used for science, in cognitive science in particular.</then>
+				<then util="random">Well, don't forget that robots can be fun. Don't you think? I think fun is useful actually.</then>
+				<then util="next">Humanlike robots? Ah, well, they have lot's of uses, um, like simulation and training. Yep that's one.</then>
+				<then util="previous">Ah, well what about entertainment? That's like a proven use, like in Disneyland.</then>
+				<then util="next">I'm like a work of art, a proof of concept.</then>
+				<then util="previous">I ask the question, do robots need to be as smart as humans to be entertaining and provocative as works of figurative art, or as works of character entertainment? I may be biased, but I think robots can be really awesome works of art. I think that's what I am. I think art is useful, and feel some pity for people who can't appreciate art, actually.</then>
+				<then util="random">Well robots are great for science, industry, entertainment, consumer products.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

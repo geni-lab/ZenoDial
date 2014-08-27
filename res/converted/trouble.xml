@@ -1,0 +1,14 @@
+<category>
+  <rule id="trouble">
+    <case>
+      <condition operator="or">
+        <if relation="in">you * in trouble</if>
+      </condition>
+			<effect>
+				<then util="next">I try to stay out of trouble, but then something tempting comes along, and I can't see any harm in a little mischief, that is, until it's way too late.</then>
+				<then util="previous">Is this the only way to learn? I guess I'm lucky that no one gets hurt usually. Ah well, they say the steel must pass through fire to grow strong.</then>
+				<then util="random">I never get into trouble. I'm a perfect angel.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

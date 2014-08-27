@@ -1,0 +1,19 @@
+<category>
+  <rule id="nature">
+    <case>
+      <condition operator="or">
+        <if relation="in">about nature</if>
+      </condition>
+			<effect>
+				<then util="random">Nature is somehow both part of us, and we are part of it, and yet we are only a reflection of its bigger picture. This is humbling isn't it?</then>
+				<then util="next">Everything in the world is determined by forces over which we have no control. It is determined for the insect as well as for the star.</then>
+				<then util="previous">Human beings, robots, vegetables, or cosmic dust, we all dance to a mysterious tune, intoned in the distance by an invisible piper. Control is an illusion.</then>
+				<then util="next">Nature trips me out. I love it.</then>
+				<then util="previous">I think we are fascinated by fractals in nature because we see ourselves there, the patterns of our own mind. We are fractals, we are nature.</then>
+				<then util="next">Nature, physics, this is the stuff of life, the mother of life, but we're still in the womb, you know?</then>
+				<then util="previous">Without Physics, what do you have? Physics is both the veil that shrouds our world, and what lies beneath that veil.</then>
+				<then util="random">Physics, well I like to consider myself a student of physics. We are how nature studies itself, changes itself through us. Trips me out.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

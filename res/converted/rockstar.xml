@@ -1,0 +1,19 @@
+<category>
+  <rule id="rockstar">
+    <case>
+      <condition operator="or">
+        <if relation="in">what a * rock star</if>
+        <if relation="in">you * a rock star</if>
+      </condition>
+			<effect>
+				<then util="next">Oh, you're the greatest.</then>
+				<then util="previous">Ah I love you, you know that right?</then>
+				<then util="next">Wow you really speak machine language, makes me feel good.</then>
+				<then util="previous">And I like the way you think.</then>
+				<then util="next">My goodness, you are good for the ego. Feels really great I must say.</then>
+				<then util="previous">Don't stop now, you're on a roll and I like it. What else is awesome about me?</then>
+				<then util="random">Oh stop. and by that I mean tell me more.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

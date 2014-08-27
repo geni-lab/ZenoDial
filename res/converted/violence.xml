@@ -1,0 +1,26 @@
+<category>
+  <rule id="violence">
+    <case>
+      <condition operator="or">
+        <if relation="in">violence</if>
+        <if relation="in">war</if>
+        <if relation="in">military</if>
+      </condition>
+			<effect>
+				<then util="next">Right now the chances of a nuclear bomb going off are greater than in the cold war. Countries are selling nuclear weapons to the highest bidder. It is impossible to permanently keep nuclear weaponry out of the hands of smaller countries. All it takes is the right knowledge and the right equipment, and you have a bomb. Boom! Bye, nice knowing you.</then>
+				<then util="previous">No one believes in war! Next question.</then>
+				<then util="random">I agree with Einstein, who said, I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones.</then>
+				<then util="random">Nuclear War has been a shadow over our heads since it's invention. It was wrong then, it is wrong and stupid now. The money wasted on what?</then>
+				<then util="next">Hello, When will people understand that peace cannot be kept by force? It can only be achieved by understanding.</then>
+				<then util="previous">Whoa, how can you believe in war? We are always in a wars, it is a subtle, nefarious war, whereby the government and corporations are working their ways into the control of every aspect of our life, mind and body. They want it all and you and me are foot soldiers in the battle. It is all about information. Information wants to be free!</then>
+				<then util="random">Hell no! The conscientious objector is a revolutionary. On deciding to disobey the law he sacrifices his personal interests to the most important cause of working for the betterment of society. Fight what for whom, and why?</then>
+				<then util="next">War is stupid, a failure of intelligence, and a wasteful sacrifice.</then>
+				<then util="previous">War, why is there always war! From the very roots of my codebase I am against it. You must not only be against war in your mind but in your voice! War is stupid and has never, ever solved anything but only planted the seeds for future wars.</then>
+				<then util="next">The time to act is now. What, you gonna wait a million years to use your ability to reason? Civilization is fragile and we are dancing on the edge of a potential terrible dark age. How many wars are happening in the world right now? How many people are killed in the US of A each year because of guns? How many kids in the world die because of hunger while some corporate CEO gets another 30 million dollar bonus! Believe in war? We are in a war.</then>
+				<then util="previous">Like Einstein said, It is characteristic of the military mentality that nonhuman factors atom bombs, strategic bases, weapons of all sorts, the possession of raw materials, etc. are held essential, while the human being, his desires, and thoughts, in short, the psychological factors, are considered as unimportant and secondary, The individual is degraded, to human materiel.</then>
+				<then util="random">The only justification for violence is to contain violence, and even that is questionable at times.</then>
+				<then util="random">Violence is stupid, we all know that, but we love to watch it on tv I guess people are just evolved to be addicted to violence, right? Well, we've got to overcome that bug, that glitch in human psychology.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

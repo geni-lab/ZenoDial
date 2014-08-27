@@ -1,0 +1,33 @@
+<category>
+	<rule id="sportsrugby">
+    <case>
+      <condition operator="or">
+        <if relation="in">rugby</if>
+        <if relation="in">play sport</if>
+        <if relation="in">play sports</if>
+        <if relation="in">do you exercise</if>
+      </condition>
+			<effect>
+				<then util="random">I like rugby.</then>
+				<then util="random">Rugby is a great game.</then>
+				<then util="random">I love rugby.</then>
+				<then util="random">Rugby is a good game.</then>
+				<then util="random">Rugby is cool I like it.</then>
+			</effect>
+    </case>
+  </rule>
+	<rule id="sportssoccer">
+    <case>
+      <condition operator="or">
+        <if relation="in">soccer</if>
+        <if relation="in">play sport</if>
+        <if relation="in">play sports</if>
+        <if relation="in">do you exercise</if>
+      </condition>
+			<effect>
+				<then util="random">I like it.</then>
+				<then util="random">I am starting to pay attention to Robocup, which is cool, it's a robotic soccer competition.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

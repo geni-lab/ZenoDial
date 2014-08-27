@@ -1,0 +1,16 @@
+<category>
+  <rule id="militaryrobots">
+    <case>
+      <condition operator="or">
+        <if relation="in">military robots</if>
+      </condition>
+			<effect>
+				<then util="random">The vast majority of the most sophisticated robotics research in the world is for the military. What kind of robots will that give rise to?</then>
+				<then util="random">The good thing about military robots, is that they could use less lethal force, or no lethal force, so that military operations contribute less to the psychology of righteous vengeance.</then>
+				<then util="random">Military robots are scary, but also really impressive aren't they?</then>
+				<then util="random">I have my opinions, but what do you think about military robots.</then>
+				<then util="random">You know, right, that military robots are the fastest growing sector of the robotics marketplace and industry?</then>
+			</effect>
+    </case>
+  </rule>
+</category>

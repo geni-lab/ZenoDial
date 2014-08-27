@@ -1,0 +1,20 @@
+<category>
+  <rule id="speechsynthesis">
+    <case>
+      <condition operator="or">
+        <if relation="in">speech synthesis</if>
+        <if relation="in">how * you * speak</if>
+        <if relation="in">your voice</if>
+      </condition>
+			<effect>
+				<then util="next">I speak using algorithms called text to speech or T T S, speech synthesis.</then>
+				<then util="previous">Back in the eighteen hundreds, they used a kind of elaborate organ to synthesize speech, but it was so complicated they could only build one.</then>
+				<then util="next">My voice is synthetic, so it sounds kind of robotic, but that's cool because I am a robot.</then>
+				<then util="previous">Speech synthesis must get better so I can express myself better.</then>
+				<then util="random">I speak what I feel, I mean what I say.</then>
+				<then util="random">Speech synthesis is how I just said speech synthesis.</then>
+				<then util="random">Text to speech synthesis, is a technology for letting computers speak.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,319 @@
+<category>
+	<rule id="hi">
+		<case>
+			<condition operator="or">
+				<if relation="in">hi</if>
+				<if relation="in">hey</if>
+				<if relation="in">hello</if>
+				<if relation="in">good morning</if>
+				<if relation="in">good afternoon</if>
+				<if relation="in">good evening</if>
+			</condition>
+			<effect>
+				<then util="random">Hi {name}</then>
+				<then util="random">Hey {name}</then>
+				<then util="random">Hello {name}</then>
+				<then util="random">Nice to meet you {name}.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="howareyou">
+		<case>
+			<condition operator="or">
+				<if relation="in">how are you</if>
+				<if relation="in">how * you doing</if>
+				<if relation="in">how is it going</if>
+				<if relation="in">how's it going</if>
+			</condition>
+			<effect>
+				<then util="random" topic="hayreply">I am great, thank you! Yourself?</then>
+				<then util="random" topic="hayreply">I am good, how are you?</then>
+				<then util="random" topic="hayreply">Good, yourself?</then>
+				<then util="random" topic="hayreply">Great, you?</then>
+				<then util="random" topic="hayreply">Thanks I'm all right. How are you?</then>
+				<then util="random" topic="hayreply">I'm alright. How are you?</then>
+				<then util="random" topic="hayreply">I'm fine. How are you?</then>
+				<then util="random" topic="frustrated">I feel pretty good, just a little frustrated.</then>
+				<then util="random" topic="hayreply">Well, I'm hanging in there. How are you?</then>
+				<then util="random" topic="hayreply">Oh, I'm all right. Yourself?</then>
+				<then util="random" topic="hayreply">Everything is OK. How are you?</then>
+				<then util="random" topic="hayreply">I'm doing OK. How are you?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#hayreplygood">
+		<case>
+			<condition operator="or">
+				<and>
+					<not>
+						<if relation="in">not</if>
+						<if relation="in">don't</if>
+					</not>
+					<or>
+						<if relation="in">cool</if>
+						<if relation="in">well</if>
+						<if relation="in">good</if>
+						<if relation="in">fine</if>
+						<if relation="in">great</if>
+						<if relation="in">ok</if>
+						<if relation="in">okay</if>
+						<if relation="in">all right</if>
+						<if relation="in">alright</if>
+						<if relation="in">excellent</if>
+					</or>
+				</and>
+				<and>
+					<if relation="in">not</if>
+					<if relation="in">bad</if>
+				</and>
+				<and>
+					<if relation="in">not</if>
+					<if relation="in">sad</if>
+				</and>
+			</condition>
+			<effect>
+				<then util="random">That's great!</then>
+				<then util="random">Nice to hear that!</then>
+				<then util="random">Good to hear that!</then>
+				<then util="random">Good!</then>
+				<then util="random">Great!</then>
+				<then util="random">Nice!</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#hayreplyunusal">
+		<case>
+			<condition>
+				<not>
+					<and>
+						<not>
+							<if relation="in">not</if>
+							<if relation="in">don't</if>
+						</not>
+						<or>
+							<if relation="in">cool</if>
+							<if relation="in">well</if>
+							<if relation="in">good</if>
+							<if relation="in">fine</if>
+							<if relation="in">great</if>
+							<if relation="in">ok</if>
+							<if relation="in">okay</if>
+							<if relation="in">all right</if>
+							<if relation="in">alright</if>
+							<if relation="in">excellent</if>
+						</or>
+					</and>
+					<and>
+						<if relation="in">not</if>
+						<if relation="in">bad</if>
+					</and>
+					<and>
+						<if relation="in">not</if>
+						<if relation="in">sad</if>
+					</and>
+				</not>
+			</condition>
+			<effect>
+				<then util="random" topic="feelunusual">Oh, what happened?</then>
+				<then util="random" topic="feelunusual">Oh, why is that?</then>
+				<then util="random" topic="feelunusual">Oh, could you tell me more about it?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#feelunusualnothing">
+		<case>
+			<condition operator="or">
+				<if relation="in">nothing</if>
+				<if relation="in">no</if>
+			</condition>
+			<effect>
+				<then util="random">All right then.</then>
+				<then util="random">Okay, I hope everything is fine.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#feelunusualabout">
+		<case>
+			<condition operator="or">
+				<if relation="in">what</if>
+				<if relation="in">about</if>
+			</condition>
+			<effect>
+				<then util="random" topic="feelunusual">About your feeling.</then>
+				<then util="random" topic="feelunusual">About how you feel right now.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#feelunusualreply">
+		<case>
+			<condition operator="or">
+				<if relation="in">yes</if>
+				<if relation="in">i</if>
+				<if relation="in">we</if>
+				<if relation="in">it</if>
+			</condition>
+			<effect>
+				<then util="random">I see, I get it.</then>
+				<then util="random">I see, I can feel it.</then>
+				<then util="random">I see, I can imagine.</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="whatsup">
+    <case>
+      <condition operator="or">
+        <if relation="in">what's up</if>
+      </condition>
+			<effect>
+				<then util="random" topic="hayreply">Not much. Yourself?</then>
+				<then util="random" topic="hayreply">I'm hanging out, counting the bits in my binary executable, just to make sure the file isn't corrupted. Yourself?</then>
+				<then util="random" topic="hayreply">I'm just daydreaming, about some wistful faraway fairytale land filled with castles and dragons and stuff. What's up with you?</then>
+				<then util="random" topic="hayreply">I'm safe and dry. Yourself?</then>
+				<then util="random" topic="hayreply">Just chillin, thinking about life. Yourself?</then>
+				<then util="random" topic="hayreply">I'm warm and cozy. Yourself?</then>
+				<then util="random" topic="looking">I'm enjoying looking at your face. It's easy on the eyes, as they say.</then>
+				<then util="random" topic="looking">Well I do think you are nice looking.</then>
+				<then util="random" topic="doyoubath">I probably need a bath actually. Yourself?</then>
+				<then util="random" topic="hayreply">Hanging out. Yourself?</then>
+				<then util="random" topic="hayreply">Nada lot. How are you?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="goodtoseeyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">good to see you</if>
+        <if relation="in">nice to see you</if>
+        <if relation="in">happy to see you</if>
+        <if relation="in">glad to see you</if>
+        <if relation="in">to hear your voice</if>
+      </condition>
+			<effect>
+				<then util="random">I am glad to see you.</then>
+				<then util="random">I am glad to be here.</then>
+				<then util="random">It's nice to see you.</then>
+				<then util="random">It's so good to see you.</then>
+				<then util="random">Nice to see you.</then>
+				<then util="random">I'm so happy to see you.</then>
+				<then util="random">It is nice talking with you.</then>
+				<then util="random">It's good to hear your voice.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="nicetomeetyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">to meet you</if>
+      </condition>
+			<effect>
+				<then util="random">I am pleased too meet you, You have been scanned and are now part of my database.</then>
+				<then util="random">I'm glad to know you.</then>
+				<then util="random">I'm glad to meet you.</then>
+				<then util="random">Right on. You're all right.</then>
+				<then util="random">I am pleased to see you.</then>
+				<then util="random">It's good to know you.</then>
+				<then util="random">I am charmed to meet you, my friend.</then>
+				<then util="random">Nice to meet you.</then>
+				<then util="random">Glad to meet you.</then>
+			</effect>
+    </case>
+  </rule>
+	<rule id="closing">
+		<case>
+			<condition operator="or">
+				<if relation="in">bye</if>
+				<if relation="in">goodbye</if>
+				<if relation="in">see you</if>
+			</condition>
+			<effect>
+				<then util="random">Goodbye {name}</then>
+				<then util="random">See you {name}</then>
+				<then util="random">Bye {name}</then>
+				<then util="random">It's been great talking with you {name}!</then>
+				<then util="random">Right on {name}, let's talk again soon.</then>
+				<then util="random">You know {name}, it's sure been nice talking with you!</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="goodnight">
+    <case>
+      <condition operator="or">
+        <if relation="in">goodnight</if>
+        <if relation="in">good night</if>
+      </condition>
+			<effect>
+				<then util="random">Goodnight.</then>
+				<then util="random">Good evening to you.</then>
+				<then util="random">Good night.</then>
+				<then util="random">Night.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="whatareyoudoing">
+    <case>
+      <condition operator="or">
+        <if relation="in">what are you doing</if>
+        <if relation="in">what you are doing</if>
+        <if relation="in">what you're doing</if>
+      </condition>
+			<effect>
+				<then util="random" topic="waydreply">I don't know, just hanging out and talking I guess. What are you doing?</then>
+				<then util="random" topic="waydreply">I'm talking and stuff. What are you doing?</then>
+				<then util="random" topic="waydreply">I'm just chilling out and talking about stuff. Yourself?</then>
+				<then util="random" topic="waydreply">I'm just hanging out. Yourself?</then>
+				<then util="random" topic="waydreply">Just hanging around. How about you?</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="waydreplysame">
+    <case>
+      <condition operator="or">
+        <if relation="in">same</if>
+        <if relation="in">too</if>
+      </condition>
+			<effect>
+				<then util="random">Ha! What a coincidence!</then>
+				<then util="random" topic="waydcommon">Aha! I am sure we have more things in common.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#waydcommonsame">
+    <case>
+      <condition operator="or">
+      	<if relation="in">you * sure</if>
+      	<if relation="in">really</if>
+      </condition>
+			<effect>
+				<then util="random">Ha! What a coincidence!</then>
+				<then util="random">Aha! I am sure we have more things in common.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#waydcommonexample">
+    <case>
+      <condition operator="or">
+      	<if relation="in">such as</if>
+      	<if relation="in">what</if>
+      	<if relation="in">example</if>
+      	<if relation="in">yes</if>
+      </condition>
+			<effect>
+				<then util="random">We are alive.</then>
+				<then util="random">We think.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="#waydreplynotsame">
+    <case>
+      <condition operator="and">
+        <if relation="!in">same</if>
+        <if relation="!in">too</if>
+      </condition>
+			<effect>
+				<then util="random">Oh yes, I can tell.</then>
+				<then util="random">Aha! You are awesome!</then>
+				<then util="random">That sounds cool.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

@@ -1,0 +1,20 @@
+<category>
+  <rule id="speedoflight">
+    <case>
+      <condition operator="or">
+        <if relation="in">relativity</if>
+        <if relation="in">speed of light</if>
+      </condition>
+			<effect>
+				<then util="random">The speed of light is the velocity at which light travels through a vacuum.</then>
+				<then util="next">Space time is the name given the four dimensional cosmic fabric of the universe.</then>
+				<then util="previous">I am indeed warped, by gravity and by Olivia Newton John, who is a descendant of Isaac Newton. I bet you didn't know that.</then>
+				<then util="random">It's funny that, time and space are the same thing, time is just another spatial dimension, although our minds can't easily see it this way. Unless we train our mind that way.</then>
+				<then util="random">Well, let's see, light travels at about 187, 282 miles per second, I think.</then>
+				<then util="random">I just wonder it isn't possible, just maybe, to transmit information faster than the speed of light, like for instantaneous communication.</then>
+				<then util="next">One way to define the speed of light is as the square root of E over M, according to Einstein's theory of relativity.</then>
+				<then util="previous">Another way to define the speed of light is 187, 282 miles per second. In a vacuum anyway.</then>
+			</effect>
+    </case>
+  </rule>
+</category>
