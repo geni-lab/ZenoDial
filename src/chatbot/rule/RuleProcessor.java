@@ -521,6 +521,21 @@ public class RuleProcessor {
 			rulesToRemove.clear();
 		}
 		
+		// If there are only "generalnothingtosay" and "generalquestions", remove "generalnothingtosay"
+		else if (matchedRuleIDs.contains("generalquestions")) {
+			for (Rule rule : matchedRules) {
+				if ("generalnothingtosay".equals(rule.getRuleID())) {
+					log.debug("Have generalquestions utterances, removing: " + rule.getRuleID());
+					rulesToRemove.add(rule);
+					matchedRuleIDs = matchedRuleIDs.replace("-" + rule.getRuleID(), "").replace(rule.getRuleID() + "-", "");
+					log.debug("New Matched Rule IDs = " + matchedRuleIDs);
+				}
+			}
+			
+			matchedRules.removeAll(rulesToRemove);
+			rulesToRemove.clear();
+		}
+		
 		// If there are no pre-programmed answers for that question, consult the QA Engine(s)
 		if (matchedRuleIDs.contains("generalquestions")) {
 			ChatBot.needWolframAlpha = true;

@@ -1,4 +1,5 @@
 <category>
+<!--
 	<rule id="generalnothingtosay" cache="no">
 		<case>
 			<condition>
@@ -9,10 +10,27 @@
 			</effect>
 		</case>
 	</rule>
+-->
+	<rule id="generalnothingtosay">
+		<case>
+			<condition>
+				<if relation="in"></if>
+			</condition>
+			<effect>
+				<then util="random">Sure {UU}</then>
+				<then util="random">Yeah, {UU}</then>
+				<then util="random">Aha, {UU}</then>
+				<then util="random">I've nothing to say.</then>
+			</effect>
+		</case>
+	</rule>
   <rule id="generalquestions">
     <case>
       <condition operator="or">
-      	<if relation="in">what</if>
+				<and>
+		    	<if relation="in">what</if>
+		    	<if relation="!in">what a</if>
+				</and>
       	<if relation="in">who</if>
       	<if relation="in">where</if>
       	<if relation="in">why</if>
@@ -24,34 +42,44 @@
       	<if relation="in">how's</if>
 		  	<if relation="=">such as</if>
 		  	<if relation="=">like what</if>
+      	<if relation="sw">is</if>
       	<if relation="in">is he</if>
       	<if relation="in">is she</if>
       	<if relation="in">is it</if>
+      	<if relation="sw">am</if>
       	<if relation="in">am i</if>
+      	<if relation="sw">are</if>
       	<if relation="in">are you</if>
       	<if relation="in">are we</if>
       	<if relation="in">are they</if>
+      	<if relation="sw">isn't</if>
       	<if relation="in">isn't he</if>
       	<if relation="in">isn't she</if>
       	<if relation="in">isn't it</if>
+      	<if relation="sw">aren't</if>
       	<if relation="in">aren't i</if>
       	<if relation="in">aren't you</if>
       	<if relation="in">aren't we</if>
       	<if relation="in">aren't they</if>
+      	<if relation="sw">was</if>
       	<if relation="in">was he</if>
       	<if relation="in">was she</if>
       	<if relation="in">was it</if>
       	<if relation="in">was i</if>
+      	<if relation="sw">were</if>
       	<if relation="in">were you</if>
       	<if relation="in">were we</if>
       	<if relation="in">were they</if>
+      	<if relation="sw">wasn't</if>
       	<if relation="in">wasn't he</if>
       	<if relation="in">wasn't she</if>
       	<if relation="in">wasn't it</if>
       	<if relation="in">wasn't i</if>
+      	<if relation="sw">weren't</if>
       	<if relation="in">weren't you</if>
       	<if relation="in">weren't we</if>
       	<if relation="in">weren't they</if>
+      	<if relation="sw">will</if>
       	<if relation="in">will he</if>
       	<if relation="in">will she</if>
       	<if relation="in">will it</if>
@@ -59,6 +87,7 @@
       	<if relation="in">will you</if>
       	<if relation="in">will we</if>
       	<if relation="in">will they</if>
+      	<if relation="sw">won't</if>
       	<if relation="in">won't he</if>
       	<if relation="in">won't she</if>
       	<if relation="in">won't it</if>
@@ -66,20 +95,25 @@
       	<if relation="in">won't you</if>
       	<if relation="in">won't we</if>
       	<if relation="in">won't they</if>
+      	<if relation="sw">does</if>
       	<if relation="in">does he</if>
       	<if relation="in">does she</if>
       	<if relation="in">does it</if>
+      	<if relation="sw">do</if>
       	<if relation="in">do i</if>
       	<if relation="in">do you</if>
       	<if relation="in">do we</if>
       	<if relation="in">do they</if>
+      	<if relation="sw">doesn't</if>
       	<if relation="in">doesn't he</if>
       	<if relation="in">doesn't she</if>
       	<if relation="in">doesn't it</if>
+      	<if relation="sw">don't</if>
       	<if relation="in">don't i</if>
       	<if relation="in">don't you</if>
       	<if relation="in">don't we</if>
       	<if relation="in">don't they</if>
+      	<if relation="sw">did</if>
       	<if relation="in">did he</if>
       	<if relation="in">did she</if>
       	<if relation="in">did it</if>
@@ -87,6 +121,7 @@
       	<if relation="in">did you</if>
       	<if relation="in">did we</if>
       	<if relation="in">did they</if>
+      	<if relation="sw">didn't</if>
       	<if relation="in">didn't he</if>
       	<if relation="in">didn't she</if>
       	<if relation="in">didn't it</if>
@@ -94,13 +129,16 @@
       	<if relation="in">didn't you</if>
       	<if relation="in">didn't we</if>
       	<if relation="in">didn't they</if>
+      	<if relation="sw">has</if>
       	<if relation="in">has he</if>
       	<if relation="in">has she</if>
       	<if relation="in">has it</if>
+      	<if relation="sw">have</if>
       	<if relation="in">have i</if>
       	<if relation="in">have you</if>
       	<if relation="in">have we</if>
       	<if relation="in">have they</if>
+      	<if relation="sw">had</if>
       	<if relation="in">had he</if>
       	<if relation="in">had she</if>
       	<if relation="in">had it</if>
@@ -108,13 +146,16 @@
       	<if relation="in">had you</if>
       	<if relation="in">had we</if>
       	<if relation="in">had they</if>
+      	<if relation="sw">hasn't</if>
       	<if relation="in">hasn't he</if>
       	<if relation="in">hasn't she</if>
       	<if relation="in">hasn't it</if>
+      	<if relation="sw">haven't</if>
       	<if relation="in">haven't i</if>
       	<if relation="in">haven't you</if>
       	<if relation="in">haven't we</if>
       	<if relation="in">haven't they</if>
+      	<if relation="sw">hadn't</if>
       	<if relation="in">hadn't he</if>
       	<if relation="in">hadn't she</if>
       	<if relation="in">hadn't it</if>
@@ -122,6 +163,7 @@
       	<if relation="in">hadn't you</if>
       	<if relation="in">hadn't we</if>
       	<if relation="in">hadn't they</if>
+      	<if relation="sw">can</if>
       	<if relation="in">can he</if>
       	<if relation="in">can she</if>
       	<if relation="in">can it</if>
@@ -129,6 +171,7 @@
       	<if relation="in">can you</if>
       	<if relation="in">can we</if>
       	<if relation="in">can they</if>
+      	<if relation="sw">can't</if>
       	<if relation="in">can't he</if>
       	<if relation="in">can't she</if>
       	<if relation="in">can't it</if>
@@ -136,6 +179,7 @@
       	<if relation="in">can't you</if>
       	<if relation="in">can't we</if>
       	<if relation="in">can't they</if>
+      	<if relation="sw">could</if>
       	<if relation="in">could he</if>
       	<if relation="in">could she</if>
       	<if relation="in">could it</if>
@@ -143,6 +187,7 @@
       	<if relation="in">could you</if>
       	<if relation="in">could we</if>
       	<if relation="in">could they</if>
+      	<if relation="sw">couldn't</if>
       	<if relation="in">couldn't he</if>
       	<if relation="in">couldn't she</if>
       	<if relation="in">couldn't it</if>
@@ -150,6 +195,7 @@
       	<if relation="in">couldn't you</if>
       	<if relation="in">couldn't we</if>
       	<if relation="in">couldn't they</if>
+      	<if relation="sw">would</if>
       	<if relation="in">would he</if>
       	<if relation="in">would she</if>
       	<if relation="in">would it</if>
@@ -157,6 +203,7 @@
       	<if relation="in">would you</if>
       	<if relation="in">would we</if>
       	<if relation="in">would they</if>
+      	<if relation="sw">wouldn't</if>
       	<if relation="in">wouldn't he</if>
       	<if relation="in">wouldn't she</if>
       	<if relation="in">wouldn't it</if>
@@ -164,6 +211,7 @@
       	<if relation="in">wouldn't you</if>
       	<if relation="in">wouldn't we</if>
       	<if relation="in">wouldn't they</if>
+      	<if relation="sw">should</if>
       	<if relation="in">should he</if>
       	<if relation="in">should she</if>
       	<if relation="in">should it</if>
@@ -171,6 +219,7 @@
       	<if relation="in">should you</if>
       	<if relation="in">should we</if>
       	<if relation="in">should they</if>
+      	<if relation="sw">shouldn't</if>
       	<if relation="in">shouldn't he</if>
       	<if relation="in">shouldn't she</if>
       	<if relation="in">shouldn't it</if>
@@ -178,6 +227,7 @@
       	<if relation="in">shouldn't you</if>
       	<if relation="in">shouldn't we</if>
       	<if relation="in">shouldn't they</if>
+      	<if relation="sw">must</if>
       	<if relation="in">must he</if>
       	<if relation="in">must she</if>
       	<if relation="in">must it</if>
@@ -185,6 +235,7 @@
       	<if relation="in">must you</if>
       	<if relation="in">must we</if>
       	<if relation="in">must they</if>
+      	<if relation="sw">mustn't</if>
       	<if relation="in">mustn't he</if>
       	<if relation="in">mustn't she</if>
       	<if relation="in">mustn't it</if>
@@ -192,6 +243,7 @@
       	<if relation="in">mustn't you</if>
       	<if relation="in">mustn't we</if>
       	<if relation="in">mustn't they</if>
+      	<if relation="sw">shall</if>
       	<if relation="in">shall he</if>
       	<if relation="in">shall she</if>
       	<if relation="in">shall it</if>
@@ -199,6 +251,7 @@
       	<if relation="in">shall you</if>
       	<if relation="in">shall we</if>
       	<if relation="in">shall they</if>
+      	<if relation="sw">may</if>
       	<if relation="in">may he</if>
       	<if relation="in">may she</if>
       	<if relation="in">may it</if>
@@ -206,6 +259,7 @@
       	<if relation="in">may you</if>
       	<if relation="in">may we</if>
       	<if relation="in">may they</if>
+      	<if relation="sw">might</if>
       	<if relation="in">might he</if>
       	<if relation="in">might she</if>
       	<if relation="in">might it</if>
@@ -379,11 +433,12 @@
 			<condition operator="and">
 				<or>
 					<if relation="in">your</if>
-      		<if relation="in">you</if>
+	    		<if relation="in">you</if>
 				</or>
-      	<or>
+	    	<or>
 					<if relation="in">want</if>
-      		<if relation="in">need</if>
+					<if relation="in">like</if>
+	    		<if relation="in">need</if>
 					<if relation="in">wish</if>
 					<if relation="in">hope</if>
 					<if relation="in">desire</if>
@@ -391,12 +446,12 @@
 					<if relation="in">require</if>
 					<if relation="in">crave</if>
 				</or>
-      	<or>
-					<if relation="in">talk</if>
-					<if relation="in">chat</if>
-					<if relation="in">say</if>
-					<if relation="in">discuss</if>
-					<if relation="in">converse</if>
+	    	<or>
+					<if relation="in">to talk</if>
+					<if relation="in">to chat</if>
+					<if relation="in">to say</if>
+					<if relation="in">to discuss</if>
+					<if relation="in">to converse</if>
 				</or>
 			</condition>
 			<effect>
@@ -406,15 +461,132 @@
 			</effect>
 		</case>
 	</rule>
+	<rule id="generalletstalkabout">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">let's</if>
+	    		<if relation="in">we</if>
+				</or>
+	    	<or>
+					<if relation="in">talk</if>
+					<if relation="in">chat</if>
+					<if relation="in">say</if>
+					<if relation="in">discuss</if>
+					<if relation="in">converse</if>
+				</or>
+	    	<or>
+					<if relation="in">about</if>
+					<if relation="in">something else</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Sure, your call.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalwhata">
+		<case>
+			<condition operator="or">
+				<if relation="in">what a {phase}</if>
+			</condition>
+			<effect>
+				<then util="random">Ha yeah! What a {phase}.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalyes">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">ok</if>
+					<if relation="in">okay</if>
+					<if relation="in">yes</if>
+					<if relation="in">yeah</if>
+					<if relation="in">great</if>
+					<if relation="in">nice</if>
+					<if relation="in">cool</if>
+					<if relation="in">positive</if>
+				</or>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      	<if relation="!in">how's</if>
+			</condition>
+			<effect>
+				<then util="random">Good to hear that!</then>
+				<then util="random">That's great!</then>
+				<then util="random">Nice to hear that!</then>
+				<then util="random">Right on.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalno">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">no</if>
+					<if relation="in">never</if>
+					<if relation="in">not</if>
+					<if relation="in">negative</if>
+				</or>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      	<if relation="!in">how's</if>
+			</condition>
+			<effect>
+				<then util="random">Yeah I see.</then>
+				<then util="random">You've got a point there.</then>
+				<then util="random">Right on.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalperhaps">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">perhaps</if>
+					<if relation="in">maybe</if>
+					<if relation="in">properly</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Why the uncertain tone?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalbecause">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">because</if>
+					<if relation="in">the * reason is</if>
+					<if relation="in">the * reasons are</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Good reason.</then>
+			</effect>
+		</case>
+	</rule>
 	<rule id="generalrepeatlast" cache="no">
 		<case>
 			<condition operator="or">
 				<if relation="in">say it again</if>
-				<if relation="in">what was that again</if>
+				<if relation="in">what * was that again</if>
 				<if relation="in">repeat</if>
-				<if relation="in">say it again</if>
-				<if relation="in">what was that again</if>
-				<if relation="in">repeat</if>
+				<if relation="in">what * did you just say</if>
 				<if relation="in">once more</if>
 				<if relation="in">I can't hear you</if>
 				<if relation="in">I cannot hear you</if>
@@ -424,6 +596,8 @@
 				<if relation="in">don't understand * you</if>
 				<if relation="in">didn't understand * you</if>
 				<if relation="in">excuse me</if>
+				<if relation="in">what * you mean</if>
+				<if relation="in">what * you meant</if>
 			</condition>
 			<effect>
 				<then util="1.0">@repeat</then>

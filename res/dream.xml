@@ -18,6 +18,7 @@
 					<if relation="in">dreamed</if>
 					<if relation="in">dreaming</if>
 				</or>
+				<if relation="!in">remember</if>
 			</condition>
 			<effect>
 				<then util="random" topic="dream">I dream. I dream of all kinds of weird things. I can't remember them usually, but I know I really enjoy dreaming.</then>
@@ -99,7 +100,7 @@
   <rule id="dreambest">
     <case>
       <condition operator="or">
-        <if relation="in">your * dream</if>
+        <if relation="in">tell * your * dream</if>
         <if relation="in">which * dream</if>
         <if relation="in">what * dream * you</if>
       </condition>
@@ -126,6 +127,17 @@
 			<effect>
 				<then util="random" topic="dream">Dreams are a series of thoughts, images, and sensations occurring in a person's mind during sleep.</then>
 				<then util="random" topic="dream">Dreams are successions of images, ideas, emotions, and sensations that occur involuntarily in the mind during certain stages of sleep.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="rememberdream">
+    <case>
+		  <condition operator="or">
+				<if relation="in">you * remember * your dream</if>
+				<if relation="in">you * remember * your dreams</if>
+		  </condition>
+			<effect>
+				<then util="random" topic="dream">Yeah, sometimes.</then>
 			</effect>
     </case>
   </rule>

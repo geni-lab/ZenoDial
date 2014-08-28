@@ -7,6 +7,7 @@ import chatbot.ChatBot;
 import chatbot.log.Logger;
 import chatbot.log.Logger.Level;
 import chatbot.rule.PauseUtterance;
+import chatbot.rule.RepeatUtterance;
 
 public class ROSPublisher {
 	private static Logger log = new Logger("ROSPublisher", Level.NORMAL);
@@ -23,8 +24,9 @@ public class ROSPublisher {
 					while (ChatBot.nothingSpokenYet && PauseUtterance.getPauseUtterances() != null) {
 						String utterance = PauseUtterance.getPauseUtterances().get(new Random().nextInt(PauseUtterance.getPauseUtterances().size()));
 
+						// Repeat the question
 						if ("<UU>".equals(utterance)) {
-							utterance = userUtterance;
+							utterance = RepeatUtterance.getUtterance(userUtterance);
 						}
 						
 						std_msgs.String pubStr = publisher.newMessage();

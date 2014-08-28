@@ -47,18 +47,13 @@
 					<if relation="in">did</if>
       		<if relation="in">didn't</if>
 				</or>
-				<or>
-					<if relation="in">your</if>
-					<if relation="in">yours</if>
-      		<if relation="in">you</if>
-				</or>
       	<or>
-					<if relation="in">feel</if>
-					<if relation="in">feeling</if>
-					<if relation="in">feelings</if>
-					<if relation="in">emotion</if>
-					<if relation="in">emotions</if>
-        	<if relation="in">emotional</if>
+					<if relation="in">you * feel</if>
+					<if relation="in">your * feeling</if>
+					<if relation="in">your * feelings</if>
+					<if relation="in">your * emotion</if>
+					<if relation="in">your * emotions</if>
+        	<if relation="in">you * emotional</if>
 				</or>
 			</condition>
 			<effect>
@@ -90,4 +85,14 @@
 			</effect>
     </case>
   </rule>
+	<rule id="yousay">
+		<case>
+			<condition operator="or">
+      	<if relation="in">did you say</if>
+			</condition>
+			<effect>
+				<then util="random">Suppose I did say that.</then>
+			</effect>
+		</case>
+	</rule>
 </category>

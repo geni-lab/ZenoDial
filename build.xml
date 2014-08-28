@@ -86,6 +86,7 @@
     </target>
     <target name="ChatBot">
         <java classname="chatbot.ChatBot" failonerror="true" fork="yes">
+            <jvmarg line="-Xms10m -Xmx100m"/>
             <classpath refid="ZenoDial.classpath"/>
         </java>
     </target>

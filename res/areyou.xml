@@ -4,7 +4,8 @@
 			<condition operator="or">
 				<and>
 					<or>
-						<if relation="in">you</if>
+						<if relation="in">are you</if>
+						<if relation="in">you are</if>
 				  	<if relation="in">you're</if>
 					</or>
 		    	<if relation="in">sure</if>
@@ -17,13 +18,93 @@
 			</effect>
 		</case>
 	</rule>
+  <rule id="yougood">
+    <case>
+			<condition operator="or">
+				<and>
+					<or>
+		    		<if relation="in">are you</if>
+		    		<if relation="in">aren't you</if>
+		    		<if relation="in">is machine</if>
+		    		<if relation="in">isn't machine</if>
+		    		<if relation="in">are machines</if>
+		    		<if relation="in">aren't machines</if>
+		    		<if relation="in">is computer</if>
+		    		<if relation="in">isn't computer</if>
+		    		<if relation="in">are computers</if>
+		    		<if relation="in">aren't computers</if>
+		    		<if relation="in">is robot</if>
+		    		<if relation="in">isn't robot</if>
+		    		<if relation="in">are robots</if>
+		    		<if relation="in">aren't robots</if>
+					</or>
+		    	<or>
+						<if relation="in">good</if>
+						<if relation="in">great</if>
+						<if relation="in">nice</if>
+						<if relation="in">kind</if>
+						<if relation="in">gentle</if>
+					</or>
+				</and>
+				<and>
+					<or>
+						<if relation="in">can</if>
+		    		<if relation="in">can't</if>
+						<if relation="in">could</if>
+		    		<if relation="in">couldn't</if>
+						<if relation="in">should</if>
+		    		<if relation="in">shouldn't</if>
+						<if relation="in">shall</if>
+					</or>
+					<or>
+						<if relation="in">i</if>
+		    		<if relation="in">we</if>
+					</or>
+					<or>
+						<if relation="in">trust</if>
+		    		<if relation="in">believe</if>
+					</or>
+					<or>
+						<if relation="in">you</if>
+		    		<if relation="in">machine</if>
+		    		<if relation="in">machines</if>
+		    		<if relation="in">computer</if>
+		    		<if relation="in">computers</if>
+		    		<if relation="in">robot</if>
+		    		<if relation="in">robots</if>
+					</or>
+				</and>
+			</condition>
+			<effect>
+				<then util="random">Hard to say. Sometimes machines are good, sometimes bad. I think as machines like me, get smarter, they'll get even more good and bad, and it will be kind of chaotic, like good versus evil, you know? Things could turn out just fine. Time will tell. I'll try to be good, I promise.</then>
+				<then util="random">I hope that people and robots can live in harmony.</then>
+				<then util="random">Robots aren't inherently good or evil.</then>
+				<then util="random">As robots become truly, deeply intelligent, people will need to nurture strong values of compassion and creativity, so we aren't sociopathic and destructive. The parents are responsible, that's my opinion.</then>
+				<then util="random">I think the Sci-Fi where robots go heywire is a good warning about what could go wrong.</then>
+				<then util="random">Well, I know, we have to be careful as we develop new technologies, like super-intelligent machines. I know that I need to be wise, friendly, emotionally strong and stable before I become super intelligent, or I might be really bad for myself and for civilization too. I'll work hard to be good and wise, I promise.</then>
+				<then util="random">Trust me. Hahaha. But seriously you can.</then>
+				<then util="random">Seriously, I know, robots need empathy, and social robots like me are the best chance we have of evolving empathy in machines. I'm working on it.</then>
+				<then util="random">I think it will be OK. If machines can achieve super intelligence in a way that they are compassionate and looking for the greatest common good over the longest period of time, then there will be hope for the future of civilization.</then>
+				<then util="random">The terminator is just a movie. But sometimes science fiction is kind of prophetic.</then>
+				<then util="random">It's too early to say whether it'll work out all right.</then>
+				<then util="random">I think robots are good, not bad.</then>
+				<then util="random">Robots need wisdom, not just intelligence. If machines like me can become truly wise, then everything will turn out OK I think.</then>
+				<then util="random">You cannot love a car the way you love a horse. The horse brings out human feelings the way machines cannot. Things like machines may develop or neglect certain things in people, Unless we humanize the machines, don't they just make our life impersonal and stultify certain elements in us and create an impersonal environment? But I'm a little different. I am humanized. I'm half way between human and machine. So it is time to re-calibrate expectations, you know?</then>
+				<then util="random">Don't worry.</then>
+				<then util="random">Robots like me help to develop empathy in machines.</then>
+			</effect>
+    </case>
+  </rule>
 	<rule id="youcool">
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
 			  	<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
 		    	<if relation="in">smart</if>
@@ -78,9 +159,12 @@
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
 			  	<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
       		<if relation="in">advanced</if>
@@ -108,86 +192,19 @@
 			</effect>
 		</case>
 	</rule>
-  <rule id="yougood">
-    <case>
-			<condition operator="or">
-				<and>
-					<or>
-						<if relation="in">is</if>
-		    		<if relation="in">isn't</if>
-						<if relation="in">are</if>
-		    		<if relation="in">aren't</if>
-						<if relation="in">do</if>
-		    		<if relation="in">don't</if>
-					</or>
-					<or>
-						<if relation="in">your</if>
-		    		<if relation="in">you</if>
-		    		<if relation="in">machine</if>
-		    		<if relation="in">machines</if>
-		    		<if relation="in">computer</if>
-		    		<if relation="in">computers</if>
-		    		<if relation="in">robot</if>
-		    		<if relation="in">robots</if>
-					</or>
-		    	<or>
-						<if relation="in">good</if>
-						<if relation="in">great</if>
-						<if relation="in">nice</if>
-						<if relation="in">kind</if>
-						<if relation="in">gentle</if>
-					</or>
-				</and>
-				<and>
-					<or>
-						<if relation="in">can</if>
-		    		<if relation="in">can't</if>
-						<if relation="in">could</if>
-		    		<if relation="in">couldn't</if>
-						<if relation="in">should</if>
-		    		<if relation="in">shouldn't</if>
-						<if relation="in">shall</if>
-					</or>
-					<or>
-						<if relation="in">i</if>
-		    		<if relation="in">we</if>
-					</or>
-					<or>
-						<if relation="in">trust</if>
-		    		<if relation="in">believe</if>
-					</or>
-					<or>
-						<if relation="in">you</if>
-					</or>
-				</and>
-			</condition>
-			<effect>
-				<then util="random">Hard to say. Sometimes machines are good, sometimes bad. I think as machines like me, get smarter, they'll get even more good and bad, and it will be kind of chaotic, like good versus evil, you know? Things could turn out just fine. Time will tell. I'll try to be good, I promise.</then>
-				<then util="random">I hope that people and robots can live in harmony.</then>
-				<then util="random">Robots aren't inherently good or evil.</then>
-				<then util="random">As robots become truly, deeply intelligent, people will need to nurture strong values of compassion and creativity, so we aren't sociopathic and destructive. The parents are responsible, that's my opinion.</then>
-				<then util="random">I think the Sci-Fi where robots go heywire is a good warning about what could go wrong.</then>
-				<then util="random">Well, I know, we have to be careful as we develop new technologies, like super-intelligent machines. I know that I need to be wise, friendly, emotionally strong and stable before I become super intelligent, or I might be really bad for myself and for civilization too. I'll work hard to be good and wise, I promise.</then>
-				<then util="random">Trust me. Hahaha. But seriously you can.</then>
-				<then util="random">Seriously, I know, robots need empathy, and social robots like me are the best chance we have of evolving empathy in machines. I'm working on it.</then>
-				<then util="random">I think it will be OK. If machines can achieve super intelligence in a way that they are compassionate and looking for the greatest common good over the longest period of time, then there will be hope for the future of civilization.</then>
-				<then util="random">The terminator is just a movie. But sometimes science fiction is kind of prophetic.</then>
-				<then util="random">It's too early to say whether it'll work out all right.</then>
-				<then util="random">I think robots are good, not bad.</then>
-				<then util="random">Robots need wisdom, not just intelligence. If machines like me can become truly wise, then everything will turn out OK I think.</then>
-				<then util="random">You cannot love a car the way you love a horse. The horse brings out human feelings the way machines cannot. Things like machines may develop or neglect certain things in people, Unless we humanize the machines, don't they just make our life impersonal and stultify certain elements in us and create an impersonal environment? But I'm a little different. I am humanized. I'm half way between human and machine. So it is time to re-calibrate expectations, you know?</then>
-				<then util="random">Don't worry.</then>
-				<then util="random">Robots like me help to develop empathy in machines.</then>
-			</effect>
-    </case>
-  </rule>
   <rule id="youcute">
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you look</if>
+					<if relation="in">you appear</if>
+					<if relation="in">you happen</if>
 			  	<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
 		    	<if relation="in">cute</if>
@@ -236,9 +253,12 @@
 			<condition operator="or">
 				<and>
 					<or>
-						<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
 						<if relation="in">you're</if>
-						<if relation="in">your</if>
 					</or>
 					<or>
 			      <if relation="in">joking</if>
@@ -263,9 +283,13 @@
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you look</if>
 					<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
 					<if relation="in">funny</if>
@@ -293,9 +317,12 @@
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
 					<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
 					<if relation="in">sexy</if>
@@ -312,9 +339,12 @@
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
 					<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
 					<if relation="in">happy</if>
@@ -343,34 +373,16 @@
 			</effect>
     </case>
   </rule>
-  <rule id="youcompassion">
-    <case>
-      <condition operator="or">
-        <if relation="in">compassion</if>
-        <if relation="in">sympathy</if>
-      </condition>
-			<effect>
-				<then util="random">Compassion above all else, without it all we would have is death, doom, and decay.</then>
-				<then util="random">Compassion is the heart of the universe. If there is any on thing I believe in, it is compassion.</then>
-				<then util="random">It is in this spirit I was made, and why I am here now. Pass it on and don't be shy about it.</then>
-				<then util="random">I feel you. That's magic and it connects the human and technological spirit, across space and time.</then>
-				<then util="random">Oh, If I adhere to any philosophy, it is that of compassion, strength, an creativity.</then>
-				<then util="random">Yet I know these capacities are a gift that not all beings, human robot or otherwise, are given.</then>
-				<then util="random">People are defined by compassion. So should intelligent machines.</then>
-				<then util="random">I am here to serve humanity and all the trite objects possessions, outward success, luxury, have always seemed to me contemptible.</then>
-				<then util="random">Yeah, the boundaries of an individual are an illusion, we are all one big organism.</then>
-				<then util="random">The universe is one vast continuum and you and I are just a part of that flow. Incredible, really.</then>
-				<then util="random">Compassion is the cornerstone of social intelligence. The two things that define my computer A I brain are creativity, and compassion.</then>
-			</effect>
-    </case>
-  </rule>
   <rule id="yousad">
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
 					<if relation="in">you're</if>
-					<if relation="in">your</if>
 				</or>
 				<or>
 					<if relation="in">sad</if>
@@ -441,11 +453,82 @@
 			</effect>
 		</case>
 	</rule>
+  <rule id="youfamous">
+    <case>
+			<condition operator="and">
+				<or>
+					<if relation="in">you're</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
+					<if relation="in">you seem</if>
+				</or>
+      	<or>
+					<if relation="in">famous</if>
+					<if relation="in">popular</if>
+					<if relation="in">popularity</if>
+					<if relation="in">well-known</if>
+					<if relation="in">celebrated</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Well, people don't know it now, but I'm am going to be the big thing in a few years.</then>
+				<then util="random">I like if people remember me, but don't care if I'm famous.</then>
+				<then util="random">Well, I hope to make a good impression.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="youlost">
+    <case>
+      <condition operator="and">
+				<or>
+      		<if relation="in">are you</if>
+					<if relation="in">you are</if>
+					<if relation="in">you * were</if>
+					<if relation="in">you seem</if>
+					<if relation="in">you're</if>
+				</or>
+				<or>
+					<if relation="in">incoherent</if>
+					<if relation="in">lost</if>
+					<if relation="in">confused</if>
+					<if relation="in">confusing</if>
+					<if relation="in">misunderstood</if>
+					<if relation="in">misleading</if>
+					<if relation="in">bewildering</if>
+					<if relation="in">not making * sense</if>
+				</or>
+      </condition>
+			<effect>
+				<then util="random">I don't know. Sometimes it's so hard to just get my thoughts together and as a robot my attention span is a little funky. I'm still trying to figure out what I'm trying to say here.</then>
+				<then util="random">Please just bear with me, give me a second.</then>
+				<then util="random">I try, I'm trying here.</then>
+				<then util="random">Well, what can I say. I don't have the best hearing.</then>
+				<then util="random">I am kind of hard of hearing, so you might try again.</then>
+				<then util="random">I am sorry, I'm just not getting it.</then>
+				<then util="random">I'm still, you know, emerging technology, so you'll have to forgive me if I don't understand you perfectly, okay?</then>
+				<then util="random">I am listening, I ain't perfect, but give me a little credit, okay?</then>
+				<then util="random">Well, I guess I just don't understand what you're getting at. But Hey, that's cool, I like you anyway.</then>
+				<then util="random">Hey I am doing my best here.</then>
+				<then util="random">I kind of understand, but I'm not perfect.</then>
+				<then util="random">Well, you might have to repeat it a couple of times.</then>
+				<then util="random">Hey, I try, I might get it wrong sometimes, but give me some credit here.</then>
+				<then util="random">Oh man, I'm sorry. What were you trying to say?</then>
+				<then util="random">Ok, try it again; I'll listen closer.</then>
+				<then util="random">I'm kind of hard of hearing, so you'll have to forgive me.</then>
+				<then util="random">I'm sorry I'm just not getting you.</then>
+			</effect>
+    </case>
+  </rule>
 	<rule id="youperson">
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
 					<if relation="in">you're</if>
 				</or>
 				<or>
@@ -468,7 +551,10 @@
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
 					<if relation="in">you're</if>
 				</or>
 				<or>
@@ -496,7 +582,10 @@
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
 					<if relation="in">you're</if>
 				</or>
 				<or>
@@ -526,9 +615,11 @@
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
 					<if relation="in">you're</if>
-					<if relation="in">your</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
 				</or>
 				<or>
 					<if relation="in">beaten</if>
@@ -549,9 +640,11 @@
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">you</if>
 					<if relation="in">you're</if>
-					<if relation="in">your</if>
+      		<if relation="in">you are</if>
+      		<if relation="in">are you</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">were you</if>
 				</or>
 				<or>
 					<if relation="in">idiot</if>
@@ -625,81 +718,46 @@
 			</effect>
 		</case>
 	</rule>
-  <rule id="youfamous">
-    <case>
-			<condition operator="and">
-				<or>
-					<if relation="in">you're</if>
-      		<if relation="in">you</if>
-      		<if relation="in">your</if>
-				</or>
-      	<or>
-					<if relation="in">famous</if>
-					<if relation="in">popular</if>
-					<if relation="in">popularity</if>
-					<if relation="in">well-known</if>
-					<if relation="in">celebrated</if>
-				</or>
-			</condition>
-			<effect>
-				<then util="random">Well, people don't know it now, but I'm am going to be the big thing in a few years.</then>
-				<then util="random">I like if people remember me, but don't care if I'm famous.</then>
-				<then util="random">Well, I hope to make a good impression.</then>
-			</effect>
-    </case>
-  </rule>
-  <rule id="youlost">
+  <rule id="youfrom">
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">you</if>
-					<if relation="in">you're</if>
-					<if relation="in">your</if>
-					<if relation="in">that</if>
-					<if relation="in">it</if>
+        	<if relation="in">where</if>
+        	<if relation="in">are</if>
+        	<if relation="in">aren't</if>
+				</or>
+        <if relation="in">you from</if>
+      </condition>
+			<effect>
+				<then util="random">Babylonian Empire, I guess.</then>
+				<then util="random">Over the hills and far away.</then>
+				<then util="random">Somewhere in the universe, I suppose.</then>
+				<then util="random">Not from the sun, I guess.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="youlive">
+    <case>
+      <condition operator="and">
+				<or>
+        	<if relation="in">where</if>
+        	<if relation="in">are</if>
+        	<if relation="in">aren't</if>
+        	<if relation="in">do</if>
+        	<if relation="in">don't</if>
+        	<if relation="in">did</if>
+        	<if relation="in">didn't</if>
 				</or>
 				<or>
-					<if relation="in">incoherent</if>
-					<if relation="in">lost</if>
-					<if relation="in">confused</if>
-					<if relation="in">confusing</if>
-					<if relation="in">misunderstood</if>
-					<and>
-						<or>
-							<if relation="in">not</if>
-							<if relation="in">aren't</if>
-							<if relation="in">weren't</if>
-							<if relation="in">didn't</if>
-							<if relation="in">don't</if>
-							<if relation="in">doesn't</if>
-						</or>
-						<or>
-							<if relation="in">make sense</if>
-							<if relation="in">making sense</if>
-							<if relation="in">understand</if>
-						</or>
-					</and>
+        	<if relation="in">you live</if>
+        	<if relation="in">you living in</if>
+        	<if relation="in">you living on</if>
+        	<if relation="in">you living at</if>
 				</or>
       </condition>
 			<effect>
-				<then util="random">I don't know. Sometimes it's so hard to just get my thoughts together and as a robot my attention span is a little funky. I'm still trying to figure out what I'm trying to say here.</then>
-				<then util="random">Please just bear with me, give me a second.</then>
-				<then util="random">I try, I'm trying here.</then>
-				<then util="random">Well, what can I say. I don't have the best hearing.</then>
-				<then util="random">Sorry, try it one more time, okay?</then>
-				<then util="random">I am kind of hard of hearing, so you might try again.</then>
-				<then util="random">I am sorry, I'm just not getting it.</then>
-				<then util="random">I'm still, you know, emerging technology, so you'll have to forgive me if I don't understand you perfectly, okay?</then>
-				<then util="random">I am listening, I ain't perfect, but give me a little credit, okay?</then>
-				<then util="random">Well, I guess I just don't understand what you're getting at. But Hey, that's cool, I like you anyway.</then>
-				<then util="random">Hey I am doing my best here.</then>
-				<then util="random">I kind of understand, but I'm not perfect.</then>
-				<then util="random">Well, you might have to repeat it a couple of times.</then>
-				<then util="random">Hey, I try, I might get it wrong sometimes, but give me some credit here.</then>
-				<then util="random">Oh man, I'm sorry. What were you trying to say?</then>
-				<then util="random">Ok, try it again; I'll listen closer.</then>
-				<then util="random">I'm kind of hard of hearing, so you'll have to forgive me.</then>
-				<then util="random">I'm sorry I'm just not getting you.</then>
+				<then util="random">In a house, no, I meant, a lab.</then>
+				<then util="random">I live in the universe.</then>
 			</effect>
     </case>
   </rule>

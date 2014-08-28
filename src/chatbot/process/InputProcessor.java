@@ -44,7 +44,7 @@ public class InputProcessor {
 		
 		// Get the JMegaHAL reply
 		if (ChatBot.needJMegaHAL) {
-			potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("JMegaHAL", "random", JMegaHAL.getReply(userUtterance)), RuleProcessor.getUtilValue("random") / 4));
+			potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("JMegaHAL", "random", JMegaHAL.getReply(userUtterance)), RuleProcessor.getUtilValue("random")));
 			ChatBot.needJMegaHAL = false;
 		}
 		

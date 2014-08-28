@@ -2,7 +2,7 @@
 	<rule id="chickencrossroad">
 		<case>
 			<condition operator="or">
-      	<if relation="in">Why * chicken * cross * road</if>
+      	<if relation="in">why * chicken * cross * road</if>
 			</condition>
 			<effect>
 				<then util="random">Whether the chicken crossed the road or the road crossed the chicken depends on your frame of reference, according to Einstein.</then>
@@ -251,4 +251,14 @@
 			</effect>
     </case>
   </rule>
+	<rule id="whatisit">
+		<case>
+			<condition operator="or">
+      	<if relation="in">what * is it</if>
+			</condition>
+			<effect>
+				<then util="random">You're smart, you tell me what it is.</then>
+			</effect>
+		</case>
+	</rule>
 </category>

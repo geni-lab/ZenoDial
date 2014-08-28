@@ -61,7 +61,6 @@
       		<if relation="in">didn't</if>
 				</or>
 				<or>
-					<if relation="in">your</if>
       		<if relation="in">you</if>
 				</or>
 				<or>
@@ -69,8 +68,16 @@
 					<if relation="in">any</if>
 				</or>
       	<or>
-					<if relation="in">sibling</if>
+					<if relation="in">sibling</if> 
 					<if relation="in">siblings</if>
+					<if relation="in">brother</if>
+					<if relation="in">brothers</if>
+					<if relation="in">sister</if>
+					<if relation="in">sisters</if>
+					<if relation="in">nephew</if>
+					<if relation="in">nephews</if>
+					<if relation="in">niece</if>
+					<if relation="in">nieces</if>
 				</or>
 			</condition>
 			<effect>

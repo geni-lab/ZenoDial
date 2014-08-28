@@ -10,6 +10,7 @@ import chatbot.ros.ROSListener;
 import chatbot.ros.ROSPublisher;
 import chatbot.rule.PauseUtterance;
 import chatbot.rule.PrefixOfUtterance;
+import chatbot.rule.RepeatUtterance;
 import chatbot.rule.RuleProcessor;
 
 public class ChatBot {
@@ -28,8 +29,6 @@ public class ChatBot {
 //	public static boolean needOpenEphyra = true;
 	
 	public static void main(String... args) {
-		log.info("Please speak or enter what you want to say here.");
-		
 		// Read all the rule XML files
 		RuleProcessor.readRules("./res");
 		
@@ -52,14 +51,15 @@ public class ChatBot {
 		// Add predefined variables to the system
 		RuleProcessor.updateSystemVariable("robotname", robotname);
 		
-		// Suggest to do a garbage collection to clear all the XML node objects etc. 
+		// Suggest JVM to do a garbage collection to clear all the XML node objects etc. 
 		System.gc();
 		
 		Scanner scanner = new Scanner(System.in);
 		try {
 			// For command line interface
+			log.info("Please speak or enter anything here.");
+			System.out.print("> ");
 			while (true) {
-				System.out.print("> ");
 				String userInput = scanner.nextLine();
 				
 				if (!"".equals(userInput.trim())) {
@@ -69,18 +69,26 @@ public class ChatBot {
 						continue;
 					}
 					
-					// Directly publish an utterance if it starts with an ">"
-					if (userInput.startsWith(">")) {
-						ROSPublisher.publish("itf_talk", userInput.replace(">", "").trim());
+					// Directly publish an utterance if it starts with an "~"
+					if (userInput.startsWith("~")) {
+						ROSPublisher.publish("itf_talk", userInput.replace("~", "").trim());
 						continue;
 					}
 					
+					// Update the flags
 					speakingTheLastSentence = false;
 					nothingSpokenYet = true;
-					lastOutputUtterance = new InputProcessor().getReply(userInput);
 					
-					// Suggest to do a garbage collection to clear all the objects created for the utterance generation
+					// Store the rephrased user utterance in case it is useful
+					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(userInput));
+					
+					// Generate the reply
+					lastOutputUtterance = new InputProcessor().getReply(userInput);
+
+					// Suggest JVM to do a garbage collection each round
 					System.gc();
+					
+					System.out.print("> ");
 				}
 			}
 		}
