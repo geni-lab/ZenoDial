@@ -27,7 +27,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class RuleProcessor {
-	private static Logger log = new Logger("RuleProcessor", Level.DEBUG);
+	private static Logger log = new Logger("RuleProcessor", Level.NORMAL);
 	private static final double MIN_UTIL = 0.001;
 	private static final double NEXT_UTIL = 10.0;
 	private static final double MUST_UTIL = 1000.0;
@@ -46,6 +46,9 @@ public class RuleProcessor {
 	
 	public static void readRules(String filePath) {
 		try {
+			// For OpenEphyra only...
+//			System.setProperty("javax.xml.parsers.DocumentBuilderFactory","com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl");
+			
 			// Get all the rule XML files
 			ArrayList<File> listOfFiles = new ArrayList<File>(Arrays.asList(new File(filePath).listFiles()));
 			
@@ -516,6 +519,15 @@ public class RuleProcessor {
 			
 			matchedRules.removeAll(rulesToRemove);
 			rulesToRemove.clear();
+		}
+		
+		// If there are no pre-programmed answers for that question, consult the QA Engine(s)
+		if (matchedRuleIDs.contains("generalquestions")) {
+			ChatBot.needWolframAlpha = true;
+		}
+		
+		if (matchedRuleIDs.contains("generalnothingtosay")) {
+			ChatBot.needJMegaHAL = true;
 		}
 		
 		return matchedRules;

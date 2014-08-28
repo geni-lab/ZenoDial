@@ -15,7 +15,12 @@
 					</or>
 				</and>
 				<and>
-        	<if relation="in">say something</if>
+					<or>
+			      <if relation="in">tell</if>
+			      <if relation="in">say</if>
+			      <if relation="in">speak</if>
+					</or>
+        	<if relation="in">something</if>
 					<or>
 						<if relation="in">funny</if>
 						<if relation="in">comic</if>

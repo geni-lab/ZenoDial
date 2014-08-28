@@ -11,7 +11,7 @@
     <property name="source" value="1.7"/>
     <path id="ZenoDial.classpath">
         <pathelement location="bin"/>
-        <pathelement location="lib/MegaHAL/JMegaHal.jar"/>
+        <pathelement location="lib/MegaHAL/JMegaHAL.jar"/>
         <pathelement location="lib/ROS/actionlib_msgs-1.11.4.jar"/>
         <pathelement location="lib/ROS/apache_xmlrpc_client-0.2.0.jar"/>
         <pathelement location="lib/ROS/apache_xmlrpc_common-0.2.0.jar"/>

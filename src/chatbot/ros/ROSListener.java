@@ -8,7 +8,7 @@ import chatbot.log.Logger.Level;
 import chatbot.process.InputProcessor;
 
 public class ROSListener {
-	private static Logger log = new Logger("ROSListener", Level.DEBUG);
+	private static Logger log = new Logger("ROSListener", Level.NORMAL);
 	
 	public static void createInputListener() {
 		Subscriber<std_msgs.String> subscriber = ROSControl.initializeSubscriber("ChatBotListener", "itf_listen");

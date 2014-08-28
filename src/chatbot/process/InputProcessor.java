@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,12 +17,13 @@ import chatbot.log.Logger.Level;
 import chatbot.plugin.JMegaHAL;
 import chatbot.plugin.WolframAlpha;
 import chatbot.ros.ROSPublisher;
+import chatbot.rule.PrefixOfUtterance;
 import chatbot.rule.Rule;
 import chatbot.rule.RuleProcessor;
 import chatbot.rule.Then;
 
 public class InputProcessor {
-	private static Logger log = new Logger("InputProcessor", Level.DEBUG);
+	private static Logger log = new Logger("InputProcessor", Level.NORMAL);
 	private boolean needToUpdateTopic = true;
 	
 	public String getReply(String userUtterance) {
@@ -29,7 +31,7 @@ public class InputProcessor {
 		userUtterance = userUtterance.replaceAll("  ", " ").toLowerCase();
 		
 		// If after certain time the robot is still searching for the answer... say something
-		ROSPublisher.startPausePublisher();
+		ROSPublisher.startPausePublisher(userUtterance);
 		
 		// Find all the rules that are satisfied by the user utterance
 		ArrayList<Rule> satisfiedRules = RuleProcessor.findMatchingRules(userUtterance);
@@ -41,10 +43,23 @@ public class InputProcessor {
 		updateVariables(potentialOutputUtterances);
 		
 		// Get the JMegaHAL reply
-		if (ChatBot.needJMegaHAL) potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("JMegaHAL", "random", JMegaHAL.getReply(userUtterance)), RuleProcessor.getUtilValue("random") / 4));
+		if (ChatBot.needJMegaHAL) {
+			potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("JMegaHAL", "random", JMegaHAL.getReply(userUtterance)), RuleProcessor.getUtilValue("random") / 4));
+			ChatBot.needJMegaHAL = false;
+		}
 		
 		// Get Wolfram|Alpha reply
-		if (ChatBot.needWolframAlpha) potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("WolframAlpha", "random", WolframAlpha.getReply(userUtterance)), RuleProcessor.getUtilValue("random")));
+		if (ChatBot.needWolframAlpha) {
+			String waReply = WolframAlpha.getReply(userUtterance).trim();
+			if (!"".equals(waReply)) {
+				waReply = PrefixOfUtterance.getPrefixUtterances().get(new Random().nextInt(PrefixOfUtterance.getPrefixUtterances().size())) + waReply;
+				potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("WolframAlpha", "random", waReply), RuleProcessor.getUtilValue("must")));
+			}
+			ChatBot.needWolframAlpha = false;
+		}
+		
+		// Get OpenEphyra reply
+//		if (ChatBot.needOpenEphyra) potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("OpenEphyra", "random", OpenEphyraSearch.getReply(userUtterance)), RuleProcessor.getUtilValue("random")));
 		
 		// Sort the output utterances in descending order
 		sortByUtils(potentialOutputUtterances);
@@ -54,7 +69,7 @@ public class InputProcessor {
 		
 		// Print out the effects
 		for (Entry<Then, Double> entry : potentialOutputUtterances) {
-			log.debug("[" + new DecimalFormat("#0.###").format(entry.getValue()) + "] " + entry.getKey().getThen());
+			log.info("[" + new DecimalFormat("#0.###").format(entry.getValue()) + "] " + entry.getKey().getThen());
 		}
 		
 		ChatBot.nothingSpokenYet = false;
@@ -91,7 +106,7 @@ public class InputProcessor {
 	
 	private String getFinalOutputUtterance(List<Entry<Then, Double>> utterances, ArrayList<Rule> satisfiedRules) {
 		// Return the one with the highest util value, with the unwanted punctuation removed
-		String output = utterances.get(0).getKey().getThen().replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"");
+		String output = utterances.get(0).getKey().getThen().replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"").replace("~~", "Around");
 		
 		// For repeating the last utterance
 		if ("@repeat".equals(output)) {
@@ -108,7 +123,7 @@ public class InputProcessor {
 			utterances.addAll(RuleProcessor.extractEffect(satisfiedRules));
 			
 			List<Entry<Then, Double>> newOutputUtterances = sortByUtils(updateVariables(utterances));
-			output = newOutputUtterances.get(0).getKey().getThen().replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"");
+			output = newOutputUtterances.get(0).getKey().getThen().replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"").replace("~~", "Around");
 		}
 		
 		try {

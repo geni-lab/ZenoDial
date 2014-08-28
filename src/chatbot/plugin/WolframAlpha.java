@@ -15,7 +15,7 @@ import chatbot.log.Logger;
 import chatbot.log.Logger.Level;
 
 public class WolframAlpha {
-	private static Logger log = new Logger("WolframAlpha", Level.DEBUG);
+	private static Logger log = new Logger("WolframAlpha", Level.NORMAL);
 	private static final String URL1 = "http://api.wolframalpha.com/v2/query?input=";
 	private static final String URL2 = "&appid=";
 	private static final String API_ID = "XE7HUU-URT7HXR4W4"; //TODO: Paste your API key here
@@ -23,8 +23,8 @@ public class WolframAlpha {
 	public static String getReply(String input) {
 		String reply = extractTheAnswer(connectToWolframAlpha(URL1 + input.replace(" ", "+") + URL2 + API_ID));
 		
-		if ("".compareTo(reply.trim()) != 0) log.debug("Wolfram|Alpha Reply = " + reply);
-		else log.debug("Wolfram|Alpha Reply = <None>");
+		if ("".compareTo(reply.trim()) != 0) log.info("Wolfram|Alpha Reply = " + reply);
+		else log.info("Wolfram|Alpha Reply = <None>");
 		
 		return reply;
 	}

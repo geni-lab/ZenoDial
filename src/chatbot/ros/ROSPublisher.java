@@ -9,9 +9,9 @@ import chatbot.log.Logger.Level;
 import chatbot.rule.PauseUtterance;
 
 public class ROSPublisher {
-	private static Logger log = new Logger("ROSPublisher", Level.DEBUG);
+	private static Logger log = new Logger("ROSPublisher", Level.NORMAL);
 	
-	public static void startPausePublisher() {
+	public static void startPausePublisher(final String userUtterance) {
 		Thread saySomethingThread = new Thread() {
 			public void run() {
 				try {
@@ -23,6 +23,10 @@ public class ROSPublisher {
 					while (ChatBot.nothingSpokenYet && PauseUtterance.getPauseUtterances() != null) {
 						String utterance = PauseUtterance.getPauseUtterances().get(new Random().nextInt(PauseUtterance.getPauseUtterances().size()));
 
+						if ("<UU>".equals(utterance)) {
+							utterance = userUtterance;
+						}
+						
 						std_msgs.String pubStr = publisher.newMessage();
 						pubStr.setData(utterance);
 						Thread.sleep(130);
@@ -32,9 +36,12 @@ public class ROSPublisher {
 						publisher.publish(pubStr);
 						ChatBot.sendNextSentence = false;
 						
-						// Time to wait util the next pause sentence is published
-						Thread.sleep(3000);
+						// ==================================== Time to wait until the next pause sentence is published are the sum of the following Thread sleep times ==================================== //
+						// Time to wait before publishing the actual reply
+						Thread.sleep(500);
 						ChatBot.isSpeaking = false;
+						// Extra time to wait before publishing the the next pause sentence
+						Thread.sleep(2500);
 					}
 				}
 				

@@ -17,7 +17,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class JMegaHAL {
-	private static Logger log = new Logger("JMegaHAL", Level.DEBUG);
+	private static Logger log = new Logger("JMegaHAL", Level.NORMAL);
 	private static JMegaHal megahal;
 	private static String BRAIN = "./res/jmegahal/brain.ser";
 	
@@ -76,8 +76,8 @@ public class JMegaHAL {
 		log.debug("Getting reply from JMegaHal for input: \"" + input + "\"");		
 		String reply = megahal.getSentence(input);
 		
-		if ("".compareTo(reply.trim()) != 0) log.debug("JMegaHAL Reply = " + reply);
-		else log.debug("JMegaHAL Reply = <None>");
+		if ("".compareTo(reply.trim()) != 0) log.info("JMegaHAL Reply = " + reply);
+		else log.info("JMegaHAL Reply = <None>");
 		
 //		addSentenceToTheBrain(input);
 //		saveBrain();
