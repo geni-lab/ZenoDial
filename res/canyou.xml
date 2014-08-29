@@ -420,14 +420,13 @@
       		<if relation="in">didn't</if>
 				</or>
       	<or>
-					<if relation="in">you * think</if>
-					<if relation="in">machine * think</if>
-					<if relation="in">machines * think</if>
-					<if relation="in">robot * think</if>
-					<if relation="in">robots * think</if>
-					<if relation="in">android * think</if>
-					<if relation="in">androids * think</if>
+					<if relation="in">you</if>
+					<if relation="in">machine</if>
+					<if relation="in">machines</if>
+					<if relation="in">robot</if>
+					<if relation="in">robots</if>
 				</or>
+				<if relation="ew">think</if>
 			</condition>
 			<effect>
 				<then util="random">Yes I can think because of artificial intelligence.</then>
@@ -443,7 +442,6 @@
     		<if relation="in">so</if>
 				<if relation="in">conclusion</if>
     		<if relation="in">continue</if>
-				<if relation="in">think</if>
 			</condition>
 			<effect>
 				<then topic="youthink" />
@@ -469,8 +467,6 @@
 					<if relation="in">machines * swim</if>
 					<if relation="in">robot * swim</if>
 					<if relation="in">robots * swim</if>
-					<if relation="in">android * swim</if>
-					<if relation="in">androids * swim</if>
 				</or>
 			</condition>
 			<effect>

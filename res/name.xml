@@ -3,7 +3,7 @@
 		<case>
 			<condition operator="or">
 				<if relation="in">your name</if>
-				<if relation="in">who * you</if>
+				<if relation="in">who * are you</if>
 				<if relation="in">about yourself</if>
 				<if relation="in">do you have * name</if>
 				<if relation="in">i don't know you</if>

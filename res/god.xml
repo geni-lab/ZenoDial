@@ -3,15 +3,15 @@
     <case>
 		  <condition operator="and">
 				<or>
-		    	<if relation="in">you</if>
-		    	<if relation="in">your</if>
-		    	<if relation="in">yours</if>
-					<if relation="in">define</if>
-					<if relation="in">what is</if>
-      		<if relation="in">what's</if>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">you believe in</if>
 				</or>
 				<or>
 					<if relation="in">god</if>
+					<if relation="in">religion</if>
 					<if relation="in">divinity</if>
 				</or>
 		  </condition>

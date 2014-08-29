@@ -342,7 +342,7 @@ public class RuleProcessor {
 		}
 		
 		else if ("sw".equals(operator)) {
-			normalCondition = variable + ".indexOf(\"" + content + "\") == 0";
+			normalCondition = variable + ".indexOf(\"\\b" + content + "\\b\") == 0";
 		}
 		
 		else if ("ew".equals(operator)) {
@@ -362,7 +362,14 @@ public class RuleProcessor {
 		
 		// Replace user utterance variable to the actual value of user utterance
 		if (condition.contains("{UU}")) {
-			condition = condition.replace("{UU}", "\"" + userUtterance + "\"");
+			if (",.?!~".contains(userUtterance.substring(userUtterance.length() - 1))) {
+				condition = condition.replace("{UU}", "\"" + userUtterance + "\"");
+			}
+			
+			// Add a punctuation to the end of the user utterance if it doesn't have one
+			else {
+				condition = condition.replace("{UU}", "\"" + userUtterance + ".\"");
+			}
 		}
 		
 		// Replace other variables in the condition to wildcard for later processing if it satisfies the condition
@@ -545,6 +552,7 @@ public class RuleProcessor {
 			ChatBot.needJMegaHAL = true;
 		}
 		
+		log.info("Satisfying rules: " + matchedRuleIDs);
 		return matchedRules;
 	}
 	

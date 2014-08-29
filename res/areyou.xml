@@ -8,9 +8,11 @@
 						<if relation="in">you are</if>
 				  	<if relation="in">you're</if>
 					</or>
-		    	<if relation="in">sure</if>
+					<or>
+		    		<if relation="in">sure</if>
+		    		<if relation="in">serious</if>
+					</or>
 				</and>
-      	<if relation="in">really</if>
 			</condition>
 			<effect>
 				<then util="random">I am sure about that.</then>
@@ -292,6 +294,7 @@
 					<if relation="in">you're</if>
 				</or>
 				<or>
+					<if relation="in">fun</if>
 					<if relation="in">funny</if>
 					<if relation="in">comic</if>
 					<if relation="in">comical</if>
@@ -560,7 +563,6 @@
 				<or>
 					<if relation="in">robot</if>
 					<if relation="in">machine</if>
-					<if relation="in">android</if>
 				</or>
       </condition>
 			<effect>

@@ -106,7 +106,7 @@ public class InputProcessor {
 	
 	private String getFinalOutputUtterance(List<Entry<Then, Double>> utterances, ArrayList<Rule> satisfiedRules) {
 		// Return the one with the highest util value, with the unwanted punctuation removed
-		String output = utterances.get(0).getKey().getThen().replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"").replace("~~", "Around");
+		String output = RemoveUnwantedCharacters.getString(utterances.get(0).getKey().getThen());
 		
 		// For repeating the last utterance
 		if ("@repeat".equals(output)) {
@@ -123,7 +123,7 @@ public class InputProcessor {
 			utterances.addAll(RuleProcessor.extractEffect(satisfiedRules));
 			
 			List<Entry<Then, Double>> newOutputUtterances = sortByUtils(updateVariables(utterances));
-			output = newOutputUtterances.get(0).getKey().getThen().replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"").replace("~~", "Around");
+			output = RemoveUnwantedCharacters.getString(newOutputUtterances.get(0).getKey().getThen());
 		}
 		
 		try {

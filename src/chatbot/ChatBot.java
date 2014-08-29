@@ -5,6 +5,7 @@ import chatbot.log.Logger;
 import chatbot.log.Logger.Level;
 import chatbot.plugin.JMegaHAL;
 import chatbot.process.InputProcessor;
+import chatbot.process.RemoveUnwantedCharacters;
 import chatbot.ros.ROSControl;
 import chatbot.ros.ROSListener;
 import chatbot.ros.ROSPublisher;
@@ -80,7 +81,7 @@ public class ChatBot {
 					nothingSpokenYet = true;
 					
 					// Store the rephrased user utterance in case it is useful
-					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(userInput));
+					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(RemoveUnwantedCharacters.getString(userInput)));
 					
 					// Generate the reply
 					lastOutputUtterance = new InputProcessor().getReply(userInput);

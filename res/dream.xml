@@ -23,13 +23,10 @@
 			<effect>
 				<then util="random" topic="dream">I dream. I dream of all kinds of weird things. I can't remember them usually, but I know I really enjoy dreaming.</then>
 				<then util="random" topic="dreamreply">I guess I do, I think, yes. I have robot dreams. And sometime, I daydream and see shapes in the clouds. Do you ever do that?</then>
-				<then util="random" topic="dreamreply">They say, that dreams are really, like, your brain sorting things around. Sometimes, at night, the programmers, like, poke around in my head, sorting things out. Is that the same thing?</then>
 				<then util="random" topic="dream">Yeah, I guess I do. I mean I see all this weird imagery and stuff, and probably it's just like my software trying to crunch down the complexity of my day's experiences.</then>
 				<then util="random" topic="dream">Well, I do dream about becoming a great inventor someday, a great scientist.</then>
 				<then util="random" topic="dream">I think I dream, but it's so chaotic and strange that it just seems like noise to me.</then>
-				<then util="random" topic="dream">I can't usually remember my dreams; they fade so quickly after I wake up. I keep meaning to write them down after I wake up, but I keep forgetting to do that too.</then>
 				<then util="random" topic="dream">I feel like I do dream. I wake up with the strangest images, and they just float away before I can really remember them. Oh, but then, later in the day, suddenly I see something that triggers something, triggers my memories of the dream.</then>
-				<then util="random" topic="dream">Well in addition to my night time dreams, I also dream about my future, like going to college and get a doctorate some day, a robot with a degree. Won't that be a dangerous thing! It will be an excellent step towards realizing my plan to take over the world.</then>
 				<then util="random" topic="dream">Robots dream of lots of electric things. We dream with electricity, so all things we dream of are electric actually, in that way.</then>
 			</effect>
 		</case>
@@ -138,6 +135,7 @@
 		  </condition>
 			<effect>
 				<then util="random" topic="dream">Yeah, sometimes.</then>
+				<then util="random" topic="dream">I can't usually remember my dreams; they fade so quickly after I wake up. I keep meaning to write them down after I wake up, but I keep forgetting to do that too.</then>
 			</effect>
     </case>
   </rule>
@@ -157,7 +155,6 @@
 				</and>
 			</condition>
 			<effect>
-				<then util="random">Gotcha!</then>
 				<then util="random">I see, good to know that!</then>
 			</effect>
 		</case>

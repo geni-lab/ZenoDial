@@ -10,7 +10,7 @@
 					<if relation="in">family</if>
 					<if relation="in">families</if>
 				</or>
-				<if relation="!in">my family</if>
+				<if relation="!in">my</if>
 			</condition>
 			<effect>
 				<then util="random">About my family. Well my family is really important to me, that's the most important, always will be.</then>
@@ -99,7 +99,6 @@
 					<if relation="in">yours</if>
       		<if relation="in">you</if>
 				</or>
-
 				<or>
 					<if relation="in">have</if>
 					<if relation="in">any</if>
