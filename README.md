@@ -12,8 +12,6 @@ Have the following installed / running on the computer that is going to compile 
 - itf_listen.py
 - itf_talk.py
 
-Sign up a Wolfram|Alpha API key (https://developer.wolframalpha.com/portal/apisignup.html) and paste it to the variable "API_ID" in "chatbot.plugin.WolframAlpha".
-
 
 How to run it
 -------------
