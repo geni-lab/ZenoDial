@@ -1,4 +1,4 @@
-package chatbot.rule;
+package chatbot.process;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,7 +14,7 @@ public class RepeatUtterance {
 			return inputUtterance.toLowerCase()
 					.replaceAll("\\baren't you\\b", "i am not")
 					.replaceAll("\\byou aren't\\b", "i am not")
-					.replaceAll("\\bare you\\b", "am i")
+					.replaceAll("\\bare you\\b", "i am")
 					.replaceAll("\\byou are\\b", "i am")
 					.replaceAll("\\byou\\b", "i")
 					.replaceAll("\\byour\\b", "my")
@@ -25,7 +25,7 @@ public class RepeatUtterance {
 		
 		else {
 			return inputUtterance.toLowerCase()
-					.replaceAll("\\bam i\\b", "are you")
+					.replaceAll("\\bam i\\b", "you are")
 					.replaceAll("\\bi am\\b", "you are")
 					.replaceAll("\\bi'm\\b", "you are")
 					.replaceAll("\\bi\\b", "you")

@@ -1,4 +1,4 @@
-package chatbot.rule;
+package chatbot.process;
 
 import java.io.BufferedReader;
 import java.io.File;

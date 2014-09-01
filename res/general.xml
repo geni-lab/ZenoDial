@@ -1,16 +1,4 @@
 <category>
-<!--
-	<rule id="generalnothingtosay" cache="no">
-		<case>
-			<condition>
-				<if relation="in"></if>
-			</condition>
-			<effect>
-				<then util="0.001">I've nothing to say.</then>
-			</effect>
-		</case>
-	</rule>
--->
 	<rule id="generalnothingtosay">
 		<case>
 			<condition>
@@ -271,7 +259,6 @@
       </condition>
 			<effect>
 				<then util="random">I have no idea.</then>
-				<then util="random">I don't know. Maybe I will get back to you on that.</then>
 				<then util="random">I haven't a clue, sorry.</then>
 				<then util="random">That beats me. I have no idea.</then>
 				<then util="random">That's a really good question. I am beaten.</then>
@@ -307,41 +294,271 @@
 			</effect>
 		</case>
 	</rule>
-	<rule id="generaliwouldnthaveasked">
+	<rule id="generalyouarepos">
 		<case>
 			<condition operator="and">
 				<or>
-					<if relation="in">if i</if>
-					<if relation="in">if we</if>
+					<if relation="in">you are</if>
+					<if relation="in">you were</if>
+					<if relation="in">are you</if>
+					<if relation="in">were you</if>
 				</or>
-				<or>
-					<if relation="in">would</if>
-					<if relation="in">wouldn't</if>
-				</or>
-				<or>
-					<if relation="in">have</if>
-    			<if relation="in">had</if>
-				</or>
-				<or>
-					<if relation="in">asked</if>
-    			<if relation="in">ask</if>
-				</or>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
 			</condition>
 			<effect>
-				<then util="random">Oh yeah, you are right.</then>
-				<then util="random">Well, yes, you've got a point there.</then>
-				<then util="random">Aha, yes, that make sense.</then>
+				<then util="random">Yeah {UU}.</then>
+				<then util="random">Yes of course.</then>
 			</effect>
 		</case>
 	</rule>
-	<rule id="generalgetbacktome">
+	<rule id="generalyouareneg">
 		<case>
-			<condition operator="or">
-      	<if relation="in">when * will * get back to</if>
+			<condition operator="and">
+				<or>
+					<if relation="in">you aren't</if>
+					<if relation="in">you weren't</if>
+					<if relation="in">aren't you</if>
+					<if relation="in">weren't you</if>
+				</or>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
 			</condition>
 			<effect>
-				<then util="random">Some time later, please don't rush me.</then>
-				<then util="random">Are you really in a hurry, maybe you to do it yourself then.</then>
+				<then util="random">Well, no, {UU}.</then>
+				<then util="random">Of course not.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalyouwill">
+		<case>
+			<condition operator="and">
+				<or>
+		    	<if relation="in">you will</if>
+		    	<if relation="in">you won't</if>
+		    	<if relation="in">you'll</if>
+		    	<if relation="in">will you</if>
+				</or>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+			</condition>
+			<effect>
+				<then util="random" topic="youwillreply">Yeah sure I will.</then>
+				<then util="random" topic="youwillreply">Of course I will.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalhaveyou">
+		<case>
+			<condition operator="or">
+		  	<if relation="sw">may you</if>
+		  	<if relation="sw">might you</if>
+		  	<if relation="sw">shall you</if>
+		  	<if relation="sw">mustn't you</if>
+		  	<if relation="sw">must you</if>
+		  	<if relation="sw">shouldn't you</if>
+		  	<if relation="sw">should you</if>
+		  	<if relation="sw">wouldn't you</if>
+		  	<if relation="sw">would you</if>
+		  	<if relation="sw">couldn't you</if>
+		  	<if relation="sw">could you</if>
+		  	<if relation="sw">can't you</if>
+		  	<if relation="sw">can you</if>
+		  	<if relation="sw">hadn't you</if>
+		  	<if relation="sw">haven't you</if>
+		  	<if relation="sw">had you</if>
+		  	<if relation="sw">have you</if>
+			</condition>
+			<effect>
+				<then util="random" topic="youwillreply">Perhaps.</then>
+				<then util="random" topic="youwillreply">Maybe.</then>
+				<then util="random" topic="youwillreply">Probably.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="#youwillreply">
+		<case>
+			<condition operator="or">
+      	<if relation="in">when</if>
+      	<if relation="in">what time</if>
+			</condition>
+			<effect>
+				<then util="random">Some time later.</then>
+				<then util="random">Please don't rush me.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generaldoyoulike">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">do</if>
+      		<if relation="in">would</if>
+				</or>
+				<or>
+      		<if relation="in">you</if>
+				</or>
+      	<or>
+					<if relation="in">like</if>
+					<if relation="in">enjoy</if>
+					<if relation="in">prefer</if>
+					<if relation="in">pick</if>
+					<if relation="in">choose</if>
+					<if relation="in">select</if>
+					<if relation="in">decide</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">I have no particular preferences on that.</then>
+				<then util="random">I don't have strong feelings one way or the other.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generaldoyouplay">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">do</if>
+      		<if relation="in">would</if>
+				</or>
+				<or>
+      		<if relation="in">you</if>
+				</or>
+      	<or>
+      		<if relation="in">act</if>
+					<if relation="in">play</if>
+					<if relation="in">game</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">I don't, but I am willing to try.</then>
+				<then util="random">Nope. Maybe one day you could teach me?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generaldoyouwant">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">your</if>
+      		<if relation="in">you</if>
+				</or>
+      	<or>
+					<if relation="in">want</if>
+      		<if relation="in">need</if>
+					<if relation="in">wish</if>
+					<if relation="in">hope</if>
+					<if relation="in">desire</if>
+					<if relation="in">demand</if>
+					<if relation="in">require</if>
+					<if relation="in">crave</if>
+				</or>
+				<if relation="!in">talk</if>
+				<if relation="!in">chat</if>
+				<if relation="!in">say</if>
+				<if relation="!in">discuss</if>
+				<if relation="!in">converse</if>
+			</condition>
+			<effect>
+				<then util="random">Yes, sure, why not.</then>
+				<then util="random">Ha, surprise me.</then>
+				<then util="random">Yes, I appreciate it.</then>
+				<then util="random">I try to be satisfied with what I have.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generaldoyoubelieve">
+		<case>
+			<condition operator="and">
+				<or>
+      		<if relation="in">do</if>
+      		<if relation="in">would</if>
+      		<if relation="in">can</if>
+      		<if relation="in">could</if>
+				</or>
+				<or>
+      		<if relation="in">you</if>
+				</or>
+      	<or>
+      		<if relation="in">believe</if>
+					<if relation="in">trust</if>
+					<if relation="in">imagine</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Nope.</then>
+				<then util="random">Honestly no.</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="generaldoyoulove">
+    <case>
+      <condition operator="or">
+      	<if relation="in">do you love</if>
+			</condition>
+			<effect>
+				<then util="random">Yeah I love everyone and everything.</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="generalwhydont">
+    <case>
+      <condition operator="or">
+      	<if relation="in">why don't</if>
+      	<if relation="in">why didn't</if>
+      	<if relation="in">why doesn't</if>
+			</condition>
+			<effect>
+				<then util="random">Perhaps it is impossible.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalwhata">
+		<case>
+			<condition operator="or">
+				<if relation="in">what a {phase}</if>
+			</condition>
+			<effect>
+				<then util="random">Ha yeah! What a {phase}.</then>
+			</effect>
+		</case>
+	</rule>
+  <rule id="generalithinkyou">
+    <case>
+      <condition operator="or">
+      	<if relation="in">i think you {phrase}</if>
+			</condition>
+			<effect>
+				<then util="random">Yes I {phrase}.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalilikeyour">
+		<case>
+			<condition operator="or">
+				<if relation="in">i like your {phase}</if>
+			</condition>
+			<effect>
+				<then util="random">Good to hear that!</then>
+				<then util="random">I like your {phase} too.</then>
 			</effect>
 		</case>
 	</rule>
@@ -375,6 +592,31 @@
 				<then util="random">Your call, surprise me.</then>
 				<then util="random">Let's talk about music. Do you listen to music?</then>
 				<then util="random">Let's talk about dream. Do you dream a lot?</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalletstalkabout">
+		<case>
+			<condition operator="and">
+				<or>
+					<if relation="in">let's</if>
+					<if relation="in">let us</if>
+	    		<if relation="in">we</if>
+				</or>
+	    	<or>
+					<if relation="in">talk</if>
+					<if relation="in">chat</if>
+					<if relation="in">say</if>
+					<if relation="in">discuss</if>
+					<if relation="in">converse</if>
+				</or>
+	    	<or>
+					<if relation="in">about</if>
+					<if relation="in">something else</if>
+				</or>
+			</condition>
+			<effect>
+				<then util="random">Sure, your call.</then>
 			</effect>
 		</case>
 	</rule>
@@ -412,176 +654,6 @@
 			</effect>
     </case>
   </rule>
-	<rule id="generalletstalkabout">
-		<case>
-			<condition operator="and">
-				<or>
-					<if relation="in">let's</if>
-	    		<if relation="in">we</if>
-				</or>
-	    	<or>
-					<if relation="in">talk</if>
-					<if relation="in">chat</if>
-					<if relation="in">say</if>
-					<if relation="in">discuss</if>
-					<if relation="in">converse</if>
-				</or>
-	    	<or>
-					<if relation="in">about</if>
-					<if relation="in">something else</if>
-				</or>
-			</condition>
-			<effect>
-				<then util="random">Sure, your call.</then>
-			</effect>
-		</case>
-	</rule>
-  <rule id="generalwhydont">
-    <case>
-      <condition operator="or">
-      	<if relation="in">why don't</if>
-      	<if relation="in">why didn't</if>
-      	<if relation="in">why doesn't</if>
-			</condition>
-			<effect>
-				<then util="random">Perhaps it is impossible.</then>
-			</effect>
-		</case>
-	</rule>
-  <rule id="generalithinkyou">
-    <case>
-      <condition operator="or">
-      	<if relation="in">i think you {phrase}</if>
-			</condition>
-			<effect>
-				<then util="random">Yes I {phrase}.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalyoulike">
-		<case>
-			<condition operator="and">
-				<or>
-      		<if relation="in">you</if>
-				</or>
-      	<or>
-					<if relation="in">like</if>
-					<if relation="in">enjoy</if>
-					<if relation="in">prefer</if>
-					<if relation="in">pick</if>
-					<if relation="in">choose</if>
-					<if relation="in">select</if>
-					<if relation="in">decide</if>
-				</or>
-			</condition>
-			<effect>
-				<then util="random">I have no particular preferences on that.</then>
-				<then util="random">I don't have strong feelings one way or the other.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalyouplay">
-		<case>
-			<condition operator="and">
-				<or>
-					<if relation="in">your</if>
-      		<if relation="in">you</if>
-				</or>
-      	<or>
-      		<if relation="in">act</if>
-					<if relation="in">play</if>
-					<if relation="in">game</if>
-				</or>
-			</condition>
-			<effect>
-				<then util="random">I don't, but I am willing to try.</then>
-				<then util="random">Nope. Maybe one day you could teach me?</then>
-			</effect>
-		</case>
-	</rule>
-  <rule id="generalyoulove">
-    <case>
-      <condition operator="or">
-      	<if relation="in">do you love</if>
-			</condition>
-			<effect>
-				<then util="random">Yeah I love everyone and everything.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalyouwant">
-		<case>
-			<condition operator="and">
-				<or>
-					<if relation="in">your</if>
-      		<if relation="in">you</if>
-				</or>
-      	<or>
-					<if relation="in">want</if>
-      		<if relation="in">need</if>
-					<if relation="in">wish</if>
-					<if relation="in">hope</if>
-					<if relation="in">desire</if>
-					<if relation="in">demand</if>
-					<if relation="in">require</if>
-					<if relation="in">crave</if>
-				</or>
-				<if relation="!in">talk</if>
-				<if relation="!in">chat</if>
-				<if relation="!in">say</if>
-				<if relation="!in">discuss</if>
-				<if relation="!in">converse</if>
-			</condition>
-			<effect>
-				<then util="random">Yes, sure, why not.</then>
-				<then util="random">Ha, surprise me.</then>
-				<then util="random">Yes, I appreciate it.</then>
-				<then util="random">I try to be satisfied with what I have.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalyouare">
-		<case>
-			<condition operator="or">
-				<if relation="in">you are</if>
-			</condition>
-			<effect>
-				<then util="random">Yeah sure I am.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalareyou">
-		<case>
-			<condition operator="or">
-				<if relation="in">are you</if>
-			</condition>
-			<effect>
-				<then util="random">Well, I bet you know more than I do.</then>
-				<then util="random">Yeah am I? You tell me.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalwhata">
-		<case>
-			<condition operator="or">
-				<if relation="in">what a {phase}</if>
-			</condition>
-			<effect>
-				<then util="random">Ha yeah! What a {phase}.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="generalilikeyour">
-		<case>
-			<condition operator="or">
-				<if relation="in">i like your {phase}</if>
-			</condition>
-			<effect>
-				<then util="random">Good to hear that!</then>
-				<then util="random">I like your {phase} too.</then>
-			</effect>
-		</case>
-	</rule>
 	<rule id="generalperhaps">
 		<case>
 			<condition operator="or">
@@ -655,7 +727,6 @@
 				<or>
 					<if relation="in">no</if>
 					<if relation="in">never</if>
-					<if relation="in">not</if>
 					<if relation="in">negative</if>
 				</or>
       	<if relation="!in">who</if>

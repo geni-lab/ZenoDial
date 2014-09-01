@@ -5,13 +5,13 @@ import chatbot.log.Logger;
 import chatbot.log.Logger.Level;
 import chatbot.plugin.JMegaHAL;
 import chatbot.process.InputProcessor;
+import chatbot.process.PauseUtterance;
+import chatbot.process.PrefixOfUtterance;
 import chatbot.process.RemoveUnwantedCharacters;
+import chatbot.process.RepeatUtterance;
 import chatbot.ros.ROSControl;
 import chatbot.ros.ROSListener;
 import chatbot.ros.ROSPublisher;
-import chatbot.rule.PauseUtterance;
-import chatbot.rule.PrefixOfUtterance;
-import chatbot.rule.RepeatUtterance;
 import chatbot.rule.RuleProcessor;
 
 public class ChatBot {
@@ -81,10 +81,10 @@ public class ChatBot {
 					nothingSpokenYet = true;
 					
 					// Store the rephrased user utterance in case it is useful
-					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(RemoveUnwantedCharacters.getString(userInput)));
+					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(RemoveUnwantedCharacters.getString(userInput, true)));
 					
 					// Generate the reply
-					lastOutputUtterance = new InputProcessor().getReply(userInput);
+					lastOutputUtterance = new InputProcessor().getReply(RemoveUnwantedCharacters.removePunctuation(userInput));
 
 					// Suggest JVM to do a garbage collection each round
 					System.gc();

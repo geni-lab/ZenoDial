@@ -6,8 +6,8 @@ import org.ros.node.topic.Publisher;
 import chatbot.ChatBot;
 import chatbot.log.Logger;
 import chatbot.log.Logger.Level;
-import chatbot.rule.PauseUtterance;
-import chatbot.rule.RepeatUtterance;
+import chatbot.process.PauseUtterance;
+import chatbot.process.RepeatUtterance;
 
 public class ROSPublisher {
 	private static Logger log = new Logger("ROSPublisher", Level.NORMAL);

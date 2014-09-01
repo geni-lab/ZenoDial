@@ -318,40 +318,40 @@ public class RuleProcessor {
 		String normalCondition = "";
 		
 		if (content.contains(" * ")) {
-			normalCondition = variable + ".match(/\\b" + content.replace(" * ", ".*") + "\\b/) !== null";
+			normalCondition = "\"" + variable + "\".match(/\\b" + content.replace(" * ", ".*") + "\\b/) !== null";
 		}
 		
 		else if ("*".equals(content)) {
-			normalCondition = variable + " !== null";
+			normalCondition = "\"" + variable + "\" !== null";
 		}
 		
 		else if ("=".equals(operator)) {
-			normalCondition = variable + " === \"\\b" + content + "\\b\"";
+			normalCondition = "\"\\b" + variable + "\\b\" === \"\\b" + content + "\\b\"";
 		}
 		
 		else if ("!=".equals(operator)) {
-			normalCondition = variable + " !== \"\\b" + content + "\\b\"";
+			normalCondition = "\"\\b" + variable + "\\b\" !== \"\\b" + content + "\\b\"";
 		}
 		
 		else if ("in".equals(operator)) {
-			normalCondition = variable + ".match(/\\b" + content + "\\b/) !== null";
+			normalCondition = "\"" + variable + "\".match(/\\b" + content + "\\b/) !== null";
 		}
 		
 		else if ("!in".equals(operator)) {
-			normalCondition = variable + ".match(/\\b" + content + "\\b/) === null";
+			normalCondition = "\"" + variable + "\".match(/\\b" + content + "\\b/) === null";
 		}
 		
 		else if ("sw".equals(operator)) {
-			normalCondition = variable + ".indexOf(\"\\b" + content + "\\b\") == 0";
+			normalCondition = "\"" + variable + "\".indexOf(\"\\b" + content + "\\b\") == 0";
 		}
 		
 		else if ("ew".equals(operator)) {
 			// Assume every utterance ends with a punctuation
-			normalCondition = "(" + variable + ".lastIndexOf(\"" + content + "\") >= 0 && " + variable + ".lastIndexOf(\"" + content + "\") == " + variable + ".length - \"" + content + "\".length - 1)";
+			normalCondition = "(\"" + variable + "\".lastIndexOf(\"" + content + "\") >= 0 && \"" + variable + "\".lastIndexOf(\"" + content + "\") == \"" + variable + "\".length - \"" + content + "\".length)";
 		}
 		
 		else {
-			normalCondition = variable + " " + operator + " \"" + content + "\"";
+			normalCondition = "\"" + variable + "\" " + operator + " \"" + content + "\"";
 		}
 		
 		return normalCondition;
@@ -362,14 +362,7 @@ public class RuleProcessor {
 		
 		// Replace user utterance variable to the actual value of user utterance
 		if (condition.contains("{UU}")) {
-			if (",.?!~".contains(userUtterance.substring(userUtterance.length() - 1))) {
-				condition = condition.replace("{UU}", "\"" + userUtterance + "\"");
-			}
-			
-			// Add a punctuation to the end of the user utterance if it doesn't have one
-			else {
-				condition = condition.replace("{UU}", "\"" + userUtterance + ".\"");
-			}
+			condition = condition.replace("{UU}", userUtterance);
 		}
 		
 		// Replace other variables in the condition to wildcard for later processing if it satisfies the condition
@@ -378,7 +371,7 @@ public class RuleProcessor {
 			condition = condition.replaceAll("\\s*\\{.+?\\}\\s*", ".*");
 		}
 		
-		log.debug("Evaluating: " + condition);
+		log.debug("Evaluating (" + rule.getRuleID() + "): " + condition);
 		return condition;
 	}
 	

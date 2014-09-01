@@ -17,7 +17,6 @@ import chatbot.log.Logger.Level;
 import chatbot.plugin.JMegaHAL;
 import chatbot.plugin.WolframAlpha;
 import chatbot.ros.ROSPublisher;
-import chatbot.rule.PrefixOfUtterance;
 import chatbot.rule.Rule;
 import chatbot.rule.RuleProcessor;
 import chatbot.rule.Then;
@@ -106,7 +105,7 @@ public class InputProcessor {
 	
 	private String getFinalOutputUtterance(List<Entry<Then, Double>> utterances, ArrayList<Rule> satisfiedRules) {
 		// Return the one with the highest util value, with the unwanted punctuation removed
-		String output = RemoveUnwantedCharacters.getString(utterances.get(0).getKey().getThen());
+		String output = RemoveUnwantedCharacters.getString(utterances.get(0).getKey().getThen(), false);
 		
 		// For repeating the last utterance
 		if ("@repeat".equals(output)) {
@@ -123,7 +122,7 @@ public class InputProcessor {
 			utterances.addAll(RuleProcessor.extractEffect(satisfiedRules));
 			
 			List<Entry<Then, Double>> newOutputUtterances = sortByUtils(updateVariables(utterances));
-			output = RemoveUnwantedCharacters.getString(newOutputUtterances.get(0).getKey().getThen());
+			output = RemoveUnwantedCharacters.getString(newOutputUtterances.get(0).getKey().getThen(), false);
 		}
 		
 		try {
