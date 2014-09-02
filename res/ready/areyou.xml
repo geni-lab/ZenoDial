@@ -429,33 +429,6 @@
 			</effect>
     </case>
   </rule>
-	<rule id="#frustrated">
-		<case>
-			<condition operator="or">
-      	<if relation="in">why</if>
-      	<if relation="in">what</if>
-      	<if relation="in">explain</if>
-      	<if relation="in">tell</if>
-      	<if relation="in">can you</if>
-      	<if relation="in">could you</if>
-			</condition>
-			<effect>
-				<then util="random" topic="fthatsall">I'm a little frustrated at my inability to communicate, that's all.</then>
-			</effect>
-		</case>
-	</rule>
-	<rule id="#fthatsall">
-		<case>
-			<condition operator="or">
-      	<if relation="in">that's all</if>
-      	<if relation="in">this</if>
-      	<if relation="in">yeah</if>
-			</condition>
-			<effect>
-				<then util="random">That's all.</then>
-			</effect>
-		</case>
-	</rule>
   <rule id="youfamous">
     <case>
 			<condition operator="and">
