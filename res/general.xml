@@ -654,6 +654,30 @@
 			</effect>
     </case>
   </rule>
+  <rule id="generalsame">
+    <case>
+      <condition operator="or">
+        <if relation="in">same</if>
+        <if relation="in">me too</if>
+      </condition>
+			<effect>
+				<then util="random">Ha! What a coincidence!</then>
+				<then util="random">Aha! I am sure we have more things in common.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="generalexample">
+    <case>
+      <condition operator="or">
+      	<if relation="in">such as</if>
+      	<if relation="in">for example</if>
+      	<if relation="in">like what</if>
+      </condition>
+			<effect>
+				<then util="random">Well, I'll leave that to your imagination.</then>
+			</effect>
+    </case>
+  </rule>
 	<rule id="generalperhaps">
 		<case>
 			<condition operator="or">
@@ -681,12 +705,57 @@
 			<condition operator="and">
 				<or>
 					<if relation="in">because</if>
+					<if relation="in">so as to</if>
+					<if relation="in">in order to</if>
 					<if relation="in">the * reason is</if>
 					<if relation="in">the * reasons are</if>
 				</or>
 			</condition>
 			<effect>
 				<then util="random">Good reason.</then>
+				<then util="random">That's reasonable.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalposreply">
+		<case>
+			<condition operator="or">
+				<and>
+					<not>
+						<if relation="in">not</if>
+						<if relation="in">don't</if>
+					</not>
+					<or>
+						<if relation="in">cool</if>
+						<if relation="in">well</if>
+						<if relation="in">good</if>
+						<if relation="in">fine</if>
+						<if relation="in">great</if>
+						<if relation="in">ok</if>
+						<if relation="in">okay</if>
+						<if relation="in">all right</if>
+						<if relation="in">alright</if>
+						<if relation="in">excellent</if>
+						<if relation="in">perfect</if>
+						<if relation="in">brilliant</if>
+						<if relation="in">wonderful</if>
+						<if relation="in">amazing</if>
+						<if relation="in">awesome</if>
+						<if relation="in">marvelous</if>
+					</or>
+				</and>
+				<and>
+					<if relation="in">not</if>
+					<if relation="in">bad</if>
+				</and>
+			</condition>
+			<effect>
+				<then util="random">That's great!</then>
+				<then util="random">Nice to hear that!</then>
+				<then util="random">Good to hear that!</then>
+				<then util="random">Good!</then>
+				<then util="random">Great!</then>
+				<then util="random">Nice!</then>
 			</effect>
 		</case>
 	</rule>
