@@ -46,9 +46,6 @@ public class RuleProcessor {
 	
 	public static void readRules(String filePath) {
 		try {
-			// For OpenEphyra only...
-//			System.setProperty("javax.xml.parsers.DocumentBuilderFactory","com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl");
-			
 			// Get all the rule XML files
 			ArrayList<File> listOfFiles = new ArrayList<File>(Arrays.asList(new File(filePath).listFiles()));
 			
@@ -587,6 +584,7 @@ public class RuleProcessor {
 		
 		// Put all the effects from all satisfied rules
 		for (Rule rule : satisfiedRules) {
+			log.info("dick! extractEffect " + rule.getRuleID());
 			allEffects.addAll(new ArrayList<Entry<Then, Double>>(rule.getEffect().entrySet()));
 		}
 		

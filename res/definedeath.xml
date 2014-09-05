@@ -1,10 +1,11 @@
 <category>
-	<rule id="death">
+	<rule id="definedeath">
 		<case>
 		  <condition operator="and">
 				<or>
         	<if relation="in">define</if>
         	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
         	<if relation="in">what is</if>
         	<if relation="in">what's</if>
         	<if relation="in">you believe in</if>

@@ -27,7 +27,6 @@ public class ChatBot {
 	public static boolean speakingTheLastSentence = false;
 	public static boolean needJMegaHAL = false;
 	public static boolean needWolframAlpha = false;
-//	public static boolean needOpenEphyra = true;
 	
 	public static void main(String... args) {
 		// Read all the rule XML files
@@ -45,9 +44,6 @@ public class ChatBot {
 		
 		// Initialize JMegaHAL
 		JMegaHAL.initializeFromCorpus("./res/jmegahal");
-		
-		// Initialize OpenEphyra
-//		if (needOpenEphyra) new OpenEphyraSearch();
 		
 		// Add predefined variables to the system
 		RuleProcessor.updateSystemVariable("robotname", robotname);
@@ -86,7 +82,7 @@ public class ChatBot {
 					// Generate the reply
 					lastOutputUtterance = new InputProcessor().getReply(RemoveUnwantedCharacters.removePunctuation(userInput));
 
-					// Suggest JVM to do a garbage collection each round
+					// Suggest JVM to do a garbage collection after all
 					System.gc();
 					
 					System.out.print("> ");
