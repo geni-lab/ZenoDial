@@ -1,16 +1,14 @@
 <category>
-  <rule id="family">
+  <rule id="tellmeaboutyourfamily">
     <case>
-			<condition operator="and">
-				<or>
-					<if relation="in">your</if>
-      		<if relation="in">you</if>
-				</or>
-      	<or>
-					<if relation="in">family</if>
-					<if relation="in">families</if>
-				</or>
-				<if relation="!in">my</if>
+			<condition operator="or">
+				<if relation="in">do you have * family</if>
+				<if relation="in">do you like * your family</if>
+				<if relation="in">do you love * your family</if>
+				<if relation="in">do you think * family</if>
+				<if relation="in">tell * about your family</if>
+				<if relation="in">how is * your family</if>
+				<if relation="in">how's * your family</if>
 			</condition>
 			<effect>
 				<then util="random">About my family. Well my family is really important to me, that's the most important, always will be.</then>
@@ -51,21 +49,12 @@
 			</effect>
     </case>
   </rule>
-  <rule id="sibling">
+  <rule id="doyouhavesibling">
     <case>
 			<condition operator="and">
 				<or>
-					<if relation="in">do</if>
-      		<if relation="in">don't</if>
-					<if relation="in">did</if>
-      		<if relation="in">didn't</if>
-				</or>
-				<or>
-      		<if relation="in">you</if>
-				</or>
-				<or>
-					<if relation="in">have</if>
-					<if relation="in">any</if>
+					<if relation="in">do you have</if>
+      		<if relation="in">don't you have</if>
 				</or>
       	<or>
 					<if relation="in">sibling</if> 
@@ -85,23 +74,12 @@
 			</effect>
     </case>
   </rule>
-  <rule id="father">
+  <rule id="doyouhaveafather">
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">do</if>
-      		<if relation="in">don't</if>
-					<if relation="in">did</if>
-      		<if relation="in">didn't</if>
-				</or>
-				<or>
-					<if relation="in">your</if>
-					<if relation="in">yours</if>
-      		<if relation="in">you</if>
-				</or>
-				<or>
-					<if relation="in">have</if>
-					<if relation="in">any</if>
+					<if relation="in">do you have</if>
+      		<if relation="in">don't you have</if>
 				</or>
 				<or>
 		      <if relation="in">father</if>
@@ -117,24 +95,12 @@
 			</effect>
     </case>
   </rule>
-  <rule id="mother">
+  <rule id="doyouhaveamother">
     <case>
       <condition operator="and">
 				<or>
-					<if relation="in">do</if>
-      		<if relation="in">don't</if>
-					<if relation="in">did</if>
-      		<if relation="in">didn't</if>
-				</or>
-				<or>
-					<if relation="in">your</if>
-					<if relation="in">yours</if>
-      		<if relation="in">you</if>
-				</or>
-
-				<or>
-					<if relation="in">have</if>
-					<if relation="in">any</if>
+					<if relation="in">do you have</if>
+      		<if relation="in">don't you have</if>
 				</or>
 				<or>
 		      <if relation="in">mother</if>

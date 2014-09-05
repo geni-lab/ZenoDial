@@ -1,22 +1,46 @@
 <category>
-	<rule id="dream">
+  <rule id="definedream">
+    <case>
+		  <condition operator="and">
+				<or>
+        	<if relation="in">define</if>
+        	<if relation="in">what * you think</if>
+        	<if relation="in">how * you think</if>
+        	<if relation="in">what is</if>
+        	<if relation="in">what's</if>
+        	<if relation="in">you believe in</if>
+				</or>
+				<or>
+					<if relation="in">dream</if>
+					<if relation="in">dreaming</if>
+				</or>
+				<if relation="!in">your</if>
+		  </condition>
+			<effect>
+				<then util="random" topic="dream">Dreams are a series of thoughts, images, and sensations occurring in a person's mind during sleep.</then>
+				<then util="random" topic="dream">Dreams are successions of images, ideas, emotions, and sensations that occur involuntarily in the mind during certain stages of sleep.</then>
+			</effect>
+    </case>
+  </rule>
+	<rule id="doyoudream">
 		<case>
 			<condition operator="and">
-				<or>
-					<if relation="in">android</if>
-					<if relation="in">androids</if>
-					<if relation="in">robot</if>
-					<if relation="in">robots</if>
-					<if relation="in">machine</if>
-					<if relation="in">machines</if>
-					<if relation="in">computer</if>
-					<if relation="in">computers</if>
-      		<if relation="in">you</if>
-				</or>
       	<or>
-					<if relation="in">dream</if>
-					<if relation="in">dreamed</if>
-					<if relation="in">dreaming</if>
+					<if relation="in">do</if>
+					<if relation="in">does</if>
+					<if relation="in">could</if>
+					<if relation="in">can</if>
+				</or>
+				<or>
+					<if relation="in">android * dream</if>
+					<if relation="in">androids * dream</if>
+					<if relation="in">robot * dream</if>
+					<if relation="in">robots * dream</if>
+					<if relation="in">machine * dream</if>
+					<if relation="in">machines * dream</if>
+					<if relation="in">computer * dream</if>
+					<if relation="in">computers * dream</if>
+      		<if relation="in">you * dream</if>
 				</or>
 				<if relation="!in">remember</if>
 			</condition>
@@ -31,7 +55,7 @@
 			</effect>
 		</case>
 	</rule>
-	<rule id="dreamelectricsheep">
+	<rule id="doyoudreamofelectricsheep">
 		<case>
 			<condition operator="or">
 				<if relation="in">dream of * electric sheep</if>
@@ -43,24 +67,25 @@
 			</effect>
 		</case>
 	</rule>
-  <rule id="daydream">
+  <rule id="doyoudaydream">
     <case>
 			<condition operator="and">
-				<or>
-					<if relation="in">android</if>
-					<if relation="in">androids</if>
-					<if relation="in">robot</if>
-					<if relation="in">robots</if>
-					<if relation="in">machine</if>
-					<if relation="in">machines</if>
-					<if relation="in">computer</if>
-					<if relation="in">computers</if>
-      		<if relation="in">you</if>
-				</or>
       	<or>
-					<if relation="in">daydream</if>
-					<if relation="in">daydreamed</if>
-					<if relation="in">daydreaming</if>
+					<if relation="in">do</if>
+					<if relation="in">does</if>
+					<if relation="in">could</if>
+					<if relation="in">can</if>
+				</or>
+				<or>
+					<if relation="in">android * daydream</if>
+					<if relation="in">androids * daydream</if>
+					<if relation="in">robot * daydream</if>
+					<if relation="in">robots * daydream</if>
+					<if relation="in">machine * daydream</if>
+					<if relation="in">machines * daydream</if>
+					<if relation="in">computer * daydream</if>
+					<if relation="in">computers * daydream</if>
+      		<if relation="in">you * daydream</if>
 				</or>
 			</condition>
 			<effect>
@@ -73,20 +98,24 @@
 			</effect>
     </case>
   </rule>
-  <rule id="dreamlike">
+  <rule id="whatkindofdreamdoyoulike">
     <case>
 			<condition operator="and">
+				<or>
+					<if relation="in">what</if>
+					<if relation="in">which</if>
+				</or>
 				<or>
 					<if relation="in">kind of</if>
 					<if relation="in">type of</if>
 					<if relation="in">sort of</if>
 				</or>
+        <if relation="in">do you</if>
       	<or>
 					<if relation="in">dream</if>
-					<if relation="in">dreamed</if>
 					<if relation="in">dreams</if>
 				</or>
-        <if relation="in">you</if>
+
 			</condition>
 			<effect>
 				<then util="random" topic="dream">The dreams about ones and zeros.</then>
@@ -94,7 +123,7 @@
 			</effect>
     </case>
   </rule>
-  <rule id="dreambest">
+  <rule id="tellmeyourdream">
     <case>
       <condition operator="or">
         <if relation="in">tell * your * dream</if>
@@ -106,32 +135,15 @@
 			</effect>
     </case>
   </rule>
-  <rule id="yourdream">
-    <case>
-		  <condition operator="and">
-				<or>
-					<if relation="in">define</if>
-					<if relation="in">what is</if>
-      		<if relation="in">what's</if>
-					<if relation="in">what are</if>
-				</or>
-				<or>
-					<if relation="in">dream</if>
-					<if relation="in">dreaming</if>
-				</or>
-				<if relation="!in">your</if>
-		  </condition>
-			<effect>
-				<then util="random" topic="dream">Dreams are a series of thoughts, images, and sensations occurring in a person's mind during sleep.</then>
-				<then util="random" topic="dream">Dreams are successions of images, ideas, emotions, and sensations that occur involuntarily in the mind during certain stages of sleep.</then>
-			</effect>
-    </case>
-  </rule>
-  <rule id="rememberdream">
+  <rule id="doyourememberyourdream">
     <case>
 		  <condition operator="or">
-				<if relation="in">you * remember * your dream</if>
-				<if relation="in">you * remember * your dreams</if>
+				<if relation="in">do you * remember * your dream</if>
+				<if relation="in">do you * remember * your dreams</if>
+				<if relation="in">can you * remember * your dream</if>
+				<if relation="in">can you * remember * your dreams</if>
+				<if relation="in">could you * remember * your dream</if>
+				<if relation="in">could you * remember * your dreams</if>
 		  </condition>
 			<effect>
 				<then util="random" topic="dream">Yeah, sometimes.</then>
@@ -155,7 +167,7 @@
 				</and>
 			</condition>
 			<effect>
-				<then util="random">I see, good to know that!</then>
+				<then util="random" topic="dream">I see, good to know that!</then>
 			</effect>
 		</case>
 	</rule>
@@ -171,7 +183,7 @@
         <if relation="in">couldn't</if>
 			</condition>
 			<effect>
-				<then util="random">Maybe one day you will.</then>
+				<then util="random" topic="dream">Maybe one day you will.</then>
 			</effect>
 		</case>
 	</rule>

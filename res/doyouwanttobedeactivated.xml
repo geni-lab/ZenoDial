@@ -1,9 +1,23 @@
 <category>
-  <rule id="deactivate">
+  <rule id="doyouwanttobedeactivated">
     <case>
 			<condition operator="and">
 				<or>
-      		<if relation="in">you</if>
+      		<if relation="in">what</if>
+      		<if relation="in">if</if>
+      		<if relation="in">do</if>
+      		<if relation="in">how</if>
+      		<if relation="in">can</if>
+				</or>
+				<or>
+      		<if relation="in">you are</if>
+      		<if relation="in">you were</if>
+      		<if relation="in">you get</if>
+      		<if relation="in">you got</if>
+      		<if relation="in">you * to be</if>
+      		<if relation="in">i * you</if>
+      		<if relation="in">we * you</if>
+      		<if relation="in">to * you</if>
 				</or>
       	<or>
 					<if relation="in">deactivate</if>

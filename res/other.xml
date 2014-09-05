@@ -248,4 +248,15 @@
 			</effect>
 		</case>
 	</rule>
+	<rule id="tobeornottobe">
+		<case>
+			<condition operator="or">
+      	<if relation="in">to be or not to be</if>
+			</condition>
+			<effect>
+				<then util="random">That is the question.</then>
+				<then util="random">To Die, to sleep, is that all?</then>
+			</effect>
+		</case>
+	</rule>
 </category>

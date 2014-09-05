@@ -1,18 +1,20 @@
 <category>
   <rule id="barnumstatements">
     <case>
-			<condition operator="and">
-				<or>
-					<if relation="in">can</if>
-      		<if relation="in">could</if>
-				</or>
-      	<or>
-					<if relation="in">ask you</if>
-				</or>
-      	<or>
-					<if relation="in">question</if>
-					<if relation="in">questions</if>
-				</or>
+			<condition operator="or">
+        <and>
+        	<or>
+				    <if relation="in">can you ask</if>
+				    <if relation="in">could you ask</if>
+			    </or>
+        	<or>
+				    <if relation="in">question</if>
+				    <if relation="in">questions</if>
+			    </or>
+        </and>
+	      <if relation="in">can you read my mind</if>
+	      <if relation="in">could you read my mind</if>
+	      <if relation="in">what do you know about me</if>
 			</condition>
 			<effect>
 				<then util="random" topic="coldreading">I sense that you are sometimes insecure, especially with people you don't know very well. Does this make sense to you?</then>

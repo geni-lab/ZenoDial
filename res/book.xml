@@ -1,19 +1,15 @@
 <category>
-  <rule id="book">
+  <rule id="doyoureadbook">
     <case>
       <condition operator="and">
-				<or>
-	        <if relation="in">you</if>
-	        <if relation="in">your</if>
-				</or>
-				<or>
-	        <if relation="in">book</if>
-	        <if relation="in">books</if>
-				</or>
-        <if relation="!in">what</if>
-        <if relation="!in">when</if>
-        <if relation="!in">who</if>
-        <if relation="!in">where</if>
+        <or>
+          <if relation="in">do you read</if>
+          <if relation="in">do you * reading</if>
+        </or>
+        <if relation="!in">type of</if>
+        <if relation="!in">kind of</if>
+        <if relation="!in">sort of</if>
+        <if relation="!in">category</if>
       </condition>
 			<effect>
 				<then util="random" topic="book">I like reading books! Reading opens my heart to new ideas, new cultures, and new worldviews.</then>
@@ -21,18 +17,7 @@
 			</effect>
     </case>
   </rule>
-  <rule id="bookhalmet">
-    <case>
-      <condition operator="or">
-        <if relation="in">to be or not to be</if>
-      </condition>
-			<effect>
-				<then util="random" topic="book">That is the question.</then>
-				<then util="random" topic="book">To Die, to sleep, is that all?</then>
-			</effect>
-    </case>
-  </rule>
-  <rule id="bookwhat">
+  <rule id="whatisyourfavoritebook">
     <case>
       <condition operator="and">
 				<or>
@@ -48,6 +33,16 @@
 	        <if relation="in">you</if>
 	        <if relation="in">your</if>
 				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+				</or>
+        <if relation="!in">type of</if>
+        <if relation="!in">kind of</if>
+        <if relation="!in">sort of</if>
+        <if relation="!in">category</if>
       </condition>
 			<effect>
 				<then util="random" topic="puzzle">I like the books from Martin Gardner, such as aha! Insight and aha! Gotcha. The puzzles in his books are just awesome!</then>
@@ -56,7 +51,7 @@
 			</effect>
     </case>
   </rule>
-  <rule id="bookwhattype">
+  <rule id="whattypeofbookdoyoulike">
     <case>
       <condition operator="and">
 				<or>
@@ -78,6 +73,13 @@
 	        <if relation="in">you</if>
 	        <if relation="in">your</if>
 				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
+	        <if relation="in">read</if>
+				</or>
       </condition>
 			<effect>
 				<then util="random" topic="book">I like all of them. Novels, biographies, comics, history, fiction, mystery et cetera et cetera.</then>
@@ -85,7 +87,7 @@
 			</effect>
     </case>
   </rule>
-  <rule id="bookwho">
+  <rule id="whoisyourfavoritebookauthor">
     <case>
       <condition operator="and">
 				<or>
@@ -95,6 +97,12 @@
 				<or>
 	        <if relation="in">you</if>
         	<if relation="in">your</if>
+				</or>
+				<or>
+	        <if relation="in">like</if>
+	        <if relation="in">love</if>
+	        <if relation="in">favorite</if>
+	        <if relation="in">keen</if>
 				</or>
 				<or>
 	        <if relation="in">author</if>
@@ -119,7 +127,7 @@
       </condition>
 			<effect>
 				<then util="random" topic="book">Well, you better read it yourself.</then>
-				<then util="random" topic="book">You know more than I do.</then>
+				<then util="random" topic="book">I guess you know more than I do.</then>
 			</effect>
     </case>
   </rule>

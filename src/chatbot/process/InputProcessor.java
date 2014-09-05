@@ -57,9 +57,6 @@ public class InputProcessor {
 			ChatBot.needWolframAlpha = false;
 		}
 		
-		// Get OpenEphyra reply
-//		if (ChatBot.needOpenEphyra) potentialOutputUtterances.add(new AbstractMap.SimpleEntry<Then, Double>(new Then("OpenEphyra", "random", OpenEphyraSearch.getReply(userUtterance)), RuleProcessor.getUtilValue("random")));
-		
 		// Sort the output utterances in descending order
 		sortByUtils(potentialOutputUtterances);
 		
