@@ -584,7 +584,6 @@ public class RuleProcessor {
 		
 		// Put all the effects from all satisfied rules
 		for (Rule rule : satisfiedRules) {
-			log.info("dick! extractEffect " + rule.getRuleID());
 			allEffects.addAll(new ArrayList<Entry<Then, Double>>(rule.getEffect().entrySet()));
 		}
 		
