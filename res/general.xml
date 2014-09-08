@@ -770,6 +770,9 @@
 					<if relation="in">great</if>
 					<if relation="in">nice</if>
 					<if relation="in">cool</if>
+					<if relation="in">sure</if>
+					<if relation="in">no worries</if>
+					<if relation="in">no problem</if>
 					<if relation="in">positive</if>
 				</or>
       	<if relation="!in">who</if>
