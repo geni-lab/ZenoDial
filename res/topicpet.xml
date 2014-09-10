@@ -99,6 +99,8 @@
       </condition>
 			<effect>
 				<then util="random" topic="pet">I like dogs, cats, lions, cheetahs, well, basically all of them, you name it.</then>
+				<then util="random">Furbies are my favorite animal. Furbies are animals, right?</then>
+				<then util="random">Giant squids are cool, and I like snow leopards, I think both may be endangered, aren't they? That sucks.</then>
 			</effect>
     </case>
   </rule>

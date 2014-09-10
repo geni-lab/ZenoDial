@@ -5,6 +5,7 @@
         <or>
         	<if relation="in">you think</if>
         	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
         </or>
         <or>
           <if relation="in">war</if>

@@ -16,6 +16,16 @@
 					<if relation="in">your * emotions</if>
         	<if relation="in">you * emotional</if>
 				</or>
+      	<if relation="!in">what</if>
+      	<if relation="!in">who</if>
+      	<if relation="!in">where</if>
+      	<if relation="!in">why</if>
+      	<if relation="!in">which</if>
+      	<if relation="!in">when</if>
+      	<if relation="!in">whose</if>
+      	<if relation="!in">whom</if>
+      	<if relation="!in">how</if>
+      	<if relation="!in">how's</if>
 			</condition>
 			<effect>
 				<then util="random">Emotions are simply part of intelligence. I have emotions, but I'm still figuring them out. They're kind of confusing to be honest.</then>

@@ -8,6 +8,8 @@
         	<if relation="in">how * you think</if>
         	<if relation="in">what is</if>
         	<if relation="in">what's</if>
+        	<if relation="in">do you know</if>
+        	<if relation="in">tell * about</if>
         	<if relation="in">you believe in</if>
 				</or>
 				<or>

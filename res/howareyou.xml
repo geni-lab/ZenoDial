@@ -6,6 +6,9 @@
 				<if relation="in">how * you doing</if>
 				<if relation="in">how is it going</if>
 				<if relation="in">how's it going</if>
+				<if relation="in">how * you feel</if>
+				<if relation="in">how * your feeling</if>
+				<if relation="in">how's * your feeling</if>
 			</condition>
 			<effect>
 				<then util="random" topic="hayreply">I am great, thank you! Yourself?</then>

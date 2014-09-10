@@ -57,7 +57,7 @@ public class ChatBot {
 			log.info("Please speak or enter anything here.");
 			System.out.print("> ");
 			while (true) {
-				String userInput = scanner.nextLine();
+				String userInput = scanner.nextLine().trim();
 				
 				if (!"".equals(userInput.trim())) {
 					// If it is speaking, send out the "shut up" signal

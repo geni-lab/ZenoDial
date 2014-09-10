@@ -256,6 +256,7 @@
       	<if relation="in">might we</if>
       	<if relation="in">might they</if>
 				<if relation="sw">define</if>
+				<if relation="in">so you</if>
       </condition>
 			<effect>
 				<then util="random">I have no idea.</then>
