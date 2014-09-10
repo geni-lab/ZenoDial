@@ -5,6 +5,7 @@
 				<if relation="in">how social are you</if>
 				<if relation="in">how is your social life</if>
 				<if relation="in">how's your social life</if>
+        <if relation="in">about your social life</if>
 				<if relation="in">are you * social</if>
 				<if relation="in">aren't you * social</if>
       </condition>

@@ -9,6 +9,7 @@
         	<if relation="in">what * you think</if>
         	<if relation="in">how * you think</if>
         	<if relation="in">your view</if>
+        	<if relation="in">tell * about</if>
 				</or>
 				<or>
 		      <if relation="in">apple computer</if>

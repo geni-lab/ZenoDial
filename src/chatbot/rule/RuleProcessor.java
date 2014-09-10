@@ -54,7 +54,7 @@ public class RuleProcessor {
 				// Skip directory
 				if (file.isDirectory() || !file.getName().endsWith(".xml")) continue;
 				
-				log.debug("Processing " + file.getName());
+				log.info("Processing \"" + file.getName() + "\"...");
 				Document xmlDocument = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file.getPath());
 				xmlDocument.getDocumentElement().normalize();
 				NodeList ruleList = xmlDocument.getElementsByTagName("rule");
