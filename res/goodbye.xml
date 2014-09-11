@@ -5,6 +5,8 @@
 				<if relation="in">bye</if>
 				<if relation="in">goodbye</if>
 				<if relation="in">see you</if>
+				<if relation="in">i have to leave</if>
+				<if relation="in">we have to leave</if>
 			</condition>
 			<effect>
 				<then util="random">Goodbye {name}</then>

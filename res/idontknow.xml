@@ -2,10 +2,8 @@
 	<rule id="idontknow">
 		<case>
 			<condition operator="or">
-      	<if relation="in">i don't</if>
-      	<if relation="in">i do not</if>
-      	<if relation="in">i didn't</if>
-      	<if relation="in">i did not</if>
+      	<if relation="in">i don't know</if>
+      	<if relation="in">i do not know</if>
       	<if relation="in">i * have no * idea</if>
 			</condition>
 			<effect>

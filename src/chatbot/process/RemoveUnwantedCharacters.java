@@ -2,7 +2,7 @@ package chatbot.process;
 
 public class RemoveUnwantedCharacters {
 	public static String getString(String inputString, boolean needToRemovePunctuation) {
-		String rtnString = inputString.replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"").replace("~~", "Around");
+		String rtnString = inputString.replace("’", "'").replace("”", "\"").replace("‘", "'").replace("“", "\"").replace("~~", " around ").replaceAll("  ", " ").trim();
 		
 		if (needToRemovePunctuation) return removePunctuation(rtnString);
 		else return rtnString;

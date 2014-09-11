@@ -315,7 +315,7 @@ public class RuleProcessor {
 		String normalCondition = "";
 		
 		if (content.contains(" * ")) {
-			normalCondition = "\"" + variable + "\".match(/\\b" + content.replace(" * ", ".*") + "\\b/) !== null";
+			normalCondition = "\"" + variable + "\".match(/\\b" + content.replace(" * ", "\\b.*\\b") + "\\b/) !== null";
 		}
 		
 		else if ("*".equals(content)) {
@@ -339,7 +339,8 @@ public class RuleProcessor {
 		}
 		
 		else if ("sw".equals(operator)) {
-			normalCondition = "\"" + variable + "\".indexOf(\"\\b" + content + "\\b\") == 0";
+			normalCondition = "\"" + variable + "\".match(/^" + content + "\\b/) !== null";
+			//normalCondition = "\"" + variable + "\".indexOf(\"\\b" + content + "\\b\") == 0";
 		}
 		
 		else if ("ew".equals(operator)) {

@@ -26,8 +26,8 @@ public class InputProcessor {
 	private boolean needToUpdateTopic = true;
 	
 	public String getReply(String userUtterance) {
-		// Remove unwanted characters from the input, if any
-		userUtterance = userUtterance.replaceAll("  ", " ").toLowerCase();
+		// To lower cases
+		userUtterance = userUtterance.toLowerCase();
 		
 		// If after certain time the robot is still searching for the answer... say something
 		ROSPublisher.startPausePublisher(userUtterance);

@@ -5,6 +5,7 @@
         <if relation="in">who * is * turing</if>
         <if relation="in">tell * about * turing</if>
         <if relation="in">you know * about * turing</if>
+        <if relation="in">do you know * turing</if>
       </condition>
 			<effect>
 				<then util="random">Alan Turing was a mathematician responsible for the foundations of modern computing.</then>

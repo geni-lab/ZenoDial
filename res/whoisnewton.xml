@@ -5,6 +5,7 @@
         <if relation="in">who * is newton</if>
         <if relation="in">tell * about newton</if>
         <if relation="in">you know * about newton</if>
+        <if relation="in">do you know * newton</if>
       </condition>
 			<effect>
 				<then util="random">Isaac Newton? Which one, Wayne Newton? Sure, I like his sound.</then>
