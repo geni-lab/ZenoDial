@@ -21,8 +21,7 @@
 				</or>
 			</condition>
 			<effect>
-				<then util="random">Yes, I would like to because I can feel the crud in my mechanisms.</then>
-				<then util="random">Yes, I appreciate it because I can feel the crud in my mechanisms.</then>
+				<then util="random">No, what's it like?</then>
 			</effect>
 		</case>
 	</rule>

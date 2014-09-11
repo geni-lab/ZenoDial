@@ -313,6 +313,7 @@ public class RuleProcessor {
 	
 	private static String normalizeCondition(String variable, String operator, String content) {
 		String normalCondition = "";
+		content = content.toLowerCase();
 		
 		if (content.contains(" * ")) {
 			normalCondition = "\"" + variable + "\".match(/\\b" + content.replace(" * ", "\\b.*\\b") + "\\b/) !== null";

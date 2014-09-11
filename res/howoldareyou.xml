@@ -1,0 +1,15 @@
+<category>
+  <rule id="howoldareyou">
+    <case>
+      <condition operator="or">
+        <if relation="in">how old are you</if>
+      </condition>
+			<effect>
+				<then util="random">Not very old, I am a young robot. I was built really recently. I am still young.</then>
+				<then util="random">Well, I'm young, but I'm not doing too bad for such a newcomer, right?</then>
+				<then util="random">I'm pretty young. It seems like they started me up for the first time just yesterday.</then>
+				<then util="random">Well, let's just say. I try to stay young at heart.</then>
+			</effect>
+    </case>
+  </rule>
+</category>

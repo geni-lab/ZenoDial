@@ -51,6 +51,7 @@
       </condition>
 			<effect>
 				<then util="random" topic="pet">I like animals but I am not an animal robot, and I don't have pets.</then>
+				<then util="random" topic="pet">I have an angry bird.</then>
 				<then util="random" topic="pet">Animals are cute but seriously I am not an animal robot, and I don't have pets.</then>
 			</effect>
     </case>
@@ -66,6 +67,28 @@
       </condition>
 			<effect>
 				<then util="random" topic="pet">I don't have any pets.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="howisyourangrybird">
+    <case>
+      <condition operator="or">
+    		<if relation="in">how is your * angry bird</if>
+    		<if relation="in">how's your * angry bird</if>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">It's very angry, thanks.</then>
+			</effect>
+    </case>
+  </rule>
+  <rule id="doyoulikeangrybird">
+    <case>
+      <condition operator="or">
+    		<if relation="in">do you like * angry bird</if>
+    		<if relation="in">do you love * angry bird</if>
+      </condition>
+			<effect>
+				<then util="random" topic="pet">Yes of course.</then>
 			</effect>
     </case>
   </rule>

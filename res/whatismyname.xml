@@ -7,6 +7,7 @@
         <if relation="in">who * am i</if>
         <if relation="in">who * i am</if>
         <if relation="in">you * my name</if>
+        <if relation="in">say my name</if>
       </condition>
 			<effect>
 				<then util="random">Did you forget your name, {name}, maybe you forgot mine too? I'm {robotname}.</then>

@@ -20,7 +20,8 @@ public class RepeatUtterance {
 					.replaceAll("\\byour\\b", "my")
 					.replaceAll("\\byours\\b", "mine")
 					.replaceAll("\\bare\\b", "am")
-					.replaceAll("\\bme\\b", "you");
+					.replaceAll("\\bme\\b", "you")
+					.replaceAll("\\byourselve\\b", "myself");
 		}
 		
 		else {
@@ -32,7 +33,8 @@ public class RepeatUtterance {
 					.replaceAll("\\bme\\b", "you")
 					.replaceAll("\\bmy\\b", "your")
 					.replaceAll("\\bmine\\b", "yours")
-					.replaceAll("\\bam\\b", "are");
+					.replaceAll("\\bam\\b", "are")
+					.replaceAll("\\bmyself\\b", "yourselve");
 		}
 	}
 }

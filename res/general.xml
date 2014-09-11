@@ -257,6 +257,8 @@
       	<if relation="in">might they</if>
 				<if relation="sw">define</if>
 				<if relation="in">so you</if>
+				<if relation="sw">tell me</if>
+				<if relation="sw">tell us</if>
       </condition>
 			<effect>
 				<then util="random">I have no idea.</then>
@@ -316,6 +318,8 @@
 			<effect>
 				<then util="random">Yeah {UU}.</then>
 				<then util="random">Yes of course.</then>
+				<then util="random">I think so.</then>
+				<then util="random">It seems so.</then>
 			</effect>
 		</case>
 	</rule>
@@ -340,6 +344,8 @@
 			<effect>
 				<then util="random">Well, no, {UU}.</then>
 				<then util="random">Of course not.</then>
+				<then util="random">It feels like that?</then>
+				<then util="random">So it seems.</then>
 			</effect>
 		</case>
 	</rule>
@@ -411,11 +417,8 @@
 		<case>
 			<condition operator="and">
 				<or>
-      		<if relation="in">do</if>
-      		<if relation="in">would</if>
-				</or>
-				<or>
-      		<if relation="in">you</if>
+      		<if relation="in">do you</if>
+      		<if relation="in">would you</if>
 				</or>
       	<or>
 					<if relation="in">like</if>
@@ -437,11 +440,8 @@
 		<case>
 			<condition operator="and">
 				<or>
-      		<if relation="in">do</if>
-      		<if relation="in">would</if>
-				</or>
-				<or>
-      		<if relation="in">you</if>
+      		<if relation="in">do you</if>
+      		<if relation="in">would you</if>
 				</or>
       	<or>
       		<if relation="in">act</if>
@@ -460,7 +460,7 @@
 			<condition operator="and">
 				<or>
 					<if relation="in">your</if>
-      		<if relation="in">you</if>
+      		<if relation="in">do you</if>
 				</or>
       	<or>
 					<if relation="in">want</if>
@@ -490,13 +490,10 @@
 		<case>
 			<condition operator="and">
 				<or>
-      		<if relation="in">do</if>
-      		<if relation="in">would</if>
-      		<if relation="in">can</if>
-      		<if relation="in">could</if>
-				</or>
-				<or>
-      		<if relation="in">you</if>
+      		<if relation="in">do you</if>
+      		<if relation="in">would you</if>
+      		<if relation="in">can you</if>
+      		<if relation="in">could you</if>
 				</or>
       	<or>
       		<if relation="in">believe</if>
@@ -531,6 +528,18 @@
 			</effect>
 		</case>
 	</rule>
+  <rule id="generalami">
+    <case>
+      <condition operator="or">
+      	<if relation="in">am i</if>
+      	<if relation="in">are we</if>
+			</condition>
+			<effect>
+				<then util="random">I think you've improved a great deal.</then>
+				<then util="random">It seems so.</then>
+			</effect>
+		</case>
+	</rule>
   <rule id="generalwhydont">
     <case>
       <condition operator="or">
@@ -553,10 +562,40 @@
 			</effect>
 		</case>
 	</rule>
+	<rule id="generalwhenwill">
+		<case>
+			<condition operator="or">
+				<if relation="in">when will</if>
+			</condition>
+			<effect>
+				<then util="random">Maybe never.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generalwhatisit">
+		<case>
+			<condition operator="and">
+        <or>
+        	<if relation="in">what * is</if>
+        	<if relation="in">what's</if>
+        </or>
+      	<if relation="!in">time</if>
+      	<if relation="!in">day</if>
+      	<if relation="!in">year</if>
+      	<if relation="!in">month</if>
+      	<if relation="!in">week</if>
+      	<if relation="!in">date</if>
+			</condition>
+			<effect>
+				<then util="random">You're smart, you tell me what that is.</then>
+			</effect>
+		</case>
+	</rule>
   <rule id="generalithinkyou">
     <case>
-      <condition operator="or">
+      <condition operator="and">
       	<if relation="in">i think you {phrase}</if>
+      	<if relation="!in">will</if>
 			</condition>
 			<effect>
 				<then util="random">Yes I {phrase}.</then>
@@ -714,6 +753,17 @@
 			</condition>
 			<effect>
 				<then util="random">Take it easy. I try not to think about such things.</then>
+			</effect>
+		</case>
+	</rule>
+	<rule id="generaltesting">
+		<case>
+			<condition operator="or">
+      	<if relation="in">testing</if>
+			</condition>
+			<effect>
+				<then util="random">Loud and clear.</then>
+				<then util="random">Copy that.</then>
 			</effect>
 		</case>
 	</rule>
