@@ -169,6 +169,16 @@
 			</effect>
     </case>
   </rule>
+  <rule id="singasong">
+    <case>
+      <condition operator="or">
+        <if relation="in">sing a song</if>
+      </condition>
+			<effect>
+				<then util="random" topic="music">Sorry I don't sing.</then>
+			</effect>
+    </case>
+  </rule>
   <rule id="#myfavmusicis">
     <case>
       <condition operator="or">

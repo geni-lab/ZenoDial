@@ -40,6 +40,8 @@
 				<then util="previous">Just for fun.</then>
 				<then util="next" topic="saysomethingreply">Why do they report power outages on TV?</then>
 				<then util="previous">Sounds fun.</then>
+				<then util="next" topic="saysomethingreply">What can you catch but not throw?</then>
+				<then util="previous">A cold.</then>
 			</effect>
 		</case>
 	</rule>
