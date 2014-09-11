@@ -55,6 +55,7 @@
 				<or>
 					<if relation="in">do you have</if>
       		<if relation="in">don't you have</if>
+      		<if relation="in">tell * about your</if>
 				</or>
       	<or>
 					<if relation="in">sibling</if> 
@@ -80,6 +81,7 @@
 				<or>
 					<if relation="in">do you have</if>
       		<if relation="in">don't you have</if>
+      		<if relation="in">tell * about your</if>
 				</or>
 				<or>
 		      <if relation="in">father</if>
@@ -101,6 +103,7 @@
 				<or>
 					<if relation="in">do you have</if>
       		<if relation="in">don't you have</if>
+      		<if relation="in">tell * about your</if>
 				</or>
 				<or>
 		      <if relation="in">mother</if>

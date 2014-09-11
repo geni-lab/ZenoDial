@@ -57,7 +57,7 @@ public class ChatBot {
 			log.info("Please speak or enter anything here.");
 			System.out.print("> ");
 			while (true) {
-				String userInput = scanner.nextLine().trim();
+				String userInput = RemoveUnwantedCharacters.getString(scanner.nextLine(), true);
 				
 				if (!"".equals(userInput.trim())) {
 					// If it is speaking, send out the "shut up" signal
@@ -76,11 +76,11 @@ public class ChatBot {
 					speakingTheLastSentence = false;
 					nothingSpokenYet = true;
 					
-					// Store the rephrased user utterance in case it is useful
-					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(RemoveUnwantedCharacters.getString(userInput, true)));
+					// Store the rephrased user utterance for rules that need it
+					RuleProcessor.updateSystemVariable("UU", RepeatUtterance.getUtterance(userInput));
 					
 					// Generate the reply
-					lastOutputUtterance = new InputProcessor().getReply(RemoveUnwantedCharacters.removePunctuation(userInput));
+					lastOutputUtterance = new InputProcessor().getReply(userInput);
 
 					// Suggest JVM to do a garbage collection after all
 					System.gc();
