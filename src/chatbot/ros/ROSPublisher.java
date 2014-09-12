@@ -16,7 +16,7 @@ public class ROSPublisher {
 		Thread saySomethingThread = new Thread() {
 			public void run() {
 				try {
-					Publisher<std_msgs.String> publisher = ROSControl.getPublisher("itf_talk");
+					Publisher<std_msgs.String> publisher = ROSControl.getPublisher("zenodial_talk");
 					
 					// Time to wait util the 1st pause sentence is published
 					Thread.sleep(2000);

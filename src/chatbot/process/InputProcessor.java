@@ -70,7 +70,7 @@ public class InputProcessor {
 		
 		ChatBot.nothingSpokenYet = false;
 		System.out.println("--> " + outputUtterance);
-		ROSPublisher.publish("itf_talk", outputUtterance);
+		ROSPublisher.publish("zenodial_talk", outputUtterance);
 		
 		// Update the topic to the one specified in the output <then>
 		if (needToUpdateTopic) updateTopic(potentialOutputUtterances);
