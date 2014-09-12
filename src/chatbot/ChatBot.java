@@ -40,7 +40,7 @@ public class ChatBot {
 		System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
 		ROSListener.createInputListener();
 		ROSListener.createNextSentenceListener();
-		ROSControl.initializePublisher("ChatBotTalker", "itf_talk");
+		ROSControl.initializePublisher("ChatBotTalker", "zenodial_talk");
 		
 		// Initialize JMegaHAL
 		JMegaHAL.initializeFromCorpus("./res/jmegahal");
@@ -68,7 +68,7 @@ public class ChatBot {
 					
 					// Directly publish an utterance if it starts with an "~"
 					if (userInput.startsWith("~")) {
-						ROSPublisher.publish("itf_talk", userInput.replace("~", "").trim());
+						ROSPublisher.publish("zenodial_talk", userInput.replace("~", "").trim());
 						continue;
 					}
 					
