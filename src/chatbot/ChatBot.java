@@ -40,6 +40,7 @@ public class ChatBot {
 		System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.NoOpLog");
 		ROSListener.createInputListener();
 		ROSListener.createNextSentenceListener();
+		ROSListener.createRobotNameListener();
 		ROSControl.initializePublisher("ChatBotTalker", "zenodial_talk");
 		
 		// Initialize JMegaHAL
