@@ -6,6 +6,7 @@ import chatbot.ChatBot;
 import chatbot.log.Logger;
 import chatbot.log.Logger.Level;
 import chatbot.process.InputProcessor;
+import chatbot.rule.RuleProcessor;
 
 public class ROSListener {
 	private static Logger log = new Logger("ROSListener", Level.NORMAL);
@@ -39,6 +40,17 @@ public class ROSListener {
 				ChatBot.sendNextSentence = true;
 //				String msgReceived = message.getData();
 //				log.info("Google Voice completed.");
+			}
+		});
+	}
+	
+	public static void createRobotNameListener() {
+		Subscriber<std_msgs.String> subscriber = ROSControl.initializeSubscriber("ChatBotRobotNameListener", "itf_robot_name");
+		subscriber.addMessageListener(new MessageListener<std_msgs.String>() {
+			@Override
+			public void onNewMessage(std_msgs.String message) {
+				System.out.println("Robot Name = " + message.getData());
+				RuleProcessor.updateSystemVariable("robotname", message.getData());
 			}
 		});
 	}
