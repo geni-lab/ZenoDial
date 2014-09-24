@@ -1,4 +1,14 @@
 <category>
+	<rule id="BADINPUT">
+		<case>
+			<condition>
+				<if relation="in">BADINPUT</if>
+			</condition>
+			<effect>
+				<then util="random">.</then>
+			</effect>
+		</case>
+	</rule>
 	<rule id="generalnothingtosay">
 		<case>
 			<condition>
