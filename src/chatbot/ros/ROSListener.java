@@ -20,7 +20,7 @@ public class ROSListener {
 				log.info("Message reached: \"" + msgReceived + "\"");
 				
 				if (ChatBot.isSpeaking) {
-					if (!ChatBot.speakingTheLastSentence) ChatBot.shutUp = true;
+//					if (!ChatBot.speakingTheLastSentence) ChatBot.shutUp = true;
 				}
 				
 				else {

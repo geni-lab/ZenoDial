@@ -12,7 +12,8 @@ import org.ros.node.topic.Publisher;
 import org.ros.node.topic.Subscriber;
 
 public class ROSControl {
-	private static final String ROSCORE_IP = "http://127.0.0.1:11311";
+//	private static final String ROSCORE_IP = "http://127.0.0.1:11311";
+	private static final String ROSCORE_IP = "http://10.0.25.64:11311";
 	private static HashMap<String, Subscriber<std_msgs.String>> subscribers = new HashMap<String, Subscriber<std_msgs.String>>();
 	private static HashMap<String, Publisher<std_msgs.String>> publishers = new HashMap<String, Publisher<std_msgs.String>>();
 	
