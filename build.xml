@@ -11,7 +11,7 @@
     <property name="source" value="1.7"/>
     <path id="ZenoDial.classpath">
         <pathelement location="bin"/>
-        <pathelement location="lib/MegaHAL/JMegaHAL.jar"/>
+        <pathelement location="lib/JMegaHAL.jar"/>
         <pathelement location="lib/ROS/actionlib_msgs-1.11.4.jar"/>
         <pathelement location="lib/ROS/apache_xmlrpc_client-0.2.0.jar"/>
         <pathelement location="lib/ROS/apache_xmlrpc_common-0.2.0.jar"/>
@@ -20,6 +20,7 @@
         <pathelement location="lib/ROS/com.springsource.org.apache.commons.httpclient-3.1.0.jar"/>
         <pathelement location="lib/ROS/com.springsource.org.apache.commons.io-1.4.0.jar"/>
         <pathelement location="lib/ROS/com.springsource.org.apache.commons.lang-2.4.0.jar"/>
+        <pathelement location="lib/ROS/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
         <pathelement location="lib/ROS/com.springsource.org.apache.commons.net-2.0.0.jar"/>
         <pathelement location="lib/ROS/commons-pool-1.6.jar"/>
         <pathelement location="lib/ROS/dnsjava-2.1.1.jar"/>
@@ -29,6 +30,7 @@
         <pathelement location="lib/ROS/junit-3.8.2.jar"/>
         <pathelement location="lib/ROS/message_generation-0.2.0.jar"/>
         <pathelement location="lib/ROS/nav_msgs-1.10.2.jar"/>
+        <pathelement location="lib/ROS/netty-3.5.2.Final.jar"/>
         <pathelement location="lib/ROS/rosgraph_msgs-1.10.2.jar"/>
         <pathelement location="lib/ROS/rosjava_test_msgs-0.2.0.jar"/>
         <pathelement location="lib/ROS/rosjava-0.2.0.jar"/>
@@ -36,8 +38,6 @@
         <pathelement location="lib/ROS/tf2_msgs-0.5.5.jar"/>
         <pathelement location="lib/ROS/ws-commons-util-1.0.1.jar"/>
         <pathelement location="lib/ROS/xml-apis-1.0.b2.jar"/>
-        <pathelement location="lib/ROS/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
-        <pathelement location="lib/ROS/netty-3.5.2.Final.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -74,19 +74,18 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    <target name="ZenoDial">
+        <java classname="zenodial.ZenoDial" failonerror="true" fork="yes">
+            <classpath refid="ZenoDial.classpath"/>
+        </java>
+    </target>
     <target name="WolframAlpha">
-        <java classname="chatbot.plugin.WolframAlpha" failonerror="true" fork="yes">
+        <java classname="zenodial.plugin.WolframAlpha" failonerror="true" fork="yes">
             <classpath refid="ZenoDial.classpath"/>
         </java>
     </target>
-    <target name="JMegaHALSearch">
-        <java classname="chatbot.plugin.JMegaHAL" failonerror="true" fork="yes">
-            <classpath refid="ZenoDial.classpath"/>
-        </java>
-    </target>
-    <target name="ChatBot">
-        <java classname="chatbot.ChatBot" failonerror="true" fork="yes">
-            <jvmarg line="-Xms10m -Xmx100m"/>
+    <target name="JMegaHAL">
+        <java classname="zenodial.plugin.JMegaHAL" failonerror="true" fork="yes">
             <classpath refid="ZenoDial.classpath"/>
         </java>
     </target>
