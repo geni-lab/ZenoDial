@@ -78,7 +78,7 @@ public class RuleMatcher {
 				if (rule.getRuleID().contains("#") && !rule.getRuleID().contains(ZenoDial.topic)) {
 					log.debug("Have off-topic-# utterances, removing: " + rule.getRuleID());
 					rulesToRemove.add(rule);
-					matchedRuleIDs = matchedRuleIDs.replace("-" + rule.getRuleID(), "").replace(rule.getRuleID() + "-", "");
+					matchedRuleIDs = removeIDFromString(matchedRuleIDs, rule.getRuleID());
 					log.debug("New Matched Rule IDs = " + matchedRuleIDs);
 				}
 			}
@@ -95,7 +95,7 @@ public class RuleMatcher {
 					if (rule.getRuleID().contains("general")) {
 						log.debug("Have non-general utterances, removing: " + rule.getRuleID());
 						rulesToRemove.add(rule);
-						matchedRuleIDs = matchedRuleIDs.replace("-" + rule.getRuleID(), "").replace(rule.getRuleID() + "-", "");
+						matchedRuleIDs = removeIDFromString(matchedRuleIDs, rule.getRuleID());
 						log.debug("New Matched Rule IDs = " + matchedRuleIDs);
 					}
 				}
@@ -113,7 +113,7 @@ public class RuleMatcher {
 					if (!rule.getRuleID().contains(ZenoDial.topic)) {
 						log.debug("Have on-topic utterances, removing: " + rule.getRuleID());
 						rulesToRemove.add(rule);
-						matchedRuleIDs = matchedRuleIDs.replace("-" + rule.getRuleID(), "").replace(rule.getRuleID() + "-", "");
+						matchedRuleIDs = removeIDFromString(matchedRuleIDs, rule.getRuleID());
 						log.debug("New Matched Rule IDs = " + matchedRuleIDs);
 					}
 				}
@@ -125,7 +125,7 @@ public class RuleMatcher {
 					if (rule.getRuleID().contains("general")) {
 						log.debug("Have off-topic utterances, removing: " + rule.getRuleID());
 						rulesToRemove.add(rule);
-						matchedRuleIDs = matchedRuleIDs.replace("-" + rule.getRuleID(), "").replace(rule.getRuleID() + "-", "");
+						matchedRuleIDs = removeIDFromString(matchedRuleIDs, rule.getRuleID());
 						log.debug("New Matched Rule IDs = " + matchedRuleIDs);
 					}
 				}
@@ -137,7 +137,7 @@ public class RuleMatcher {
 					if (!rule.getRuleID().contains("general")) {
 						log.debug("Have only general utterances, removing: " + rule.getRuleID());
 						rulesToRemove.add(rule);
-						matchedRuleIDs = matchedRuleIDs.replace("-" + rule.getRuleID(), "").replace(rule.getRuleID() + "-", "");
+						matchedRuleIDs = removeIDFromString(matchedRuleIDs, rule.getRuleID());
 						log.debug("New Matched Rule IDs = " + matchedRuleIDs);
 					}
 				}
@@ -185,6 +185,7 @@ public class RuleMatcher {
 //			ZenoDial.needJMegaHAL = true;
 //		}
 		
+		if (matchedRuleIDs.equals("")) matchedRuleIDs = "<None>";
 		log.info("Matched rules: " + matchedRuleIDs);
 		log.debug("No. of matched rules: " + matchedRules.size());
 		return matchedRules;
@@ -195,7 +196,7 @@ public class RuleMatcher {
 		
 		// Replace input utterance variable to the actual value of input utterance before going to the script engine
 		if (condition.contains("{" + RuleInterpreter.getInputUtteranceLabel() + "}")) {
-			condition = condition.replace("{" + RuleInterpreter.getInputUtteranceLabel() + "}", userUtterance);
+			condition = condition.replace("{" + RuleInterpreter.getInputUtteranceLabel() + "}", userUtterance.toLowerCase());
 		}
 		
 		// Replace other variables in the condition to wildcard for later processing
@@ -206,5 +207,12 @@ public class RuleMatcher {
 		
 		log.debug("Evaluating (" + rule.getRuleID() + "): " + condition);
 		return condition;
+	}
+	
+	private static String removeIDFromString(String strToProcess, String strToRemove) {
+		String rtnStr = strToProcess.replace("-" + strToRemove, "").replace(strToRemove + "-", "");
+		if (rtnStr.length() == strToProcess.length()) rtnStr = "";
+		
+		return rtnStr;
 	}
 }

@@ -31,7 +31,7 @@ public class Output {
 	
 	public static void publishOutput(String output) {
 		int maxLength = 90; // Max no. of characters
-		int timeToWait = 2000; // TODO: Should change it to a flag in practice
+		int timeToWait = 1500; // TODO: Should change it to a flag in practice
 		
 		try {
 			// Split the output into shorter sentences if it's length > maxLength
@@ -68,15 +68,10 @@ public class Output {
 	}
 	
 	private static ArrayList<String> splitUtterance(String utterance, int maxLength) {
-		utterance = utterance
-				.replace('?', '.')
-				.replace('!', '.')
-				.replace(';', '.')
-				.replace("...", ".");
 		ArrayList<String> sentences = new ArrayList<String>();
 
 		while (utterance.length() > 0 && utterance.length() > maxLength) {
-			int indexToSplit = checkAndSplit(utterance, ".", maxLength, true);
+			int indexToSplit = checkAndSplit(utterance.replace('?', '.').replace('!', '.').replace(';', '.').replace("...", "."), ".", maxLength, true);
 			if (indexToSplit == 0) indexToSplit = checkAndSplit(utterance, ",", maxLength, false);
 			if (indexToSplit == 0) indexToSplit = checkAndSplit(utterance, " where ", maxLength, false);
 			if (indexToSplit == 0) indexToSplit = checkAndSplit(utterance, " who ", maxLength, false);

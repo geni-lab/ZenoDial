@@ -5,7 +5,7 @@
 				<if relation="in"></if>
 			</condition>
 			<effect>
-				<then util="random">I've nothing to say.</then>
+				<then util="0.01">I've nothing to say.</then>
 			</effect>
 		</case>
 	</rule>

@@ -47,7 +47,7 @@ public class JMegaHAL {
 		        while ((ch = reader.read()) != -1) {
 		            buffer.append((char) ch);
 		            
-		            if ("\n".indexOf((char) ch) >= 0) {
+		            if ("\n".indexOf((char) ch) >= 0 || ".".indexOf((char) ch) >= 0 || "!".indexOf((char) ch) >= 0 || "?".indexOf((char) ch) >= 0) {
 		            	if (!"#".equals(buffer.toString()) && buffer.toString().contains(" ")) addSentenceToTheBrain(buffer.toString());
 		                buffer = new StringBuffer();
 		            }
@@ -114,7 +114,7 @@ public class JMegaHAL {
 	
 	public static void main(String... args) {
 		initialize();
-		trainFromCorpus("./res/jmegahal/traindoc1");
+		trainFromCorpus("./res/jmegahal/traindoc3");
 		
 		System.out.println("JMegaHAL:");
 		Scanner scanner = new Scanner(System.in);

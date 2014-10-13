@@ -19,7 +19,7 @@ import zenodial.rule.Rule;
 import zenodial.rule.Then;
 
 public class RuleInterpreter {
-	private static Logger log = new Logger("RuleReader", Level.NORMAL);
+	private static Logger log = new Logger("RuleInterpreter", Level.NORMAL);
 	private static final String INPUT_UTTERANCE = "IU";
 	private static ArrayList<Rule> rules = new ArrayList<Rule>();
 	private static HashMap<String, String> variables = new HashMap<String, String>();

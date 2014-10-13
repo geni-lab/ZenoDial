@@ -9,7 +9,7 @@ public class Weighting {
 	public static final double MUST = 1000.0;
 	
 	public static double get(String util) {
-		double weighting = new Random().nextDouble();
+		double weighting = (util.matches("[+-]?\\d*(\\.\\d+)?"))? Double.parseDouble(util) : new Random().nextDouble();
 		
 		if (util.equals("random") || util.equals("next")) {
 			weighting = new Random().nextDouble() + MIN;
@@ -28,7 +28,7 @@ public class Weighting {
 		}
 		
 		else if (util.equals("wolframAlpha")) {
-			weighting = new Random().nextDouble() + MIN;
+			weighting = 100;
 		}
 		
 		else if (util.equals("jmegahal")) {

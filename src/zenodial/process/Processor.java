@@ -23,7 +23,8 @@ import zenodial.rule.RuleMatcher;
 public class Processor {
 	private static Logger log = new Logger("Processor", Level.NORMAL);
 	private static HashMap<Double, Then> potentialOutputs = new HashMap<Double, Then>();
-	private static ArrayList<String> somethingToSayWhenWaiting = new ArrayList<String>(Arrays.asList("Well", "Interesting", "Let me think"));
+	private static ArrayList<String> somethingToSayWhenWaiting = new ArrayList<String>(Arrays.asList("Well", "Interesting"));
+	private static ArrayList<String> prefixes = new ArrayList<String>(Arrays.asList("I think it's ", "I heard that it's "));
 	private static ArrayList<Rule> matchingRules = new ArrayList<Rule>();
 	private static Map.Entry<Double, Then> output;
 	private static String lastOutputUtterance = "";
@@ -41,7 +42,7 @@ public class Processor {
 		// Get the reply from Wolfram|Alpha
 		if (ZenoDial.needsWolframAlpha) {
 			String waReply = WolframAlpha.getReply(inputUtterance);
-			if (!"".equals(waReply)) potentialOutputs.put(Weighting.get("wolframAlpha"), new Then("Wolfram|Alpha", "wolframAlpha", waReply));
+			if (!"".equals(waReply)) potentialOutputs.put(Weighting.get("wolframAlpha"), new Then("Wolfram|Alpha", "wolframAlpha", prefixes.get(new Random().nextInt(prefixes.size())) + waReply));
 		}
 		
 		// Get the reply from JMegaHAL
